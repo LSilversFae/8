@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Webpage featuring detailed information about Lilah Twilight from JSON data">
+    <title>Character Details - Lilah Twilight</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #121212;
+            color: #E0E0E0;
+        }
+        h1, h2, h3 {
+            color: #67C7EB;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1E1E1E;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 0 auto;
+        }
+        a {
+            color: #4FC3F7;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            color: #AAA;
+            font-size: 0.8rem;
+        }
+        .character-details {
+            background: #2A2A2A;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .character-details h3 {
+            color: #67C7EB;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Character Details - Lilah Twilight</h1>
+        <img src="Lilah.jpg" alt="Lilah Twilight - Goddess of Light">
+        <div class="character-details" id="character-info">
+            <h2>Character Information</h2>
+            <ul id="character-info-list"></ul>
+            <h3>Appearance</h3>
+            <ul id="appearance"></ul>
+            <h3>Personality</h3>
+            <ul id="personality"></ul>
+            <h3>Powers and Abilities</h3>
+            <ul id="powers_and_abilities"></ul>
+            <h3>Background</h3>
+            <ul id="background"></ul>
+            <h3>Relationships</h3>
+            <ul id="relationships"></ul>
+            <h3>Role in Story</h3>
+            <ul id="role_in_story"></ul>
+            <h3>Inner Conflict and Character Growth</h3>
+            <ul id="inner_conflict_and_character_growth"></ul>
+            <h3>Impact on the World of Elarion</h3>
+            <ul id="impact_on_the_world_of_elarion"></ul>
+        </div>
+        <footer class="footer">
+            © 2024 L Silvers - All Rights Reserved | Contact me on Instagram: <a href="https://instagram.com/darkfae_lsilvers">@darkfae_lsilvers</a>
+        </footer>
+    </div>
+
+    <script>
+        // JSON data for Lilah's details
+        const lilahData = {
+            "name": "Lilah Twilight",
+            "title": "Goddess of Light",
+            "status": "Goddess",
+            "physical_description": {
+                "skin": "Bronze Skin: Lilah's skin glows with a bronze radiance, giving her an ethereal and otherworldly beauty.",
+                "hair": "Long, flowing lilac hair that cascades down her back, symbolizing her divine connection to light and magic.",
+                "eyes": "Her eyes are a striking lilac shade, glowing with an inner light that reflects her status as the Goddess of Light.",
+                "build": "Slim yet athletic, embodying a balance of grace and power."
+            },
+            "personality": {
+                "before_awakening": "Gentle, compassionate, and curious. Lilah possesses a kind heart and an unyielding empathy for others, always willing to help and heal.",
+                "after_awakening": "After embracing her true identity as the Goddess of Light, Lilah becomes more confident, powerful, and wise. However, she retains her compassion, showing a fierce determination to protect those she loves.",
+                "inner_conflict": "Despite her divine nature, she struggles with accepting her power and the responsibilities that come with it, constantly torn between her mortal emotions and godly duties.",
+                "ignorance_to_love": "Having no prior experience with love, Lilah is initially naive to the concept of romance, which leads to inner turmoil when she feels drawn to Riven Nightshade."
+            },
+            "powers_and_abilities": {
+                "light_manipulation": {
+                    "radiant_energy_projection": "Lilah can generate and project beams of concentrated light that range from gentle illumination to destructive blasts capable of incinerating enemies.",
+                    "light_healing": "Her healing abilities are enhanced by the light she channels, allowing her to mend wounds, cure diseases, and cleanse poisons.",
+                    "illumination": "Lilah’s presence brings light wherever she goes, illuminating even the darkest of places."
+                },
+                "revival_powers": {
+                    "resurrection": "Lilah possesses the rare ability to bring others back from the brink of death.",
+                    "soul_restoration": "She can restore fractured or corrupted souls, mending the damage done by curses, dark magic, or traumatic experiences.",
+                    "spirit_rejuvenation": "Lilah can infuse her light into weary or injured spirits, revitalizing them and restoring their strength."
+                },
+                "regeneration_abilities": {
+                    "self_healing": "Lilah’s body heals itself at an accelerated rate.",
+                    "restorative_light": "By channeling her light into an area, Lilah can restore vitality to plants, animals, and even the land itself.",
+                    "environmental_healing": "Lilah’s presence can cleanse environments tainted by corruption or darkness."
+                },
+                "creation_powers": {
+                    "matter_formation": "Lilah can create physical objects out of light.",
+                    "illusory_crafting": "She can bend light to create illusions that deceive the senses.",
+                    "blessing_and_empowerment": "By channeling her divine light, Lilah can bestow blessings upon others."
+                },
+                "portal_opening": {
+                    "celestial_portals": "Lilah can open portals that allow her and others to travel across great distances instantly.",
+                    "light_gateways": "These portals can act as protective barriers.",
+                    "creation_portals": "Lilah can form portals that draw forth materials or elements from other realms."
+                }
+            },
+            "background": {
+                "mortal_origins_and_death": "Lilah was an ordinary woman living in Houston, Texas, in 2024. Her life took a sudden and tragic turn when she became the victim of a fatal road rage accident.",
+                "life_as_a_goddess": "As a goddess, Lilah lived for 5,000 years in the realm of Elysion, revered and powerful.",
+                "fleeing_to_stoneveil": "Drawn by a mysterious force, Lilah fled Elysion and found herself in a fae and beast realm.",
+                "the_awakening": "In her current reincarnation, Lilah lives as an ordinary mortal in Stoneveil until her encounter with Riven Nightshade."
+            },
+            "relationships": {
+                "riven_nightshade": "Riven, the High Fae King of the Northern Courts, is Lilah’s destined mate.",
+                "the_fae_kingdoms": "Due to her role as the Goddess of Light, Lilah has a complex relationship with the fae kingdoms.",
+                "the_village_of_stoneveil": "As the creator and nurturer of Stoneveil, Lilah has a deep bond with the village and its inhabitants."
+            },
+            "role_in_story": {
+                "protagonist_and_catalyst": "Lilah is central to the narrative, embodying the theme of light and darkness.",
+                "bridge_between_worlds": "She serves as a bridge between different factions and realms.",
+                "healer_and_warrior": "Lilah's compassion makes her a healer, but her power and determination also make her a formidable warrior against the darkness."
+            },
+            "inner_conflict_and_character_growth": {
+                "acceptance_of_power": "One of Lilah's most significant struggles is accepting the vast power she possesses.",
+                "embracing_love": "Lilah's journey with Riven teaches her about love, something she had never experienced as a goddess.",
+                "balancing_light_and_darkness": "As she grows closer to Riven and embraces her destiny, Lilah learns that light and darkness are not opposites."
+            },
+            "impact_on_the_world_of_elarion": {
+                                "restoration_of_balance": "Lilah's mission is to restore balance to Elarion by uniting the fae kingdoms against the rising threat of the Demon Lord Azrathar. Her light serves as a beacon of hope, guiding others in the fight against darkness.",
+                "challenge_to_fae_beliefs": "Lilah's existence challenges the long-standing beliefs and traditions of the fae, forcing them to reconsider their views on power, light, and darkness.",
+                "bridge_between_factions": "Due to her unique experiences as both a mortal and a goddess, Lilah is able to connect with characters from different backgrounds and realms, fostering understanding and unity in a world torn apart by conflict."
+            }
+        };
+
+        // Helper function to populate list items
+        function populateList(parentElement, data) {
+            Object.entries(data).forEach(([key, value]) => {
+                const li = document.createElement("li");
+
+                if (typeof value === 'object' && !Array.isArray(value)) {
+                    li.innerHTML = `<strong>${key.replace(/_/g, " ")}:</strong>`;
+                    const sublist = document.createElement("ul");
+                    populateList(sublist, value);
+                    li.appendChild(sublist);
+                } else {
+                    li.textContent = `${key.replace(/_/g, " ")}: ${value}`;
+                }
+                
+                parentElement.appendChild(li);
+            });
+        }
+
+        // Populate the general character info
+        const infoList = document.getElementById("character-info-list");
+        Object.entries(lilahData).forEach(([key, value]) => {
+            if (typeof value !== 'object' || Array.isArray(value)) {
+                const li = document.createElement("li");
+                li.textContent = `${key.replace(/_/g, " ")}: ${value}`;
+                infoList.appendChild(li);
+            }
+        });
+
+        // Sections to populate complex data
+        const sections = {
+            "appearance": lilahData.physical_description,
+            "personality": lilahData.personality,
+            "powers_and_abilities": lilahData.powers_and_abilities,
+            "background": lilahData.background,
+            "relationships": lilahData.relationships,
+            "role_in_story": lilahData.role_in_story,
+            "inner_conflict_and_character_growth": lilahData.inner_conflict_and_character_growth,
+            "impact_on_the_world_of_elarion": lilahData.impact_on_the_world_of_elarion
+        };
+
+        // Populate each detailed section
+        Object.entries(sections).forEach(([sectionId, sectionData]) => {
+            const sectionElement = document.getElementById(sectionId);
+            populateList(sectionElement, sectionData);
+        });
+    </script>
+</body>
+</html>
+
+
