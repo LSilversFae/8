@@ -247,6 +247,9 @@ def push_to_notion(category: str, mapping_path: Optional[Path] = None) -> Dict[s
             entry = load_json(p)
             if not isinstance(entry, dict):
                 continue
+            # Skip region bundle JSONs or non-entry files
+            if "categories" in entry and "region" in entry and "name" not in entry:
+                continue
             name = entry.get("name") or p.stem
             # Ensure accurate round-trip path & category every push
             entry.setdefault("source", {})
