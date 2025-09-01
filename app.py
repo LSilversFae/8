@@ -79,17 +79,23 @@ try:
         push_characters_to_notion as push_chars_full,
         pull_characters_from_notion as pull_chars_full,
         CHAR_MAPPING_PATH,
+        ensure_characters_schema as ensure_chars_schema,
     )
 except Exception as e:
     print(f"Warning: notion sync utilities not available: {e}")
     push_chars_full = None
     pull_chars_full = None
     CHAR_MAPPING_PATH = None
+    ensure_chars_schema = None
 
 # -------- INDEXING --------
 def build_category_index(category):
-    """Build index of entries from JSON files inside category folder."""
-    folder_path = LORE_ROOT / category
+    """Build index of entries from JSON files inside category folder.
+
+    Preference order: lore/<category>/formatted/*.json if exists; otherwise lore/<category>/*.json
+    """
+    formatted_path = LORE_ROOT / category / "formatted"
+    folder_path = formatted_path if formatted_path.exists() else (LORE_ROOT / category)
     index = []
 
     if not folder_path.exists():
@@ -171,6 +177,11 @@ def generate_master_index():
 # -------- NOTION SYNC --------
 def sync_index_to_notion(category):
     """Sync entries to Notion DB (create or update)."""
+    # Guard if Notion client not initialized
+    try:
+        _ = notion  # type: ignore
+    except NameError:
+        return {"error": "Notion client not available in this runtime"}
     db_id = NOTION_DATABASES.get(category)
     if not db_id:
         return {"error": f"No Notion DB configured for '{category}'"}
@@ -314,6 +325,10 @@ def sync_single(category):
 @app.route('/sync-all-to-notion', methods=['POST', 'GET'])
 def sync_all():
     results = {}
+    try:
+        _ = notion  # type: ignore
+    except NameError:
+        return jsonify({"error": "Notion client not available in this runtime"}), 500
     for category, db_id in NOTION_DATABASES.items():
         if db_id:  # only sync configured DBs
             results[category] = sync_index_to_notion(category)
@@ -349,6 +364,54 @@ def pull_characters_from_notion_route():
         return jsonify({"status": "ok", **result})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+@app.route('/ensure-characters-schema', methods=['POST', 'GET'])
+def ensure_characters_schema_route():
+    if ensure_chars_schema is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = ensure_chars_schema(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+# -------- HEALTH CHECKS --------
+@app.route('/health/notion', methods=['GET'])
+def health_notion():
+    token_present = bool(os.getenv("NOTION_TOKEN"))
+    char_db_id = os.getenv("CHARACTER_DB_ID")
+    try:
+        client = Client(auth=os.getenv("NOTION_TOKEN")) if token_present else None
+    except Exception:
+        client = None
+    status = {
+        "token_present": token_present,
+        "character_db_id": char_db_id,
+        "client_initialized": client is not None,
+        "access_ok": False,
+        "message": None,
+    }
+    if not token_present:
+        status["message"] = "NOTION_TOKEN missing"
+        return jsonify(status)
+    if not char_db_id:
+        status["message"] = "CHARACTER_DB_ID missing"
+        return jsonify(status)
+    if client is None:
+        status["message"] = "Failed to initialize Notion client"
+        return jsonify(status)
+    try:
+        client.databases.query(database_id=char_db_id, page_size=1)
+        status["access_ok"] = True
+        status["message"] = "OK"
+    except Exception as e:
+        status["message"] = f"Query failed: {e}"
+    return jsonify(status)
 
 @app.route('/getLore', methods=['GET'])
 def get_lore():

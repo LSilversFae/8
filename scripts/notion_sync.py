@@ -206,10 +206,10 @@ def push_characters_to_notion(mapping_path: Optional[Path] = None) -> Dict[str, 
             if not isinstance(entry, dict):
                 continue
             name = entry.get("name") or p.stem
-            # Ensure source.file is set for round-trip
+            # Ensure accurate round-trip path & category every push
             entry.setdefault("source", {})
-            if not entry["source"].get("file"):
-                entry["source"]["file"] = str(p)
+            entry["source"]["file"] = str(p)
+            entry["source"].setdefault("category", "characters")
 
             props = build_properties_from_json(entry, mapping)
 
@@ -315,3 +315,90 @@ __all__ = [
     "CHAR_MAPPING_PATH",
 ]
 
+
+def _property_stub(prop_type: str) -> Dict[str, Any]:
+    if prop_type == "title":
+        return {"title": {}}
+    if prop_type == "rich_text":
+        return {"rich_text": {}}
+    if prop_type == "select":
+        return {"select": {"options": []}}
+    if prop_type == "multi_select":
+        return {"multi_select": {"options": []}}
+    if prop_type == "number":
+        return {"number": {}}
+    if prop_type == "checkbox":
+        return {"checkbox": {}}
+    return {"rich_text": {}}
+
+
+def ensure_characters_schema(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    """Create any missing properties in the Characters DB to match the mapping.
+
+    - Ensures the title property is named "Name" if possible.
+    - Adds missing properties with appropriate types.
+    """
+    notion, db_id = get_env_client()
+    mapping = load_mapping(mapping_path)
+
+    # Read current schema
+    db = notion.databases.retrieve(db_id)
+    current_props: Dict[str, Any] = db.get("properties", {})
+
+    # Find current title property name
+    title_prop_name: Optional[str] = None
+    for pname, pdef in current_props.items():
+        if pdef.get("type") == "title":
+            title_prop_name = pname
+            break
+
+    # Attempt to set title property name to "Name" when mismatched
+    title_renamed = False
+    if title_prop_name and title_prop_name != "Name":
+        try:
+            # Notion API supports updating the title property name at DB level
+            notion.databases.update(db_id, title_property_name="Name")  # type: ignore
+            title_renamed = True
+            # Update local view of properties to reflect rename
+            current_props["Name"] = current_props.pop(title_prop_name)
+        except Exception:
+            # Best-effort: leave as-is; pushing will still work if mapping uses "Name"
+            pass
+
+    # Compute properties to add
+    to_add: Dict[str, Any] = {}
+    added: List[str] = []
+    skipped_existing: List[str] = []
+
+    for notion_prop, spec in mapping.items():
+        desired_type = spec.get("type")
+        if notion_prop in current_props:
+            skipped_existing.append(notion_prop)
+            continue
+        # Do not try to add a second title property; handled above
+        if desired_type == "title" and title_prop_name:
+            skipped_existing.append(notion_prop)
+            continue
+        to_add[notion_prop] = _property_stub(desired_type)
+
+    if to_add:
+        try:
+            notion.databases.update(db_id, properties=to_add)  # type: ignore
+            added = list(to_add.keys())
+            # Refresh current props for return context
+            db = notion.databases.retrieve(db_id)
+            current_props = db.get("properties", {})
+        except Exception as e:
+            return {
+                "updated": False,
+                "error": f"Failed to add properties: {e}",
+                "attempted": list(to_add.keys()),
+            }
+
+    return {
+        "updated": True,
+        "title_renamed": title_renamed,
+        "added_properties": added,
+        "existing_unchanged": skipped_existing,
+        "property_count": len(current_props),
+    }
