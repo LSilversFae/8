@@ -30,8 +30,26 @@ load_dotenv()
 
 LORE_ROOT = Path("lore")
 CHAR_DIR = LORE_ROOT / "characters" / "formatted"
+CREATURES_DIR = LORE_ROOT / "creatures" / "formatted"
+REALMS_DIR = LORE_ROOT / "realms" / "formatted"
+
 MAPPINGS_DIR = Path("scripts") / "notion_mappings"
 CHAR_MAPPING_PATH = MAPPINGS_DIR / "characters.json"
+CREATURES_MAPPING_PATH = MAPPINGS_DIR / "creatures.json"
+REALMS_MAPPING_PATH = MAPPINGS_DIR / "realms.json"
+
+# Category helpers
+CATEGORY_DIRS: Dict[str, Path] = {
+    "characters": CHAR_DIR,
+    "creatures": CREATURES_DIR,
+    "realms": REALMS_DIR,
+}
+
+CATEGORY_MAPPING_PATHS: Dict[str, Path] = {
+    "characters": CHAR_MAPPING_PATH,
+    "creatures": CREATURES_MAPPING_PATH,
+    "realms": REALMS_MAPPING_PATH,
+}
 
 
 def load_json(path: Path) -> Any:
@@ -43,18 +61,27 @@ def save_json(path: Path, data: Any) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def get_env_client() -> tuple[Client, str]:
+def get_env_client_for(category: str) -> tuple[Client, str]:
     token = os.getenv("NOTION_TOKEN")
     if not token:
         raise ValueError("NOTION_TOKEN is not set")
-    db_id = os.getenv("CHARACTER_DB_ID")
+    env_key = {
+        "characters": "CHARACTER_DB_ID",
+        "creatures": "CREATURES_DB_ID",
+        "realms": "REALMS_DB_ID",
+        "plots": "PLOTS_DB_ID",
+        "magic": "MAGIC_DB_ID",
+    }.get(category)
+    if not env_key:
+        raise ValueError(f"Unsupported category: {category}")
+    db_id = os.getenv(env_key)
     if not db_id:
-        raise ValueError("CHARACTER_DB_ID is not set")
+        raise ValueError(f"{env_key} is not set")
     return Client(auth=token), db_id
 
 
-def load_mapping(path: Optional[Path] = None) -> Dict[str, Dict[str, str]]:
-    p = path or CHAR_MAPPING_PATH
+def load_mapping(path: Optional[Path] = None, *, category: Optional[str] = None) -> Dict[str, Dict[str, str]]:
+    p = path or (CATEGORY_MAPPING_PATHS[category] if category else CHAR_MAPPING_PATH)
     if not p.exists():
         raise FileNotFoundError(f"Mapping file not found: {p}")
     data = load_json(p)
@@ -164,15 +191,16 @@ def build_json_from_page(page: Dict[str, Any], mapping: Dict[str, Dict[str, str]
     return out
 
 
-def list_character_files() -> List[Path]:
-    if not CHAR_DIR.exists():
+def list_files_for(category: str) -> List[Path]:
+    base = CATEGORY_DIRS.get(category)
+    if not base or not base.exists():
         return []
-    return sorted([p for p in CHAR_DIR.glob("*.json")])
+    return sorted([p for p in base.glob("*.json")])
 
 
-def find_file_by_name_or_source(name: str) -> Optional[Path]:
+def find_file_by_name_or_source(name: str, category: str) -> Optional[Path]:
     # Try to find a file where JSON name == given name
-    for p in list_character_files():
+    for p in list_files_for(category):
         try:
             data = load_json(p)
             if isinstance(data, dict) and data.get("name") == name:
@@ -193,10 +221,10 @@ def safe_filename(name: str) -> str:
     return base or "character"
 
 
-def push_characters_to_notion(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
-    notion, db_id = get_env_client()
-    mapping = load_mapping(mapping_path)
-    files = list_character_files()
+def push_to_notion(category: str, mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    notion, db_id = get_env_client_for(category)
+    mapping = load_mapping(mapping_path, category=category)
+    files = list_files_for(category)
 
     created = 0
     updated = 0
@@ -209,7 +237,7 @@ def push_characters_to_notion(mapping_path: Optional[Path] = None) -> Dict[str, 
             # Ensure accurate round-trip path & category every push
             entry.setdefault("source", {})
             entry["source"]["file"] = str(p)
-            entry["source"].setdefault("category", "characters")
+            entry["source"].setdefault("category", category)
 
             props = build_properties_from_json(entry, mapping)
 
@@ -233,9 +261,9 @@ def push_characters_to_notion(mapping_path: Optional[Path] = None) -> Dict[str, 
     return {"created": created, "updated": updated, "total": created + updated}
 
 
-def pull_characters_from_notion(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
-    notion, db_id = get_env_client()
-    mapping = load_mapping(mapping_path)
+def pull_from_notion(category: str, mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    notion, db_id = get_env_client_for(category)
+    mapping = load_mapping(mapping_path, category=category)
 
     # Paginate through DB
     results: List[Dict[str, Any]] = []
@@ -260,7 +288,8 @@ def pull_characters_from_notion(mapping_path: Optional[Path] = None) -> Dict[str
                 dest = fp if fp.is_absolute() else Path(str(fp))
             if not dest or not dest.exists():
                 # Try find by name
-                dest = find_file_by_name_or_source(name) or (CHAR_DIR / f"{safe_filename(name)}.json")
+                base_dir = CATEGORY_DIRS[category]
+                dest = find_file_by_name_or_source(name, category) or (base_dir / f"{safe_filename(name)}.json")
 
             # If file exists, merge mapped fields into it; else create new skeleton
             if dest.exists():
@@ -274,23 +303,7 @@ def pull_characters_from_notion(mapping_path: Optional[Path] = None) -> Dict[str
                 current = {
                     "id": safe_filename(str(name)).lower(),
                     "name": name,
-                    "titles": [],
-                    "species": None,
-                    "gender": None,
-                    "age": None,
-                    "realm": None,
-                    "court": None,
-                    "affiliations": None,
-                    "domains": [],
-                    "role": None,
-                    "appearance": {},
-                    "personality": {},
-                    "lineage": {},
-                    "prophecy": {},
-                    "abilities": [],
-                    "relationships": {},
-                    "notes": None,
-                    "source": {"file": str(dest), "category": "characters"},
+                    "source": {"file": str(dest), "category": category},
                 }
 
             # Merge mapped fields from Notion
@@ -309,10 +322,40 @@ def pull_characters_from_notion(mapping_path: Optional[Path] = None) -> Dict[str
     return {"written": written, "pages": len(results)}
 
 
+def push_characters_to_notion(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return push_to_notion("characters", mapping_path)
+
+
+def pull_characters_from_notion(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return pull_from_notion("characters", mapping_path)
+
+
+def push_creatures_to_notion(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return push_to_notion("creatures", mapping_path)
+
+
+def pull_creatures_from_notion(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return pull_from_notion("creatures", mapping_path)
+
+
+def push_realms_to_notion(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return push_to_notion("realms", mapping_path)
+
+
+def pull_realms_from_notion(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return pull_from_notion("realms", mapping_path)
+
+
 __all__ = [
     "push_characters_to_notion",
     "pull_characters_from_notion",
+    "push_creatures_to_notion",
+    "pull_creatures_from_notion",
+    "push_realms_to_notion",
+    "pull_realms_from_notion",
     "CHAR_MAPPING_PATH",
+    "CREATURES_MAPPING_PATH",
+    "REALMS_MAPPING_PATH",
 ]
 
 
@@ -332,14 +375,14 @@ def _property_stub(prop_type: str) -> Dict[str, Any]:
     return {"rich_text": {}}
 
 
-def ensure_characters_schema(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+def ensure_schema(category: str, mapping_path: Optional[Path] = None) -> Dict[str, Any]:
     """Create any missing properties in the Characters DB to match the mapping.
 
     - Ensures the title property is named "Name" if possible.
     - Adds missing properties with appropriate types.
     """
-    notion, db_id = get_env_client()
-    mapping = load_mapping(mapping_path)
+    notion, db_id = get_env_client_for(category)
+    mapping = load_mapping(mapping_path, category=category)
 
     # Read current schema
     db = notion.databases.retrieve(db_id)
@@ -402,3 +445,15 @@ def ensure_characters_schema(mapping_path: Optional[Path] = None) -> Dict[str, A
         "existing_unchanged": skipped_existing,
         "property_count": len(current_props),
     }
+
+
+def ensure_characters_schema(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return ensure_schema("characters", mapping_path)
+
+
+def ensure_creatures_schema(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return ensure_schema("creatures", mapping_path)
+
+
+def ensure_realms_schema(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return ensure_schema("realms", mapping_path)

@@ -1,0 +1,11 @@
+{
+  "Name": { "json": "name", "type": "title" },
+  "ID": { "json": "id", "type": "rich_text" },
+  "Kind": { "json": "kind", "type": "select" },
+  "Location": { "json": "location", "type": "rich_text" },
+  "Danger Level": { "json": "danger_level", "type": "select" },
+  "Description": { "json": "description", "type": "rich_text" },
+  "File Path": { "json": "source.file", "type": "rich_text" },
+  "Category": { "json": "source.category", "type": "select" }
+}
+

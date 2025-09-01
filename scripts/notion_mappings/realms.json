@@ -1,0 +1,11 @@
+{
+  "Name": { "json": "name", "type": "title" },
+  "ID": { "json": "id", "type": "rich_text" },
+  "Ruler": { "json": "ruler", "type": "rich_text" },
+  "Capital": { "json": "capital", "type": "rich_text" },
+  "Domains": { "json": "domains", "type": "multi_select" },
+  "Description": { "json": "description", "type": "rich_text" },
+  "File Path": { "json": "source.file", "type": "rich_text" },
+  "Category": { "json": "source.category", "type": "select" }
+}
+

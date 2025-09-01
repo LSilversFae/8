@@ -84,6 +84,12 @@ try:
         pull_characters_from_notion as pull_chars_full,
         CHAR_MAPPING_PATH,
         ensure_characters_schema as ensure_chars_schema,
+        push_creatures_to_notion as push_creatures_full,
+        pull_creatures_from_notion as pull_creatures_full,
+        ensure_creatures_schema as ensure_creatures_schema,
+        push_realms_to_notion as push_realms_full,
+        pull_realms_from_notion as pull_realms_full,
+        ensure_realms_schema as ensure_realms_schema,
     )
 except Exception as e:
     print(f"Warning: notion sync utilities not available: {e}")
@@ -91,6 +97,12 @@ except Exception as e:
     pull_chars_full = None
     CHAR_MAPPING_PATH = None
     ensure_chars_schema = None
+    push_creatures_full = None
+    pull_creatures_full = None
+    ensure_creatures_schema = None
+    push_realms_full = None
+    pull_realms_full = None
+    ensure_realms_schema = None
 
 # -------- INDEXING --------
 def build_category_index(category):
@@ -384,6 +396,92 @@ def ensure_characters_schema_route():
         return jsonify({"error": str(e)}), 500
 
 
+# -------- CREATURES FULL SYNC --------
+@app.route('/ensure-creatures-schema', methods=['POST', 'GET'])
+def ensure_creatures_schema_route():
+    if ensure_creatures_schema is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = ensure_creatures_schema(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/push-creatures-to-notion', methods=['POST', 'GET'])
+def push_creatures_to_notion_route():
+    if push_creatures_full is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = push_creatures_full(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/pull-creatures-from-notion', methods=['POST', 'GET'])
+def pull_creatures_from_notion_route():
+    if pull_creatures_full is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = pull_creatures_full(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+# -------- REALMS FULL SYNC --------
+@app.route('/ensure-realms-schema', methods=['POST', 'GET'])
+def ensure_realms_schema_route():
+    if ensure_realms_schema is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = ensure_realms_schema(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/push-realms-to-notion', methods=['POST', 'GET'])
+def push_realms_to_notion_route():
+    if push_realms_full is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = push_realms_full(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/pull-realms-from-notion', methods=['POST', 'GET'])
+def pull_realms_from_notion_route():
+    if pull_realms_full is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = pull_realms_full(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 # -------- HEALTH CHECKS --------
 @app.route('/health/notion', methods=['GET'])
 def health_notion():
@@ -656,4 +754,3 @@ def normalize_realms_route():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
