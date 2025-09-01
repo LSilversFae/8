@@ -742,9 +742,66 @@ def _start_scheduler_if_enabled():
     pull_each_cycle = _bool_env("AUTO_PULL_EACH_CYCLE", True)
     publish_each_cycle = _bool_env("AUTO_PUBLISH_EACH_CYCLE", False)
 
+    def _maybe_refactor_creatures():
+        try:
+            if not _bool_env("AUTO_REFACTOR_CREATURES_ON_START", True):
+                return
+            # If formatted creatures are missing or very few, attempt a refactor
+            formatted = LORE_ROOT / "creatures" / "formatted"
+            existing = list(formatted.glob("**/*.json")) if formatted.exists() else []
+            src = LORE_ROOT / "creatures" / "creatures.json"
+            if len(existing) < 5 and src.exists() and normalize_creatures_file is not None:
+                # Load synonyms
+                default_map = LORE_ROOT / "creatures" / "mappings.json"
+                try:
+                    syn = load_creatures_synonyms(default_map)
+                    set_creatures_synonyms(syn)
+                except Exception:
+                    pass
+                # Normalize entries from source file
+                entries = normalize_creatures_file(src)
+                outdir = formatted
+                outdir.mkdir(parents=True, exist_ok=True)
+                written = 0
+                for e in entries:
+                    name = e.get("name") or e.get("id") or "creature"
+                    safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in name)
+                    reg = e.get("region") or "Uncategorized"
+                    reg_safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in str(reg))
+                    sub = outdir / reg_safe
+                    sub.mkdir(parents=True, exist_ok=True)
+                    save_json_util(sub / f"{safe}.json", e)
+                    written += 1
+                # Build region bundles
+                try:
+                    from scripts.format_creatures import build_region_bundles as _bundles
+                    bundles = _bundles(entries)
+                    base = outdir / "regions"
+                    base.mkdir(parents=True, exist_ok=True)
+                    for region, data in bundles.items():
+                        rsafe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in region)
+                        save_json_util(base / f"{rsafe}.json", data)
+                except Exception:
+                    pass
+                # Rewrite source to compact index with backup
+                try:
+                    orig = src.read_text(encoding="utf-8")
+                    (src.parent / "creatures.json.bak").write_text(orig, encoding="utf-8")
+                except Exception:
+                    pass
+                compact = {
+                    "note": "Data split into lore/creatures/formatted and /formatted/regions for bundles.",
+                    "total": len(entries),
+                }
+                save_json_util(src, compact)
+                print(f"Auto-refactor creatures completed: {written} entries")
+        except Exception as e:
+            print(f"Auto-refactor creatures skipped: {e}")
+
     def worker():
         # initial delay allows the app to finish booting
         time.sleep(3)
+        _maybe_refactor_creatures()
         if pull_on_start:
             _do_pull_all_internal()
         if publish_on_start:
