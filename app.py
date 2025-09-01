@@ -272,6 +272,34 @@ def sync_all():
             results[category] = {"status": "⚠️ Skipped (no DB ID configured)"}
     return jsonify(results)
 
+@app.route('/getLore', methods=['GET'])
+def get_lore():
+    subject = request.args.get("subject")
+
+    # Search across all categories for exact match
+    for category in CATEGORIES:
+        index_path = INDEX_DIR / f"{category}_index.json"
+        if not index_path.exists():
+            continue
+
+        with open(index_path, "r", encoding="utf-8") as f:
+            entries = json.load(f)
+
+        for entry in entries:
+            if entry["name"] == subject:
+                # Locate and load the JSON file
+                lore_file = LORE_ROOT / entry["file"]
+                if lore_file.exists():
+                    with open(lore_file, "r", encoding="utf-8") as lf:
+                        lore_data = json.load(lf)
+                    return jsonify({
+                        "subject": subject,
+                        "category": category,
+                        "content": lore_data
+                    })
+
+    return jsonify({"error": f"No lore entry found for '{subject}'"}), 404
+
 
 if __name__ == '__main__':
     app.run(debug=True)
