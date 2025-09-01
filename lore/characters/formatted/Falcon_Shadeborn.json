@@ -1,0 +1,81 @@
+{
+  "id": "falcon_shadeborn",
+  "name": "Falcon_Shadeborn",
+  "titles": [
+    "northern court councilmen"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "male",
+  "age": "237 (appears to be in his early thirties by human standards)",
+  "realm": "Elarion",
+  "court": "Darkwing",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "hair": "His hair flows like a cosmic breeze, now streaked with silver, and seems to shift and move even when there is no wind.",
+    "eyes": "His eyes are now bright silver, with tiny flecks of starlight shining in them. When he uses his abilities, his eyes blaze like twin stars, giving him an otherworldly presence..",
+    "notes": [
+      "facial_features: Sharp, angular features reflecting his noble Fae lineage.",
+      "aura: He carries the wind with him, a constant gentle breeze surrounds him, filled with the whispers of ancient cosmic winds​.",
+      "horns: Two elegantly curved horns extending from his head, marking his divine heritage.",
+      "accessories: A deep indigo scarf wraps around his neck, suggesting a touch of warmth and sentimentality."
+    ],
+    "skin": "His pale skin now has a celestial glow, with silver stardust woven into his skin, particularly around his shoulders and chest, where his divine powers are most concentrated.",
+    "attire": "Intricately designed armor with motifs of leaves and shadowy swirls, shimmering with a faint, spectral glow, primarily black with hints of indigo and silver.",
+    "wings": "{'appearance': {'description': 'His wings are grand, resembling the night sky itself, with stars and cosmic winds swirling within. They appear translucent but solidify when he flies or fights, becoming the wings of a cosmic warrior, rippling with energy.', 'texture': \"The wings have a sleek, smooth texture that ripples like the surface of water in moonlight, reflecting Falcon's natural agility and ability to blend seamlessly into his surroundings. When the light hits them just right, faint patterns of runic engravings, reminiscent of ancient celestial markings, become visible, hinting at his celestial connection through Aetheria's blessing.\"}, 'special_traits': {'fluctuating_state': \"Falcon's wings seem to fluctuate between being solid and incorporeal, as though they're woven from shadow and wind. At times, wisps of mist or shadow trail from the edges, and when he moves, they leave faint traces of silver light in their wake, making him appear as if he's moving through the night sky itself.\", 'functionality': {'camouflage': 'The wings can fold close to his body, concealing him entirely, blending with shadows or surroundings to enhance his stealth.', 'flight': 'When spread wide, they catch the wind, allowing for swift, silent flight. His wings enable him to move with unmatched precision and agility, making him nearly invisible in the sky or within the forest canopy.'}}}",
+    "distinctive_features": "['Ethereal, otherworldly beauty.', 'Regal aura enhanced by his attire and curved horns.']"
+  },
+  "personality": {
+    "traits": [
+      "Intelligent and authoritative, speaks only when necessary.",
+      "Cold and detached demeanor, yet harbors deep loyalty and responsibility.",
+      "Warmth beneath his exterior, revealed only to a select few, especially his wife, Thalassa Shadeborn.",
+      "general demeanor: Stoic, serious, and enigmatic, maintaining an air of mystery that makes him difficult to read."
+    ],
+    "virtues": [
+      "Calculating and strategic.",
+      "Deeply loyal to his duties and loved ones.",
+      "Unyielding in the face of adversity."
+    ],
+    "flaws": [
+      "Struggles with expressing vulnerability.",
+      "Tends to keep his emotions tightly controlled."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_ice",
+      "description": null,
+      "application": null
+    },
+    {
+      "name": "aetheria_wind_and_air_abilities",
+      "description": null,
+      "application": null
+    },
+    {
+      "name": "faelorn_forest_abilities",
+      "description": null,
+      "application": null
+    },
+    {
+      "name": "divine_abilities",
+      "description": null,
+      "application": null
+    }
+  ],
+  "relationships": {
+    "spouse": "Thalassa Shadeborn, with whom he shares a deep, powerful bond."
+  },
+  "notes": [
+    "class: divine"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

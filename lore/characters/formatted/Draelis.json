@@ -1,0 +1,46 @@
+{
+  "id": "draelis",
+  "name": "Draelis",
+  "titles": [
+    "Goddess of Shadows and Mysteries"
+  ],
+  "species": null,
+  "gender": null,
+  "age": null,
+  "realm": null,
+  "court": null,
+  "affiliations": null,
+  "domains": [
+    "Shadows",
+    "Secrets",
+    "The Unknown"
+  ],
+  "role": null,
+  "appearance": {
+    "skin": "Onyx-black skin that absorbs light",
+    "hair": "Shadowy tendrils flowing like smoke",
+    "eyes": "Pure white eyes, like twin moons in a dark sky",
+    "attire": "Gown of shadow silk adorned with shifting constellations"
+  },
+  "personality": {
+    "traits": [
+      "Elusive",
+      "Enigmatic",
+      "Mischievous",
+      "Guarded"
+    ],
+    "temperament": "Speaks in whispers and cryptic verses, enjoys puzzles and hidden games"
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [],
+  "relationships": {},
+  "notes": [
+    "role_in_council: One of the six gods on the council of Elysion, keeper of secrets and guardian of hidden truths."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "Gods_and_Goddesses"
+  }
+}

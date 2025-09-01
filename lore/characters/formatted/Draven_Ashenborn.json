@@ -1,0 +1,76 @@
+{
+  "id": "draven_ashenborn",
+  "name": "Draven_Ashenborn",
+  "titles": [
+    "Knight Commander of The Northern Fae Courts Royal Guard; Bodyguard and confidant to King Riven"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "male",
+  "age": "Appears to be in his late 20s but is several centuries old, with knowledge and experience that span ages.",
+  "realm": "Elarion",
+  "court": "Veilborn",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "notes": [
+      "height_and_build: Tall (around 6'4\"), lithe yet muscular, with a build honed for speed, agility, and combat.",
+      "aura: A cold mist surrounds him, and shadows seem to coil and shift at his feet, making him appear even more intimidating​​.",
+      "markings: Faint, rune-like markings in silvery-blue run along his arms and chest, glowing softly when he uses his magic."
+    ],
+    "hair": "His long, jet-black hair has icy blue streaks running through it, occasionally giving off tendrils of mist as if touched by the cold.",
+    "eyes": "His stormy grey eyes now glow with an inner light that flickers like the last light before an ice storm, reflecting his command over both frost and darkness.",
+    "skin": "His bluish-gray skin now glows faintly under moonlight, reflecting the divine nature of his ice manipulation. Silver and blue runes are etched across his body, pulsing with power whenever he uses his divine abilities.",
+    "wings": "Draven's wings are made of jagged ice and shadow, stretching long and sharp like a predator's. They give off a cold mist, and when he moves, they blur into the shadows, making him appear as a living wraith.",
+    "distinctive_features": "Slightly pointed ears and sharp features give him a wolfish, predatory look."
+  },
+  "personality": {
+    "virtues": [
+      "Fiercely loyal, intelligent, and an excellent strategist. He is protective, courageous, and unyielding in battle, with an unwavering sense of duty."
+    ],
+    "flaws": [
+      "Holds his burdens alone, hesitant to show vulnerability, and struggles with living up to his father's legacy. The fear that his powers might consume him causes internal conflict."
+    ],
+    "traits": [
+      "general demeanor: Draven is calm, stoic, and reserved, often exuding a quiet intensity that can be intimidating to others. He carries himself with the grace and confidence of a predator, always alert and ready for action.",
+      "around friends: When around King Riven and those he trusts, Draven's humor shines through. He enjoys teasing, bantering, and placing bets with Riven, acting as comic relief and displaying a dry, sarcastic wit that contrasts with his usual serious demeanor."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_walking",
+      "description": "Draven can step into shadows and travel through them, allowing him to move undetected and strike without warning."
+    },
+    {
+      "name": "ice_manipulation",
+      "description": "He can summon and control ice, using it to create weapons, barriers, or freeze opponents. He can generate freezing winds or coat his blade with frost for increased lethality."
+    },
+    {
+      "name": "darkness_manipulation",
+      "description": "Draven can summon an aura of darkness that drains the strength and willpower of his enemies. He can also call upon shades—spirits of the dead—to fight alongside him in battle."
+    },
+    {
+      "name": "combat_skills",
+      "description": "A master of dual-wielding his double-bladed scimitar, Draven's fighting style is fluid and deadly. He excels in close-quarter combat and is also proficient with daggers and unarmed fighting."
+    },
+    {
+      "name": "divine_abilities",
+      "description": null,
+      "application": null
+    }
+  ],
+  "relationships": {
+    "king_riven": "Draven's closest friend, confidant, and the one he considers a brother. They share a bond forged through years of fighting side by side, and Draven is fiercely loyal to him, often lightening the king's burdens with playful banter and challenges.",
+    "the_royal_guard": "{'dynamic': 'Draven is respected and admired by those under his command. He's a fair but demanding leader, always leading by example and earning the trust of his soldiers.'}"
+  },
+  "notes": [
+    "current_position: As Knight Commander, he serves as the protector of King Riven and leader of the Royal Guard, defending The Northern Fae Courts from external threats and internal strife."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

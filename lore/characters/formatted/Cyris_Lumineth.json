@@ -1,0 +1,94 @@
+{
+  "id": "cyris_lumineth",
+  "name": "Cyris_Lumineth",
+  "titles": [],
+  "species": "High Solaryn Fae",
+  "gender": "male",
+  "age": "Appears to be in his mid-20s, but as a high fae elder, his true age stretches back several centuries.",
+  "realm": "Elarion",
+  "court": "Dawnspire",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "His golden-bronze skin glows faintly, as if kissed by sunlight. Intricate patterns resembling solar flares ripple across his arms and chest, becoming brighter when he wields his divine light powers.",
+    "hair": "His wavy, flame-kissed hair shifts between deep gold and fiery amber, shimmering like molten sunlight. In battle, embers seem to spark from its strands.",
+    "eyes": "His piercing amber eyes radiate warmth and intensity, glowing brighter when his power is invoked. Specks of golden flame dance within his irises, reflecting his divine lineage.",
+    "notes": [
+      "horns: Elegant, spiraling horns of radiant gold rise from his head, etched with ancient runes symbolizing his solar heritage and divine might.",
+      "facial_features: Chiseled and regal, his sharp cheekbones and strong jawline are complemented by an aura of commanding nobility. His pointed ears and faintly glowing skin mark his high fae lineage.",
+      "physique: Athletic and perfectly proportioned, his physique exudes both strength and grace, a testament to his role as a warrior and king.",
+      "runes: Solar runes, glowing with golden light, adorn his arms and torso. These symbols shift and shimmer, resonating with his divine connection to Zenithar and Helionis."
+    ],
+    "attire": "Adorned in flowing robes of luminous white and gold, trimmed with fiery embroidery. His armor, when worn, is crafted from sunsteel, a radiant metal that glimmers like the first light of dawn.",
+    "wings": "Massive, ethereal wings of golden light spread from his back. They pulse with solar energy, radiating warmth and shimmering with a mix of gold and fiery red hues."
+  },
+  "personality": {
+    "traits": [
+      "general demeanor: Stoic, commanding, and unyielding, Cyris exudes an aura of cold authority. He is calculated and rarely shows vulnerability, projecting an image of unwavering strength to maintain control.",
+      "inner conflicts: Cyris harbors an insatiable drive for power and perfection, born from his divine lineage and the pressures of ruling the Southern Courts. Though outwardly confident, he wrestles with the fear that his reign may never reach the grandeur he envisions.",
+      "with others: Cyris maintains a distant and authoritative demeanor, valuing obedience and efficiency above personal connection. He respects strength and competence, rewarding loyalty but showing little patience for weakness or failure.",
+      "loyalty: His loyalty is reserved for the vision of a united, dominant Southern Court under his rule. Cyris values individuals only insofar as they serve his ambitions, often viewing relationships as tools to further his goals.",
+      "leadership style: Cyris rules with an iron will, employing strict discipline and harsh measures to ensure the Southern Fae remain a formidable force. He tolerates no dissent, demanding unwavering loyalty and respect while focusing relentlessly on expanding his power and influence."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "solar_dominion",
+      "description": "Channeling the power of Zenithar, Cyris can summon and manipulate sunlight to devastating effect, enhancing allies and weakening foes. He creates searing beams of light and radiant shields."
+    },
+    {
+      "name": "golden_flame_manifestation",
+      "description": "Inherited from Helionis, Cyris commands flames imbued with divine essence, burning with purifying and restorative energy. He can cleanse dark magic, weave flames into weapons, and heal wounds."
+    },
+    {
+      "name": "solar_ascendancy",
+      "description": "As an embodiment of celestial might, Cyris ascends into a solar form, amplifying his speed, strength, and magical output exponentially. He can generate a massive solar flare to disrupt enemy formations."
+    },
+    {
+      "name": "aurora_forge",
+      "description": "Harnessing light and flame, Cyris crafts radiant weapons, constructs, or barriers in real-time. These creations can be used for offense, defense, or battlefield strategy."
+    },
+    {
+      "name": "sunlit_harmony",
+      "description": "Cyris emits a calming light that mends emotional and spiritual turmoil, restores morale, and protects allies from mental assaults or fear-inducing magic."
+    },
+    {
+      "name": "ecliptic_blade",
+      "description": "A signature skill combining light and flame into a concentrated weapon of immense precision and destructive potential. Cyris wields a solar sword capable of cutting through nearly any material."
+    },
+    {
+      "name": "flameborn_wings",
+      "description": "Cyris's wings, aflame with golden energy, allow flight and agility. They can shield allies, leave trails of disorienting light, or emit bursts of energy to knock back enemies."
+    },
+    {
+      "name": "lightwoven_veil",
+      "description": "A defensive ability allowing Cyris to bend light around him, creating dazzling illusions or rendering himself partially invisible. He can reflect projectiles with a light-infused barrier."
+    },
+    {
+      "name": "solar_binding",
+      "description": "Cyris draws upon celestial forces to bind enemies with radiant chains that suppress dark magic and immobilize foes, purging curses and sealing breaches or portals."
+    },
+    {
+      "name": "celestial_wrath",
+      "description": "Cyris calls down a massive solar storm, cleansing the land of corruption and darkness. This radiant blast devastates enemies while restoring natural balance and purifying landscapes."
+    },
+    {
+      "name": "divine_abilities",
+      "description": null,
+      "application": null
+    }
+  ],
+  "relationships": {},
+  "notes": [
+    "class: awakened",
+    "Title: High Fae King of the Southern Courts"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "southern_court"
+  }
+}

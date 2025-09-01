@@ -1,0 +1,82 @@
+{
+  "id": "thalassa_shadeborn",
+  "name": "Thalassa_Shadeborn",
+  "titles": [],
+  "species": "High Shadow Fae-Divine Hybrid",
+  "gender": "female",
+  "age": "276 (appears in her mid-20s by human standards)",
+  "realm": "Elarion",
+  "court": "Darkwing",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "Thalassa's skin now carries a soft glow, like moonlight reflecting off the ocean, with silver veins running across her arms and legs, representing her bond with both wind and shadow.",
+    "hair": "Her dark hair now carries streaks of silver and pale blue, flowing like a breeze even when there is no wind, further emphasizing her connection to Aetheria.",
+    "eyes": "Her eyes glow a radiant silver, with the depth of the cosmos swirling in them, reflecting both the sky and the dark forest.",
+    "notes": [
+      "aura: A constant, gentle breeze surrounds her, carrying the faint scent of fresh pine and cool mountain air, making her presence soothing yet powerful",
+      "horns: Horn-like blackened adornments, adding an air of nobility and danger",
+      "accessories: A deep crimson scarf accenting her attire, hinting at warmth amid her icy, darkened presence",
+      "height_and_build: Tall with a commanding presence, exuding an ethereal, graceful power typical of high fae nobility"
+    ],
+    "attire": "Intricately crafted armor combining elegance and strength, decorated with patterns reminiscent of wind and shadows",
+    "wings": "{'appearance': {'description': \"Thalassa's wings are grounded in the essence of nature, darkness, and ice. Her wingspan is slightly smaller than Falcon's, measuring around ten feet, yet equally impressive. The feathers are a blend of deep forest green and midnight black, interwoven with strands of silver that gleam faintly, as if touched by frost. Along the edges, the feathers are tipped with iridescent icy blue, capturing the light and giving the impression of frost crystallizing.\", 'texture': \"The feathers possess a velvety texture, soft yet resilient, and emanate a faint chill, reflecting her connection to ice magic. Unlike Falcon's mist-like feathers, hers have a more solid appearance, shimmering with a shadowy, silver glow, especially when touched by light. Embedded within the wings are faint, intricate patterns resembling the roots and veins of ancient trees, representing her affinity with nature and her father's power over forest shadows.\"}, 'special_traits': {'frost_trail': \"When Thalassa's wings move, they leave a delicate trail of sparkling frost in the air, and the shadows within the feathers seem to dance, as if alive.\", 'protective_cloak': 'Her wings can fold around her like a protective cloak, offering warmth despite their icy appearance, and when fully extended, they resonate with a faint, melodic hum, almost like a whisper of the forest and the wind.'}, 'abilities': {\"nature's_grace\": 'Her wings allow her to move with exceptional agility, especially in forested areas, where her affinity with nature enhances her flight.', 'ice_resonance': 'The icy blue edges of her wings can channel her ice magic, allowing her to create small bursts of frost or freeze objects she touches with her wings.', 'shadow_blend': 'The midnight black feathers enable Thalassa to blend seamlessly into shadows, enhancing her stealth and making her nearly undetectable.'}}",
+    "distinctive_features": "['Ethereal beauty with a faint, icy glow', 'Hair that moves as if touched by the wind', 'Armor adorned with wind and shadow motifs', 'Moonlight-like glisten to her skin, reflecting her celestial lineage']"
+  },
+  "personality": {
+    "traits": [
+      "Perceptive and often listens more than she speaks",
+      "Warm and approachable despite her intimidating appearance",
+      "Fiercely loyal to those she cares about",
+      "Possesses a subtle, sharp wit",
+      "Mysterious, keeping parts of herself hidden",
+      "general demeanor: Thalassa carries herself with an air of elegance and intelligence, her demure and light-hearted demeanor belying the vast power she wields.",
+      "leadership style: Commands respect through her elegance and intelligence, with a calm and collected presence."
+    ],
+    "virtues": [
+      "Insightful and empathetic, making her an adept diplomat",
+      "Highly adaptive and resourceful",
+      "Skilled in balancing power with compassion"
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_manipulation",
+      "description": "She can blend into the shadows, become nearly invisible, or even travel through them, using darkness as both a weapon and a shield."
+    },
+    {
+      "name": "ice_manipulation",
+      "description": "Controls ice in all its forms, shaping it into weapons, barriers, or even armor. Her presence can chill the air, and she's capable of freezing enemies in their tracks."
+    },
+    {
+      "name": "death_manipulation",
+      "description": "Has a profound connection with death, allowing her to summon wraith-like entities, absorb life force, or even communicate with spirits lingering in the mortal realm."
+    },
+    {
+      "name": "darkness_manipulation",
+      "description": "The shadows bend to her will, granting her the ability to create illusions, manipulate shadows into physical constructs, or engulf entire areas in darkness."
+    },
+    {
+      "name": "divine_abilities",
+      "description": null,
+      "application": null
+    }
+  ],
+  "relationships": {
+    "marital_status": "Married to Falcon Shadeborn",
+    "relationship_description": "Their relationship is a blend of love, respect, and mutual power, forged through years of trust and shared experiences.",
+    "ties": "Strong ties to the Court Darkwing and an extensive network of allies and confidants among both fae and mortal beings, though she keeps her divine heritage hidden."
+  },
+  "notes": [
+    "class: supreme",
+    "Title: Northern Court Councilman"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

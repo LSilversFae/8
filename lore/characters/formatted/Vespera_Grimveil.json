@@ -1,0 +1,76 @@
+{
+  "id": "vespera_grimveil",
+  "name": "Vespera_Grimveil",
+  "titles": [
+    "northern court councilmen"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "female",
+  "age": "120 (appears in her mid-20s)",
+  "realm": "Elarion",
+  "court": "Shadowborne",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "Vespera's skin now shimmers with the pale blue light of frost, as though she is constantly surrounded by a thin layer of ice. Silver-blue veins of ice-like patterns run across her body, glowing faintly when she uses her powers.",
+    "hair": "Her hair is long and dark with streaks of icy silver. It flows gently, as though touched by a winter breeze, even in still air.",
+    "eyes": "Her eyes are now a deep, icy blue with silver flecks that shine like stars on a winter night. Her gaze is as cold and sharp as the frost she commands.",
+    "notes": [
+      "horns: Small, delicately curved horns emerge from her head, adding an exotic touch to her otherwise gentle appearance.",
+      "aura: A freezing cold surrounds her, but it is soothing rather than harsh. Her presence brings with it both the calm of a winter's night and the promise of healing through the power of frost.",
+      "jewelry: ['Ornate gold jewelry, including layered necklaces with gemstone pendants', 'A delicate headpiece adorned with golden flowers', 'Elegant earrings']",
+      "height_and_build: Average height with a slender and graceful build, embodying the elegance and sensuality typical of the Fae."
+    ],
+    "wings": "Her wings are made of frost and shadow, large and majestic. They shimmer like ice under the moonlight but can disappear into shadow when she needs stealth. When extended, they exude an aura of cold.",
+    "attire": "{'main': 'A deep golden-yellow top and a red shawl draped over her shoulders, complementing her soft, elegant features.', 'tattoo': \"A faint, swirling tattoo curls up her left arm, representing her connection to ancient magic and her court's heritage.\"}",
+    "distinctive_features": "['Ethereal beauty that enhances her shadow and fae heritage', 'Ornate jewelry reflecting her noble status and connection to her people', 'Tattoo that glows faintly when she uses her magic, symbolizing her ancient lineage']"
+  },
+  "personality": {
+    "traits": [
+      "general demeanor: Gentle and nurturing, always ready to offer comfort or a healing touch.",
+      "wit: Possesses a sharp and playful sense of humor, delighting in light-hearted banter and the joy of making others smile.",
+      "empathy: Strong empathic abilities allow her to sense the emotions of those around her, enabling her to provide guidance and support.",
+      "compassion: Deeply invested in mending emotional wounds and nurturing relationships, she extends her compassion beyond physical healing.",
+      "hobbies and interests: ['Matchmaking, using her empathic abilities to encourage love and healing among those around her.', 'Indulging in friendly gossip, not out of malice but because she enjoys learning about others and helping them find happiness.']",
+      "presence: Her warm, motherly presence makes her beloved among her people, and she is always ready to lend a helping hand or a listening ear."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "Frostbound_Healing",
+      "description": "Vespera can heal her allies using the divine frost of Zaldran. Her ice can freeze wounds closed, preserving life and restoring vitality. It can also slow time for the injured, giving them more time to recover."
+    },
+    {
+      "name": "Umbriel's_Shadowveil",
+      "description": "She can summon a veil of shadow that cloaks her allies, hiding them from all forms of detection. This veil can also absorb attacks, making her allies nearly invulnerable while hidden."
+    },
+    {
+      "name": "Frozen_Soul_Bind",
+      "description": "Vespera can bind the souls of her enemies in eternal frost, freezing their life force and trapping them in suspended animation. This ability is powerful enough to trap even celestial beings."
+    },
+    {
+      "name": "Veil_of_Eternal_Winter",
+      "description": "She can summon a veil of divine frost that spreads across the battlefield, freezing enemies in place and protecting her allies. The frost also has healing properties for those she wishes to aid."
+    },
+    {
+      "name": "Shadowmend",
+      "description": "Using Umbriel's powers, Vespera can mend wounds with shadows, drawing out toxins, curses, or negative magic while restoring health and vitality to her allies."
+    }
+  ],
+  "relationships": {
+    "marek_grimveil": "{'relationship': 'Vespera shares a deep, loving bond with her husband, Marek Grimveil, who complements her gentle nature with his strength and determination.', 'dynamic': 'Their relationship is one of mutual respect and devotion, with Vespera often providing a softer perspective and guiding him with her wisdom.'}",
+    "matchmaking_efforts": "{'description': 'Vespera enjoys playing matchmaker among her friends and kin, always looking to bring more love and joy into the lives of those around her.'}",
+    "connections_with_other_characters": "[{'name': 'Riven Nightshade', 'relationship': 'Shares a diplomatic and friendly relationship with the King, often acting as an advisor in matters of healing and empathy.'}, {'name': 'Lilah Twilight', 'relationship': 'Vespera sees Lilah as a kindred spirit and supports her efforts to bring light and hope to the kingdom, providing guidance and comfort.'}]"
+  },
+  "notes": [
+    "pregnant: One of the first fea females pregnant due to Lilah reviving the realm and the fae. Pregnant by her mate Marek."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

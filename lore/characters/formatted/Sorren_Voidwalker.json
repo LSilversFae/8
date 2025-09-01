@@ -1,0 +1,67 @@
+{
+  "id": "sorren_voidwalker",
+  "name": "Sorren_Voidwalker",
+  "titles": [
+    "The Master Steward of the Royal Palace (Head Butler)",
+    "Keeper of Shadows",
+    "Advisor to the King"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "male",
+  "age": "Approximately 5,500 years old (appears in his mid-30s)",
+  "realm": "Elarion",
+  "court": "Veilborn",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "Pale blue, almost luminescent skin, giving him an ethereal, ghostly appearance.",
+    "hair": "Long, dark hair, always neatly tied back, emphasizing his pointed ears and sharp, angular features.",
+    "eyes": "Intense silver with a hint of violet, glowing faintly in dim light.",
+    "build": "Tall and lean with a commanding presence.",
+    "attire": "Impeccably dressed in a tailored dark suit, high-collared shirt, black gloves, and polished shoes. A golden brooch bearing the crest of his position adorns his lapel.",
+    "notes": [
+      "movements: Moves with fluid, almost unnaturally smooth movements, as if gliding rather than walking."
+    ]
+  },
+  "personality": {
+    "traits": [
+      "warm yet reserved: Projects cold authority but possesses deep warmth toward those he cares for, especially King Riven.",
+      "meticulous and detail oriented: Supervises the palace with supernatural precision, expecting excellence from himself and others.",
+      "unwavering loyalty: Loyal to the crown, rooted in genuine care for King Riven.",
+      "wise and insightful: Possesses centuries of knowledge and offers guidance with a preternatural ability to read people and situations.",
+      "protective: Fiercely protective of Riven and the palace, subtly expressed through acts of care rather than open aggression."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_manipulation",
+      "description": "Controls shadows, allowing silent movement, disappearing into darkness, and creating shadow constructs."
+    },
+    {
+      "name": "shadow_travel",
+      "description": "Moves through shadows, appearing and disappearing at will, making him nearly impossible to track."
+    },
+    {
+      "name": "influence_thoughts_and_emotions",
+      "description": "Subtly influences the thoughts and emotions of others, maintaining order or guiding conversations in his favor."
+    },
+    {
+      "name": "heightened_senses",
+      "description": "As a High Fae, possesses heightened senses, agility, and strength, able to detect the faintest sounds or movements."
+    }
+  ],
+  "relationships": {
+    "king_riven": "Has known Riven since he was a baby, acting as a mentor, guardian, and confidant. Shares a paternal affection for Riven, while respecting his role as king.",
+    "vesper_nightwhisper": "Shares a complicated past with Vesper, a relationship of mutual respect and rivalry, marked by camaraderie and tension.",
+    "palace_staff": "Seen as an authoritative figure, demanding the best, but deeply cares for the staff, earning their loyalty."
+  },
+  "notes": null,
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

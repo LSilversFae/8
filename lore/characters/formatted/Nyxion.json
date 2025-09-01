@@ -1,0 +1,83 @@
+{
+  "id": "nyxion",
+  "name": "Nyxion",
+  "titles": [
+    "tracker assassin"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "male",
+  "age": "2,000 years old",
+  "realm": "Elarion",
+  "court": "Grimshadow",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "notes": [
+      "height_and_build: Nyxion is tall and lean, with a wiry strength evident in his precise and calculated movements. His every step exudes the silent lethality of a predator.",
+      "ears: Elongated and tapering sharply, his ears hint at his fae lineage, emphasizing his ethereal and otherworldly appearance.",
+      "cloak: His cloak, woven from the threads of shadow itself, flows like liquid night. It shifts and blends into the surroundings, rendering him invisible in low light.",
+      "weapon: Nyxion wields dual shadow-forged daggers, their blades infused with the essence of silent death. The weapons hum faintly with latent energy, capable of piercing both physical and magical defenses."
+    ],
+    "skin": "His skin is an obsidian black with faint, rippling silver undertones that shimmer in moonlight. Etched across his form are glowing, intricate shadow glyphs, pulsing faintly during moments of intense magic use.",
+    "hair": "Nyxion's hair is short and sleek, resembling a curtain of black satin streaked with deep silver. It is often tousled yet functional, giving him an air of effortless control.",
+    "eyes": "His eyes are pools of liquid gold, flickering like candlelight in the darkness. When channeling his divine power, his gaze takes on a hypnotic, swirling pattern of gold and silver.",
+    "attire": "Nyxion dons shadow-forged leather armor, perfectly tailored for stealth and mobility. The dark fabric is enchanted to muffle sound and reflect minimal light, ensuring he is nearly undetectable."
+  },
+  "personality": {
+    "traits": [
+      "public demeanor: To those outside his trusted circle, Nyxion is cold and inscrutable, with an aura of unrelenting precision. His words are measured and deliberate, often leaving others unsettled.",
+      "among allies: Nyxion's demeanor softens among his allies in the Grimshadow Court. While still reserved, he shows moments of dry humor and calculated wisdom, earning the respect and trust of his peers.",
+      "inner world: Nyxion hides a deep yearning for purpose beyond his role as an assassin. He struggles to reconcile the life of duty he was born into with a growing desire for connection and meaning."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_manipulation",
+      "description": "Nyxion wields unparalleled control over shadows, shaping them into lethal weapons, barriers, or conduits for his magic."
+    },
+    {
+      "name": "shadow_walking",
+      "description": "Effortlessly moves through shadows, allowing him to teleport across distances unseen and unheard."
+    },
+    {
+      "name": "illusion_mastery",
+      "description": "Weaves complex and deadly illusions that can deceive even the most perceptive of enemies, creating chaos and fear."
+    },
+    {
+      "name": "umbral_shields",
+      "description": "Summons nearly impenetrable shields of shadow energy, capable of deflecting physical and magical attacks."
+    },
+    {
+      "name": "deathly_silence",
+      "description": "Channels divine power to suppress all sound within a certain radius, disorienting foes and rendering them vulnerable."
+    },
+    {
+      "name": "dark energy strikes",
+      "description": "Unleashes concentrated bursts of dark energy, capable of devastating his enemies in combat."
+    },
+    {
+      "name": "predators_instinct",
+      "description": "An innate ability passed from Varynex, allowing Nyxion to anticipate and counter his enemies' movements with surgical precision."
+    },
+    {
+      "name": "fae_aura_suppression",
+      "description": "Suppresses his magical presence, making him virtually invisible to magical detection and difficult to trace."
+    }
+  ],
+  "relationships": {
+    "loyalty_to_court": "Nyxion's loyalty to the Grimshadow Court is absolute, viewing his role as an assassin as both a duty and a sacred honor bestowed by his lineage.",
+    "professional_bonds": "He shares a mutual respect with the court's strategists and warriors, often collaborating on highly sensitive missions where his skills are indispensable.",
+    "romantic_potential": "Beneath his stoic exterior lies a vulnerability waiting to be uncovered by someone capable of understanding his internal conflicts and drawing him toward a life beyond duty and death."
+  },
+  "notes": [
+    "class: divine"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "mortalis",
+  "name": "Mortalis",
+  "titles": [
+    "God of Death and Rebirth"
+  ],
+  "species": null,
+  "gender": null,
+  "age": null,
+  "realm": null,
+  "court": null,
+  "affiliations": null,
+  "domains": [
+    "Death",
+    "Rebirth",
+    "Cycle of Life"
+  ],
+  "role": null,
+  "appearance": {
+    "skin": "Skeletal appearance with robes of midnight blue",
+    "hair": "None, face is half-human, half-skull",
+    "eyes": "Cold blue fire burning in his eye sockets",
+    "attire": "Carries a scythe entwined with blooming flowers"
+  },
+  "personality": {
+    "traits": [
+      "Stoic",
+      "Contemplative",
+      "Impartial",
+      "Philosophical"
+    ],
+    "temperament": "Sees beauty in endings and understands death as a doorway to a new beginning"
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [],
+  "relationships": {},
+  "notes": [
+    "role_in_council: One of the six gods on the council of Elysion, overseeing the cycle of existence and the transition between life and death."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "Gods_and_Goddesses"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "angelina",
+  "name": "Angelina",
+  "titles": [],
+  "species": "Divine Class High Queen Dryads",
+  "gender": "female",
+  "age": "30,000 years",
+  "realm": "Elarion",
+  "court": "Northern Fae Courts",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "Ethereal green, kissed by moonlight, with golden veins glowing softly beneath the surface, symbolizing her deep connection to nature and divine power.",
+    "hair": "Cascades in shimmering silver and green waves, flowing like moonlit water. Her hair moves as if enchanted by an eternal breeze.",
+    "eyes": "Luminous pools of silver and gold, flecked with emerald, holding the wisdom of ancient realms and reflecting her serene nature.",
+    "wings": "Majestic, leaf-shaped wings with translucent green and silver hues. Golden veins thread through them, giving the illusion of woven moonlight and stardust.",
+    "attire": "A gown made from enchanted leaves and silver-threaded vines, shifting from deep green to pale gold depending on the light, enhancing her connection to the earth.",
+    "distinctive_features": "Small flowers and vines bloom along her hair and gown, responding to her emotions. Her entire form glows with a soft, sunlit aura, giving her a goddess-like presence."
+  },
+  "personality": {
+    "traits": [
+      "Intelligent and observant, Angelina prefers to think before speaking or acting.",
+      "Thoughtful and soothing, able to calm even the most chaotic situations.",
+      "Deeply caring, though her demeanor may seem distant.",
+      "Calm Wisdom: Angelina remains thoughtful and analytical, often observing and reflecting before taking action. Her calm demeanor brings peace to those around her, even in the face of chaos.",
+      "Guardian Nature: She is fiercely protective of the realm, driven by her duty to nurture and guard the earth. Though her outward appearance is serene, those who threaten nature will face her full wrath."
+    ],
+    "virtues": [
+      "Ethereal Beauty and Charisma: Angelina's appearance has become so mesmerizingly beautiful that it can captivate and calm even the fiercest of opponents, allowing her to disarm foes with her presence alone.",
+      "Demon Binding: Her greatest feat, the ability to bind demons, remains one of her most dangerous abilities. She can harness the power of nature and light to trap dark entities.",
+      "Divine Blessing: Lilah's blood has imbued Angelina with enhanced healing powers, allowing her to regenerate quickly from wounds and share her healing abilities with others.",
+      "Dual Nature Control: Angelina now walks a fine line between light and darkness, able to channel both life-giving nature magic and the dangerous shadows left by her encounter with Kharvax and from Riven creating her."
+    ],
+    "flaws": [
+      "Tends to be overly responsible, feeling the need to guide her sisters constantly.",
+      "Can seem emotionally distant due to her reserved nature."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "Divine_Realm_Knowledge",
+      "description": "Angelina has gained divine wisdom from training for 30,000 years. She now possesses knowledge of every realm, able to access insights about their history, power, and creatures, and can travel freely between them."
+    },
+    {
+      "name": "Earth_Guardian",
+      "description": "Her divine power is directly tied to the life force of Elarion, enabling her to manipulate and protect the natural world. Forests grow at her command, mountains rise or fall, and rivers change course to suit her will."
+    },
+    {
+      "name": "Purification of Azrathar's Miasma",
+      "description": "One of Angelina's primary roles is to cleanse the land of Azrathar's dark miasma. Her divine power allows her to draw upon the life force of the earth to neutralize the corruption that threatens the realm."
+    },
+    {
+      "name": "Warden of Wraithwood Forest",
+      "description": "Angelina is tasked with maintaining the containment of Azrathar, the Demon Lord, within Wraithwood Forest. She strengthens the ancient wards that trap him, ensuring he remains bound to the forest and cannot spread his destruction across Elarion."
+    },
+    {
+      "name": "Celestial Binding",
+      "description": "Her most dangerous ability, Angelina can bind not only physical beings but the very essence of dark entities. This power traps enemies within the earth itself, rendering them powerless."
+    },
+    {
+      "name": "Verdant_Ascendancy",
+      "description": "Angelina can call upon the ancient spirits of the forest, summoning them in times of need. Trees, vines, and mystical creatures fight alongside her, bolstering her power in both offense and defense."
+    },
+    {
+      "name": "Healing Touch",
+      "description": "Angelina's healing powers are now divine in nature. She can heal even the gravest wounds, share her vitality with others, and restore entire regions affected by war or sickness."
+    },
+    {
+      "name": "Nature's Judgement",
+      "description": "In moments of dire need, Angelina can channel the full power of nature to unleash a devastating attack that binds and traps enemies in enchanted roots and vines infused with moonlight. This ability is incredibly powerful but risks triggering Kharvax's influence."
+    }
+  ],
+  "relationships": {
+    "King Riven": "{'description': 'Respects him deeply, often serving as his advisor among the sprites and understanding his struggles better than her sisters.', 'role_in_story': 'Acts as a subtle guide and trusted confidante for Riven, offering advice and support in critical moments.'}",
+    "Lilah Twilight": "{'description': \"Views Lilah with admiration and sees her as a source of light and balance. Angelina respects Lilah's compassionate nature and power.\", 'role_in_story': \"Her connection with Lilah aids in maintaining the balance between light and shadow magic, often drawing inspiration from Lilah's approach to problems.\"}",
+    "Sorren Voidwalker": "{'description': 'Shares an unspoken bond of understanding with Sorren, appreciating his loyalty to King Riven and valuing his counsel.', 'interactions': 'Their mutual respect and loyalty towards King Riven create a strong yet quiet bond between them.'}",
+    "Her Sisters": "{'Serenity': \"Has a soft spot for Serenity's antics, even though she tries not to show it.\", 'Gisele': 'Often advises Gisele when she gets herself into trouble.', 'Alyssa': \"Keeps an eye on Alyssa, ensuring she's comfortable as she naps.\", 'overall_role': 'Acts as the mediator and guide for her sisters, serving as their voice of reason and grounding force.'}"
+  },
+  "notes": [
+    "order_of_birth: 2"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "luminara",
+  "name": "Luminara",
+  "titles": [
+    "Goddess of Healing and Light"
+  ],
+  "species": null,
+  "gender": null,
+  "age": null,
+  "realm": null,
+  "court": null,
+  "affiliations": null,
+  "domains": [
+    "Healing",
+    "Light",
+    "Restoration"
+  ],
+  "role": null,
+  "appearance": {
+    "skin": "Golden skin that glows softly from within",
+    "hair": "Cascade of sunlight",
+    "eyes": "Warm amber glow",
+    "attire": "Robes of light, shifting in hues of gold, white, and lavender"
+  },
+  "personality": {
+    "traits": [
+      "Compassionate",
+      "Empathetic",
+      "Wise",
+      "Understanding"
+    ],
+    "temperament": "Believes in redemption and second chances, understanding the duality of light and shadow"
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [],
+  "relationships": {},
+  "notes": [
+    "role_in_council: One of the six gods on the council of Elysion, healer of both body and soul, dedicated to restoration and balance."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "Gods_and_Goddesses"
+  }
+}

@@ -1,0 +1,433 @@
+[
+  {
+    "id": "caelirion_nightshade",
+    "name": "Caelirion Nightshade",
+    "titles": [
+      "Heir of Harmony, Child of Light and Shadow"
+    ],
+    "realm": null,
+    "court": null,
+    "domains": [
+      "Unity",
+      "Primordial Balance",
+      "Creation and Destruction",
+      "Dream and Flame"
+    ]
+  },
+  {
+    "id": "alyssa",
+    "name": "Alyssa",
+    "titles": [
+      "High Queen of the Dryads",
+      "Guardian of Realms",
+      "Oracle of Earth and Dreams"
+    ],
+    "realm": "Elarion",
+    "court": "Northern Fae Courts",
+    "domains": []
+  },
+  {
+    "id": "angelina",
+    "name": "Angelina",
+    "titles": [],
+    "realm": "Elarion",
+    "court": "Northern Fae Courts",
+    "domains": []
+  },
+  {
+    "id": "draven_ashenborn",
+    "name": "Draven_Ashenborn",
+    "titles": [
+      "Knight Commander of The Northern Fae Courts Royal Guard; Bodyguard and confidant to King Riven"
+    ],
+    "realm": "Elarion",
+    "court": "Veilborn",
+    "domains": []
+  },
+  {
+    "id": "eamon_darkrider",
+    "name": "Eamon_Darkrider",
+    "titles": [
+      "northern court councilmen",
+      "Northern Fae General"
+    ],
+    "realm": "Elarion",
+    "court": "Grimshadow",
+    "domains": []
+  },
+  {
+    "id": "elara",
+    "name": "Elara",
+    "titles": [
+      "assassin"
+    ],
+    "realm": "Elarion",
+    "court": "Grimshadow",
+    "domains": []
+  },
+  {
+    "id": "elyndra",
+    "name": "Elyndra",
+    "titles": [],
+    "realm": "Elarion",
+    "court": "Veilborne",
+    "domains": []
+  },
+  {
+    "id": "elysia_nightstorm",
+    "name": "Elysia_Nightstorm",
+    "titles": [
+      "Divine Guardian of the Sacred Moon Waters (unknown to her)"
+    ],
+    "realm": "Elarion",
+    "court": "Nightshade",
+    "domains": []
+  },
+  {
+    "id": "erika_nightwhisper",
+    "name": "Erika_Nightwhisper",
+    "titles": [
+      "High Priestess of The Northern Fae Courts",
+      "Northern Court Councilmen"
+    ],
+    "realm": "Elarion",
+    "court": "Nightwhisper",
+    "domains": []
+  },
+  {
+    "id": "falcon_shadeborn",
+    "name": "Falcon_Shadeborn",
+    "titles": [
+      "northern court councilmen"
+    ],
+    "realm": "Elarion",
+    "court": "Darkwing",
+    "domains": []
+  },
+  {
+    "id": "giselle",
+    "name": "Giselle",
+    "titles": [],
+    "realm": "Elarion",
+    "court": "Northern Fae Courts",
+    "domains": []
+  },
+  {
+    "id": "isolde",
+    "name": "Isolde",
+    "titles": [
+      "assassin"
+    ],
+    "realm": "Elarion",
+    "court": "Grimshadow",
+    "domains": []
+  },
+  {
+    "id": "jarek_nightstorm",
+    "name": "Jarek_Nightstorm",
+    "titles": [
+      "northern court councilmen"
+    ],
+    "realm": "Elarion",
+    "court": "Court Nightshade",
+    "domains": []
+  },
+  {
+    "id": "krystine_stormglaive",
+    "name": "Krystine_Stormglaive",
+    "titles": [
+      "Lady Krystine of House Stormglaive",
+      "Knight of the Royal Order"
+    ],
+    "realm": "Elarion",
+    "court": "The Veilborn",
+    "domains": []
+  },
+  {
+    "id": "lilah_twilight",
+    "name": "lilah_twilight",
+    "titles": [
+      "Queen of the Northern Kingdom and Goddess of Light"
+    ],
+    "realm": null,
+    "court": null,
+    "domains": []
+  },
+  {
+    "id": "lythia",
+    "name": "Lythia",
+    "titles": [
+      "assassin"
+    ],
+    "realm": "Elarion",
+    "court": "Grimshadow",
+    "domains": []
+  },
+  {
+    "id": "marek_grimveil",
+    "name": "Marek_Grimveil",
+    "titles": [],
+    "realm": "Elarion",
+    "court": "Shadowborne",
+    "domains": []
+  },
+  {
+    "id": "nerisyth_nyxtar",
+    "name": "Nerisyth_Nyxtar",
+    "titles": [],
+    "realm": null,
+    "court": "Nightshade",
+    "domains": []
+  },
+  {
+    "id": "nyxion",
+    "name": "Nyxion",
+    "titles": [
+      "tracker assassin"
+    ],
+    "realm": "Elarion",
+    "court": "Grimshadow",
+    "domains": []
+  },
+  {
+    "id": "rael_thornheart",
+    "name": "Rael_Thornheart",
+    "titles": [],
+    "realm": "Elarion",
+    "court": "Grimshadow",
+    "domains": []
+  },
+  {
+    "id": "riven_nightshade",
+    "name": "Riven Nightshade",
+    "titles": [
+      "King of Shadows, Warden of the Crucible Flame"
+    ],
+    "realm": "Elarion",
+    "court": "Veilborn",
+    "domains": []
+  },
+  {
+    "id": "rose_starwhisper",
+    "name": "Rose_Starwhisper",
+    "titles": [
+      "Lady Rose of House Starwhisper"
+    ],
+    "realm": "Northern Fae Courts",
+    "court": "Nightwhisper",
+    "domains": []
+  },
+  {
+    "id": "seraphina_moonbane",
+    "name": "Seraphina_Moonbane",
+    "titles": [
+      "northern court councilmen"
+    ],
+    "realm": "Elarion",
+    "court": "Obsidianveil",
+    "domains": []
+  },
+  {
+    "id": "serenity",
+    "name": "Serenity",
+    "titles": [],
+    "realm": "Elarion",
+    "court": "Northern Fae Courts",
+    "domains": []
+  },
+  {
+    "id": "sorren_voidwalker",
+    "name": "Sorren_Voidwalker",
+    "titles": [
+      "The Master Steward of the Royal Palace (Head Butler)",
+      "Keeper of Shadows",
+      "Advisor to the King"
+    ],
+    "realm": "Elarion",
+    "court": "Veilborn",
+    "domains": []
+  },
+  {
+    "id": "sylthar_moonbane",
+    "name": "Sylthar_Moonbane",
+    "titles": [
+      "Northern Court Councilmen",
+      "Kharvax - The Herald of Ruin"
+    ],
+    "realm": "Elarion",
+    "court": "Obsidianveil",
+    "domains": []
+  },
+  {
+    "id": "thalassa_shadeborn",
+    "name": "Thalassa_Shadeborn",
+    "titles": [],
+    "realm": "Elarion",
+    "court": "Darkwing",
+    "domains": []
+  },
+  {
+    "id": "valdris",
+    "name": "Valdris",
+    "titles": [
+      "lead assassin"
+    ],
+    "realm": "Elarion",
+    "court": "Grimshadow",
+    "domains": []
+  },
+  {
+    "id": "vesper_nightwhisper",
+    "name": "Vesper_Nightwhisper",
+    "titles": [
+      "High Priest of The Northern Fae Courts",
+      "northern court councilmen"
+    ],
+    "realm": "Elarion",
+    "court": "Nightwhisper",
+    "domains": []
+  },
+  {
+    "id": "vespera_grimveil",
+    "name": "Vespera_Grimveil",
+    "titles": [
+      "northern court councilmen"
+    ],
+    "realm": "Elarion",
+    "court": "Shadowborne",
+    "domains": []
+  },
+  {
+    "id": "zareth",
+    "name": "Zareth",
+    "titles": [
+      "assassin"
+    ],
+    "realm": "Elarion",
+    "court": "Grimshadow",
+    "domains": []
+  },
+  {
+    "id": "cyris_lumineth",
+    "name": "Cyris_Lumineth",
+    "titles": [],
+    "realm": "Elarion",
+    "court": "Dawnspire",
+    "domains": []
+  },
+  {
+    "id": "isalyn_brightwing",
+    "name": "Isalyn_Brightwing",
+    "titles": [],
+    "realm": "Elarion",
+    "court": "Dawnspire",
+    "domains": []
+  },
+  {
+    "id": "the_god_king",
+    "name": "The God King",
+    "titles": [
+      "Sovereign of Divine Order"
+    ],
+    "realm": null,
+    "court": null,
+    "domains": [
+      "Creation",
+      "Balance",
+      "Law",
+      "Cosmic Harmony"
+    ]
+  },
+  {
+    "id": "draelis",
+    "name": "Draelis",
+    "titles": [
+      "Goddess of Shadows and Mysteries"
+    ],
+    "realm": null,
+    "court": null,
+    "domains": [
+      "Shadows",
+      "Secrets",
+      "The Unknown"
+    ]
+  },
+  {
+    "id": "eldoria",
+    "name": "Eldoria",
+    "titles": [],
+    "realm": null,
+    "court": null,
+    "domains": []
+  },
+  {
+    "id": "kaelos",
+    "name": "Kaelos",
+    "titles": [
+      "God of Flame and Forge"
+    ],
+    "realm": null,
+    "court": null,
+    "domains": [
+      "Fire",
+      "Craftsmanship",
+      "Destruction"
+    ]
+  },
+  {
+    "id": "liora",
+    "name": "Liora",
+    "titles": [
+      "Goddess of Serenity and Nature"
+    ],
+    "realm": null,
+    "court": null,
+    "domains": [
+      "Serenity",
+      "Vitality",
+      "Nature"
+    ]
+  },
+  {
+    "id": "luminara",
+    "name": "Luminara",
+    "titles": [
+      "Goddess of Healing and Light"
+    ],
+    "realm": null,
+    "court": null,
+    "domains": [
+      "Healing",
+      "Light",
+      "Restoration"
+    ]
+  },
+  {
+    "id": "mortalis",
+    "name": "Mortalis",
+    "titles": [
+      "God of Death and Rebirth"
+    ],
+    "realm": null,
+    "court": null,
+    "domains": [
+      "Death",
+      "Rebirth",
+      "Cycle of Life"
+    ]
+  },
+  {
+    "id": "thyrenos",
+    "name": "Thyrenos",
+    "titles": [
+      "God of Wisdom and Time"
+    ],
+    "realm": null,
+    "court": null,
+    "domains": [
+      "Wisdom",
+      "Time",
+      "Knowledge"
+    ]
+  }
+]

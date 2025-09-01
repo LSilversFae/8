@@ -1,0 +1,45 @@
+{
+  "id": "nerisyth_nyxtar",
+  "name": "Nerisyth_Nyxtar",
+  "titles": [],
+  "species": null,
+  "gender": null,
+  "age": null,
+  "realm": null,
+  "court": "Nightshade",
+  "affiliations": null,
+  "domains": [],
+  "role": "Head of Naval Unit and Assassins",
+  "appearance": {
+    "hair": "Midnight black with shimmering silver strands that reflect moonlight, flowing like waves of dark water.",
+    "eyes": "Deep ocean blue, swirling with shadow and flecks of silver like starlight on water.",
+    "skin": "Pale, with an ethereal glow under moonlight, marked with intricate silver and black runes.",
+    "notes": [
+      "aura: A mix of dark allure and otherworldly beauty, commanding attention yet cloaked in mystery."
+    ]
+  },
+  "personality": {
+    "traits": [
+      "tactical and calculating: Master strategist, always several steps ahead of her enemies.",
+      "cold and detached on battlefield: Icy demeanor in combat, emotionally distant to make precise decisions.",
+      "loyal but reserved: Fiercely loyal to the Nightshade Court, but keeps her thoughts and emotions hidden.",
+      "dark charisma: Emotionally distant but wields beauty and allure as a weapon for manipulation.",
+      "relentlessly perfectionist: Holds herself and soldiers to impossibly high standards.",
+      "hidden compassion: Deeply cares for her soldiers, silently tending to the injured when necessary.",
+      "philosophical about power and death: Sees herself as both a preserver of order and a harbinger of destruction.",
+      "inner conflict: Struggles between darker instincts from Abyssidon and the calming serenity from Lunaris."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [],
+  "relationships": {},
+  "notes": [
+    "internal_conflict: Struggles between darker instincts and calm serenity."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "isolde",
+  "name": "Isolde",
+  "titles": [
+    "assassin"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "female",
+  "age": "2,000 years old",
+  "realm": "Elarion",
+  "court": "Grimshadow",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "notes": [
+      "height_and_build: Isolde is of medium height, with a lithe and agile frame that radiates an aura of deadly elegance. Her movements are as silent and fluid as a shadow in moonlight.",
+      "ears: Her elongated ears are elegantly curved and adorned with delicate violet gemstones, enhancing her ethereal appearance.",
+      "cloak: Her cloak, woven from pure darkness, seems to drink in the surrounding light, enveloping her in near-perfect invisibility. It shifts fluidly with her movements, enhancing her stealth.",
+      "weapon: Isolde wields a pair of elegant shadow-forged rapiers, their edges glowing with a faint violet light. These weapons are extensions of her lethal precision and grace."
+    ],
+    "skin": "Her skin is a deep onyx black, smooth and radiant, with faint violet undertones that shimmer under magical light.",
+    "hair": "Isolde's hair flows like liquid night, a cascade of silken black streaked with subtle silver highlights. It is often styled into intricate braids that emphasize both her grace and practicality.",
+    "eyes": "Her eyes are a mesmerizing amethyst, glowing faintly in the darkness. When channeling her divine powers, her gaze intensifies, reflecting the infinite depth of Nyxralis's eternal night.",
+    "attire": "Isolde's attire is a blend of functionality and artistry: a sleek bodysuit of shadow silk, accented with violet and silver embroidery in the patterns of night constellations."
+  },
+  "personality": {
+    "traits": [
+      "public demeanor: Isolde projects an aura of composed confidence and quiet authority. Her calm, calculating demeanor commands respect and leaves an impression of impenetrable mystery.",
+      "among allies: Among her allies in the Grimshadow Court, Isolde is a supportive and insightful presence. She offers measured advice and possesses a quiet humor that surfaces in moments of camaraderie.",
+      "inner world: Beneath her serene exterior lies a soul shaped by the burdens of her divine lineage. Isolde harbors a yearning for understanding and connection, seeking meaning beyond the endless cycle of shadows and retribution."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_blade_mastery",
+      "description": "Isolde wields her rapiers with unparalleled precision, channeling shadow energy into strikes that bypass armor and magical defenses."
+    },
+    {
+      "name": "veil of invisibility",
+      "description": "Inherited from Nyxralis, Isolde can render herself and nearby allies completely invisible, blending seamlessly into her surroundings."
+    },
+    {
+      "name": "phantom strike",
+      "description": "A rapid, devastating attack where Isolde becomes a blur of motion, striking her enemies before vanishing back into the shadows."
+    },
+    {
+      "name": "shadowmeld",
+      "description": "Allows Isolde to dissolve into shadows, becoming intangible and immune to physical attacks for a short duration."
+    },
+    {
+      "name": "eclipse aura",
+      "description": "Summons a dark aura that disorients and weakens enemies, lowering their defenses and making them vulnerable to her strikes."
+    },
+    {
+      "name": "illusion mastery",
+      "description": "Weaves complex illusions that confuse and terrify her foes, creating openings for lethal attacks."
+    },
+    {
+      "name": "nyxralis's touch",
+      "description": "Enhances her agility and perception in darkness, allowing her to anticipate and counter enemy movements with unmatched precision."
+    },
+    {
+      "name": "valthira's resolve",
+      "description": "Calls upon her divine heritage to enhance her combat prowess, allowing her to execute flawless strikes in battle."
+    }
+  ],
+  "relationships": {
+    "loyalty_to_court": "Isolde is deeply loyal to the Grimshadow Court, viewing her role as an assassin as both a duty and a sacred calling from her divine lineage.",
+    "professional_bonds": "Isolde shares a respectful and collaborative relationship with her fellow assassins and strategists. Her calm and composed nature makes her a trusted confidant in high-stakes situations.",
+    "romantic_potential": "Isolde's reserved demeanor hides a deep capacity for connection. She may find a romantic bond with someone who can appreciate the complexity of her soul and offer her a sense of peace amidst the shadows."
+  },
+  "notes": [
+    "class: divine"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

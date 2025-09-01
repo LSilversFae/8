@@ -1,0 +1,84 @@
+{
+  "id": "zareth",
+  "name": "Zareth",
+  "titles": [
+    "assassin"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "male",
+  "age": "2,000 years old",
+  "realm": "Elarion",
+  "court": "Grimshadow",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "notes": [
+      "height_and_build: Zareth is tall and lean, his physique honed to lethal perfection. He moves with the silent precision of a predator, each step calculated and deliberate.",
+      "ears: His ears are elongated and sharp, adorned with simple, dark metallic cuffs that match his twin sister's.",
+      "cloak: His cloak, like Elara's, is woven from pure shadow and moves with an almost sentient fluidity, aiding in his stealth.",
+      "weapon: Zareth wields an umbral greatsword, its blade wreathed in shifting shadow and edged with crimson energy. It is a weapon of devastating precision and power."
+    ],
+    "skin": "His skin mirrors Elara's, a pale obsidian black with faint crimson undertones that shimmer subtly under shadow magic.",
+    "hair": "Zareth's hair is shoulder-length, an inky black with crimson streaks. It is usually tied back, lending him a sense of calculated efficiency.",
+    "eyes": "Zareth's eyes are molten gold with faint crimson flecks, glowing with predatory intensity. When channeling his divine power, his gaze becomes hypnotic and commanding.",
+    "attire": "Zareth wears lightweight shadow-forged armor designed for combat and stealth. Its intricate, crimson-edged designs are a perfect complement to his twin's attire."
+  },
+  "personality": {
+    "traits": [
+      "public demeanor: Zareth is the quieter of the twins, exuding a calm, lethal energy. His presence commands respect, and his silence often speaks louder than words.",
+      "among allies: Among his allies, Zareth is a steady and reliable figure. He offers thoughtful advice and unwavering support, earning deep trust from those who know him.",
+      "inner world: Zareth struggles with the burden of his lineage, balancing the weight of expectation with a quiet desire for a life defined by more than duty and death."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_blade_mastery",
+      "description": "Zareth wields his umbral greatsword with unparalleled skill, delivering precise and devastating strikes."
+    },
+    {
+      "name": "shadow_walking",
+      "description": "Masters the art of traversing shadows, allowing him to move undetected and strike from unexpected angles."
+    },
+    {
+      "name": "crimson_veil",
+      "description": "Surrounds himself in an aura of shadows laced with crimson energy, enhancing his defense and combat capabilities."
+    },
+    {
+      "name": "dark aegis",
+      "description": "Summons a powerful shield of shadow energy to protect himself and his allies from attacks."
+    },
+    {
+      "name": "illusion_breaker",
+      "description": "Inherits a unique ability to see through illusions and dispel magical deceptions, making him invaluable in unraveling enemy plans."
+    },
+    {
+      "name": "fae aura suppression",
+      "description": "Suppresses his magical presence, making him undetectable to physical and magical senses."
+    },
+    {
+      "name": "predator's grace",
+      "description": "Shares this ability with Elara, allowing for seamless teamwork in combat as they anticipate and execute their moves with deadly precision."
+    },
+    {
+      "name": "valthira's resolve",
+      "description": "Channels divine energy to amplify his physical and magical prowess in critical moments."
+    }
+  ],
+  "relationships": {
+    "twin_bond": "Zareth and Elara are an inseparable team, their bond transcending words. In battle and beyond, they are each other's greatest strength.",
+    "loyalty_to_court": "Zareth's dedication to the Grimshadow Court is absolute, rooted in both duty and pride in his heritage.",
+    "professional_bonds": "Zareth shares a deep mutual respect with the court's warriors and strategists, often acting as a quiet leader in critical moments.",
+    "romantic_potential": "Though reserved, Zareth harbors a quiet longing for someone who can see beyond his stoicism and offer him the freedom to express his hidden depths."
+  },
+  "notes": [
+    "class: divine"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

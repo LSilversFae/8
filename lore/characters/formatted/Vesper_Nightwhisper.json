@@ -1,0 +1,67 @@
+{
+  "id": "vesper_nightwhisper",
+  "name": "Vesper_Nightwhisper",
+  "titles": [
+    "High Priest of The Northern Fae Courts",
+    "northern court councilmen"
+  ],
+  "species": "['Shadow High Fae', 'Demigod']",
+  "gender": "male",
+  "age": "Appears to be in his late 30s but is several centuries old",
+  "realm": "Elarion",
+  "court": "Nightwhisper",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "Vesper's pale skin now glows with a faint silver light, and dark lines that resemble the pathways of the mind and fate wind across her body, pulsing softly when she uses her powers.",
+    "wings": "His wings are formed from the wisps of shadow and light, appearing as though woven from threads of fate itself. They shimmer and shift constantly, never solid for long, reflecting her mastery of hidden paths and mental realms.",
+    "hair": "His black hair now has silver streaks that glimmer like threads of fate. It seems to shift and twist, as though caught in a gentle, unseen wind.",
+    "eyes": "His eyes have become silver, with swirling labyrinth-like patterns within them, representing her connection to Kalethar and the mental realms. His gaze is piercing, seeing through lies and illusions.",
+    "notes": [
+      "features: Sharp, noble features with high cheekbones, characteristic of fae nobility.",
+      "aura: A shroud of mystery and destiny surrounds him, making those around his feel as though they are part of a larger plan. His presence commands respect, as if he holds the secrets of fate itself",
+      "sigil: A glowing sigil on his chest, pulsing with ethereal light, representing his divine connection.",
+      "rings_and_crystals: His fingers are adorned with rings embedded with gemstones, and he is often surrounded by small glowing crystals and wisps of light that swirl around him."
+    ],
+    "attire": "Dark, intricately embroidered robes adorned with golden patterns representing sacred symbols and runes of the Northern Fae Courts."
+  },
+  "personality": {
+    "traits": [
+      "devout and steadfast: Unyielding faith in the gods and a strong sense of duty.",
+      "enigmatic and mysterious: Speaks in riddles and metaphors, making him difficult to understand and sometimes frustrating those who seek his guidance.",
+      "protective and caring: Deeply cares for his people, though he often expresses it through stern lessons and character tests.",
+      "internal conflict: Struggles with reconciling his identity as both a high priest and a demigod, adding an element of vulnerability and uncertainty to his character."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "elemental_powers",
+      "description": null,
+      "application": null
+    },
+    {
+      "name": "divine_powers",
+      "description": null,
+      "application": null
+    },
+    {
+      "name": "portal_opening",
+      "description": "Tears through space, opening portals for physical travel or to ethereal planes where past, present, and future intertwine."
+    }
+  ],
+  "relationships": {
+    "with_king_riven": "Serves as a chief advisor, guiding King Riven through the complexities of rule and fate.",
+    "with_erika_nightwhisper": "Shares a deep bond with Erika, his mate. Their relationship is complex, balancing light and shadow, passion and restraint."
+  },
+  "notes": [
+    "class: supreme"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

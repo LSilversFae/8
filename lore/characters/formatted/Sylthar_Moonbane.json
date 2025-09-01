@@ -1,0 +1,70 @@
+{
+  "id": "sylthar_moonbane",
+  "name": "Sylthar_Moonbane",
+  "titles": [
+    "Northern Court Councilmen",
+    "Kharvax - The Herald of Ruin"
+  ],
+  "species": "['High Demon (Glamoured to appear as a Swamp Fae)', 'God']",
+  "gender": "male",
+  "age": "Appears to be in his early 30s (true age: ancient, likely over several millennia)",
+  "realm": "Elarion",
+  "court": "Obsidianveil",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "notes": [
+      "glamoured_form: {'skin': 'Vibrant, textured green, resembling the scales of a reptile, with intricate patterns that cover his face and extend down his neck.', 'head_and_facial_features': 'Narrow and elongated face with sharp, angular features. His forehead is adorned with faintly glowing sigils that pulse with emerald light, looking like the roots of ancient swamp trees.', 'eyes': 'Yellow-gold, slitted like a serpent, with a piercing intensity. They emit a faint, eerie glow in the dark, making him appear perpetually watchful.', 'horns': 'Two upward-arching, ridged horns twist backward, resembling gnarled tree roots or swamp vines.', 'ears': 'Elongated, sharply pointed ears with a more rigid, angular quality, betraying their demonic origin.', 'clothing': 'Wears garments composed of woven vines, moss, and dark leather strips, blending seamlessly with the swamp environment. The material is accented with bits of bone and obsidian.', 'jewelry_accessories': 'Black cords wrap around his neck, bearing small, carved bone talismans and a single amulet etched with demonic runes.'}",
+      "true_form: {'skin': 'Darker, turning into a void-like shade of greenish-black. The elegant fae features transform into something far more sinister.', 'horns': 'Horns extend and curl backward, becoming more prominent and jagged.', 'eyes': 'Burn with an intense, fiery red glow.', 'sigils': 'The sigils on his skin pulse with crimson light, marking his heritage as the Herald of Ruin.'}"
+    ]
+  },
+  "personality": {
+    "traits": [
+      "Enjoys deception and exploiting the weaknesses of others.",
+      "Capable of whimsical humor, often laced with mockery or malice.",
+      "Holds no true loyalty to anyone except his brother, Azrathar.",
+      "Relishes manipulation and using others as pawns in his schemes.",
+      "demeanor: Cold, calculating, and precise. Sylthar maintains an air of aloofness, appearing detached and contemplative as a swamp fae."
+    ]
+  },
+  "lineage": {
+    "notes": [
+      "brother: Azrathar, Demon Lord of Shadows and Fear"
+    ],
+    "father": "God King of Elysion"
+  },
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "primordial_darkness_manipulation",
+      "description": "Control over shadows and ancient, malevolent darkness from the Abyss, manifesting as tendrils, creatures, or an aura of fear."
+    },
+    {
+      "name": "demonic_glamour",
+      "description": "His ability to mask his true form is nearly flawless, allowing him to pass as a swamp fae even among other fae. This illusion extends to his voice, scent, and magical aura, making it extremely difficult to detect his true nature."
+    },
+    {
+      "name": "shadowstep",
+      "description": "Can travel through shadows, allowing him to appear and disappear without warning, making him an expert at ambushes and evasions."
+    },
+    {
+      "name": "darkfire_conjuration",
+      "description": "Wields black flames that can burn both the physical and spiritual essence of his enemies. These flames are cold to the touch and emit a faint, eerie blue glow."
+    },
+    {
+      "name": "mind_corruption",
+      "description": "Has the ability to manipulate the minds of those around him, planting seeds of doubt, fear, or madness, often turning allies against each other or breaking his enemies' will."
+    }
+  ],
+  "relationships": {
+    "Azrathar": "{'relationship': \"Sylthar's loyalty lies firmly with his older brother, whom he respects and admires for his power and vision. He serves as Azrathar's eyes and ears within the mortal realm, always ready to carry out his brother's will.\"}",
+    "Seraphina Moonbane": "{'relationship': 'Appears to be her subordinate but is, in truth, her overseer and potential executioner. He sees her as an expendable pawn in the grand scheme, though he occasionally finds her tenacity and wit amusing. He is ever watchful for any sign of betrayal or weakness.'}"
+  },
+  "notes": null,
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

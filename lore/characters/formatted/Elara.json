@@ -1,0 +1,84 @@
+{
+  "id": "elara",
+  "name": "Elara",
+  "titles": [
+    "assassin"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "female",
+  "age": "2,000 years old",
+  "realm": "Elarion",
+  "court": "Grimshadow",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "notes": [
+      "height_and_build: Elara is tall and statuesque, her form exuding lethal elegance and quiet strength. Her movements are a dance of grace and precision, perfectly honed for stealth and combat.",
+      "ears: Her elongated ears are sharply tapered, adorned with delicate, dark metallic cuffs engraved with ancient runes of her lineage.",
+      "cloak: Her cloak, woven from the essence of shadow and night, moves as though alive, enveloping her in an aura of invisibility and intimidation.",
+      "weapon: Elara wields a pair of umbral daggers, their edges wreathed in crimson energy. These weapons are said to cut not just flesh but the very essence of a being."
+    ],
+    "skin": "Her skin is a pale, obsidian black with faint crimson undertones, shimmering with an otherworldly luminescence when touched by shadow magic.",
+    "hair": "Elara's hair is a flowing cascade of midnight blue, streaked with threads of blood-red. It is often braided intricately, both for practicality and as a reflection of her divine heritage.",
+    "eyes": "Her eyes are a striking crimson, glowing faintly like embers in the dark. When channeling her divine abilities, her gaze radiates a fierce, hypnotic intensity.",
+    "attire": "Elara wears a sleek, shadow-forged bodysuit tailored for stealth and flexibility. It is accented with dark crimson embroidery that seems to shift like flowing blood."
+  },
+  "personality": {
+    "traits": [
+      "public demeanor: Elara radiates a cold, commanding presence. Her words are few but impactful, leaving those around her in quiet awe or intimidation.",
+      "among allies: Among trusted members of the Grimshadow Court, she is a quiet but insightful presence, offering sharp observations and unwavering loyalty. Her camaraderie is subtle but deeply valued.",
+      "inner world: Beneath her composed exterior, Elara carries the weight of her divine lineage and a yearning for purpose beyond the endless cycle of death and retribution. Her heart is a battlefield between duty and a longing for solace."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_blade_mastery",
+      "description": "Elara can summon and wield blades of pure shadow, capable of piercing both physical and magical defenses with deadly precision."
+    },
+    {
+      "name": "shadow_walking",
+      "description": "Effortlessly traverses shadows, allowing her to teleport across distances without leaving a trace."
+    },
+    {
+      "name": "crimson_veil",
+      "description": "Shrouds herself in an aura of shadows laced with crimson energy, which absorbs and reflects damage while intimidating her enemies."
+    },
+    {
+      "name": "umbral_retribution",
+      "description": "Channels her divine heritage to unleash devastating, targeted attacks that combine speed, precision, and lethal force."
+    },
+    {
+      "name": "illusion_weaving",
+      "description": "Crafts intricate illusions that deceive, disorient, or terrify her enemies, creating opportunities for lethal strikes."
+    },
+    {
+      "name": "dark aura suppression",
+      "description": "Conceals her presence entirely, making her undetectable to both physical and magical senses."
+    },
+    {
+      "name": "predator's grace",
+      "description": "Inherited from Thalvyr, Elara possesses an unmatched ability to strike with deadly accuracy and evade counterattacks with fluid, almost dance-like movements."
+    },
+    {
+      "name": "valthira's resolve",
+      "description": "Calls upon her divine lineage to enhance her combat prowess, making her nearly unstoppable in battle for a short period."
+    }
+  ],
+  "relationships": {
+    "twin_bond": "Elara and Zareth share an unbreakable connection, both in their divine powers and their personal bond. They work seamlessly as a team, often anticipating each other's moves in battle.",
+    "loyalty_to_court": "Elara's loyalty to the Grimshadow Court is unwavering, viewing her role as a sacred extension of her divine heritage.",
+    "professional_bonds": "While often aloof, she shares a deep respect with her fellow assassins and strategists. Her reliability and excellence have earned her their trust.",
+    "romantic_potential": "Elara's stoic nature conceals a hidden vulnerability. A connection may arise with someone who can see past her walls and offer her the balance and solace she secretly craves."
+  },
+  "notes": [
+    "class: divine"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

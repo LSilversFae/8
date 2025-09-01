@@ -1,0 +1,81 @@
+{
+  "id": "marek_grimveil",
+  "name": "Marek_Grimveil",
+  "titles": [],
+  "species": "High Shadow Fae",
+  "gender": "male",
+  "age": "Appears to be in his mid-20s, but as a high fae elder, his true age stretches back several centuries.",
+  "realm": "Elarion",
+  "court": "Shadowborne",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "His sapphire-blue skin now shimmers with frost, and silver veins of ice trace intricate patterns across his body, especially when he wields his divine frost powers.",
+    "hair": "His dark hair has streaks of silver frost, and in battle, snowflakes swirl around him as if drawn by his presence.",
+    "eyes": "His golden eyes have become more intense, glowing with both wisdom and the cold fury of Zaldran, the Frost Lord. Ice-blue flecks dance around his irises, representing his connection to eternal winter.",
+    "notes": [
+      "horns: Spiraling upward from his head with intricate engravings resembling ancient runes of power.",
+      "facial_features: Sharp and angular with high cheekbones and pointed ears that suggest his fae lineage.",
+      "physique: Lean but well-defined, radiating a sense of effortless strength and agility.",
+      "runes: New runes have appeared on his arms, glowing faintly blue and silver, symbols of his divine connection to both shadow and frost​​."
+    ],
+    "attire": "Wears a long, earth-toned scarf draped over his shoulders, layered with ropes, and adorned with an ornate golden pendant, a family relic signifying his rank as Duke.",
+    "wings": "Large, ethereal wings of translucent ice and shadow now extend from his back. The wings appear solid but shift into shadowy tendrils in combat, allowing him to travel through darkness."
+  },
+  "personality": {
+    "traits": [
+      "general demeanor: Playful, charismatic, and a master of mischief. Finds humor even in the darkest situations.",
+      "inner conflicts: Beneath his joking demeanor lies a profound sense of wisdom and responsibility, and he is not afraid to step into a leadership role when needed.",
+      "with others: Magnetic, drawing people to him effortlessly, and he uses his charm to lead with both compassion and understanding.",
+      "loyalty: Fiercely loyal and deeply compassionate, especially toward those he holds dear.",
+      "leadership style: He leads with both compassion and strength, embodying a sense of duty and care for his people, and has a strong protective instinct towards Morinthal."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_manipulation",
+      "description": "Marek can control shadows, bending them to his will. He often uses this ability for playful illusions or as a means to travel swiftly through darkness."
+    },
+    {
+      "name": "illusion_crafting",
+      "description": "His magic allows him to weave elaborate illusions, ranging from simple tricks of the eye to complex, multi-layered scenes."
+    },
+    {
+      "name": "nightmare_weaving",
+      "description": "As a last resort, Marek can tap into the fears of others, manifesting their nightmares into reality. He wields this power with caution, as it can have devastating effects."
+    },
+    {
+      "name": "healing_touch",
+      "description": "As part of the Court Shadowborne, Marek can heal wounds with his touch, drawing on the influence of the healing god Elirae. He can mend injuries, cure sickness, and even transfer his own life energy to another if necessary."
+    },
+    {
+      "name": "shadowbinding",
+      "description": "Marek can use shadows to seal wounds, stabilizing life-threatening injuries instantly. This ability is unique to the people of Morinthal and is a manifestation of their connection to both darkness and light."
+    },
+    {
+      "name": "heartbond",
+      "description": "Capable of invoking the Heartbond, a rare and powerful connection that allows him to transfer life energy from himself to save another, though this comes at a great cost to his own strength."
+    },
+    {
+      "name": "divine_abilities",
+      "description": null,
+      "application": null
+    }
+  ],
+  "relationships": {
+    "mate": "{'name': 'Vespera Grimveil', 'description': 'Marek is unwaveringly devoted to his mate and wife, whom he regards as the light that tames his darkness. Their bond is one of equals, and their love is as deep as the shadows that envelop their village.'}",
+    "friend": "{'name': 'Jarek of the Court Nightshade', 'description': 'Marek's closest friend and partner in crime. The two share a brotherhood forged through centuries of shared adventures and battles, often found together in shadowy taverns, swapping tales and laughter.'}"
+  },
+  "notes": [
+    "class: awakened",
+    "Title: Northern Court Councilman"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

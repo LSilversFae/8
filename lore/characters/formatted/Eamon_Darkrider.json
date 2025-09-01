@@ -1,0 +1,76 @@
+{
+  "id": "eamon_darkrider",
+  "name": "Eamon_Darkrider",
+  "titles": [
+    "northern court councilmen",
+    "Northern Fae General"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "male",
+  "age": "2,000 years old",
+  "realm": "Elarion",
+  "court": "Grimshadow",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "notes": [
+      "height_and_build: Eamon stands tall and imposing, towering over most men at over six feet, with a muscular and powerful build honed from countless battles.",
+      "horns: Two large, curling horns protrude from his forehead, twisting upward with a menacing elegance, their dark, rough texture like the shadow and ice he commands.",
+      "ears: His ears are long and pointed, adding to his predatory, otherworldly aura.",
+      "cloak: His cloak is made from the pelt of a shadowbeast, drinking in the light around him, making him appear as though he's half-formed from darkness itself.",
+      "weapon: A massive, multi-pronged weapon is strapped to his back, a symbol of his role as a warrior and his connection to his divine heritage."
+    ],
+    "skin": "His skin is an otherworldly pale, touched by frost, etched with faint, silvery scars that glow faintly in the moonlight, marks of his divine lineage.",
+    "hair": "His hair is a mane of midnight black, streaked with silver and blue, often cascading down his shoulders in thick waves, braided with leather cords.",
+    "eyes": "Eamon's eyes are an intense, glowing ice-blue, capable of an intimidating, soul-piercing stare.",
+    "attire": "He wears dark, rugged leather armor, adorned with fur accents around the shoulders, and shadow-forged steel, etched with ancient, shifting runes."
+  },
+  "personality": {
+    "traits": [
+      "public demeanor: To those outside his inner circle, he is stoic, intimidating, and silent, his presence alone enough to command respect and fear. He speaks only when necessary, and his words are clipped and direct, often carrying the weight of his authority.",
+      "battlefield presence: On the battlefield, he is unyielding, relentless, and calculating, embodying the essence of war itself.",
+      "among comrades: Among his comrades and Court Grimshadow, Eamon reveals a completely different side—boisterous, loud, and full of life. He enjoys revels, often leading his warriors in songs, jokes, and hearty celebrations. His laughter is deep and infectious, and he possesses a sharp, witty sense of humor, frequently engaging in playful banter.",
+      "leadership style: This side of him fosters a deep sense of loyalty and camaraderie within his tribe, making him not just a leader but a brother to those who fight alongside him."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_manipulation",
+      "description": "Eamon can summon and control shadows, bending them to his will. He can use them as weapons, cloak himself in darkness to become nearly invisible, or weave them into armor that shifts and protects him."
+    },
+    {
+      "name": "ice_manipulation",
+      "description": "He wields the power of ice with the same ease as a blade, capable of freezing entire landscapes or summoning blizzards in the heat of battle. His touch can freeze enemies in place, and he can form weapons and shields of pure, unbreakable ice."
+    },
+    {
+      "name": "death_manipulation",
+      "description": "This power allows him to command spirits and the souls of the dead, bending them to his will. He can drain life from those who oppose him, or even momentarily raise fallen warriors to fight alongside him, though this ability comes with a heavy cost."
+    },
+    {
+      "name": "darkness_manipulation",
+      "description": "The darkness answers his call, allowing him to create tendrils of shadow that can bind, attack, or even teleport him short distances. He can plunge entire areas into darkness, blinding his enemies while allowing his allies to see."
+    },
+    {
+      "name": "divine_abilitiess",
+      "description": null,
+      "application": null
+    }
+  ],
+  "relationships": {
+    "loyalty_to_court": "Eamon is fiercely loyal to his court, and they, in turn, are deeply devoted to him. They see him as not only a leader but as a brother, a friend, and a warrior they would follow to the ends of the earth.",
+    "tribal_bonds": "His relationships with his warriors are marked by camaraderie, respect, and genuine affection. Despite his intimidating exterior, Eamon shares a close bond with his tribe's elders and warriors, often seeking their counsel and sharing in their laughter and stories.",
+    "romantic_potential": "Potential romantic relationships could develop with a character who can see beyond his stoic exterior and understand the man beneath the warrior's armor."
+  },
+  "notes": [
+    "class: divine",
+    "divine_lineage: Atronis, the God of War and Valor"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "seraphina_moonbane",
+  "name": "Seraphina_Moonbane",
+  "titles": [
+    "northern court councilmen"
+  ],
+  "species": "Fae-Demon Hybrid",
+  "gender": "female",
+  "age": "Appears to be in her late 20s (true age unknown, been within The Northern Fae Courts for 1500 years)",
+  "realm": "Elarion",
+  "court": "Obsidianveil",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "Deep emerald with subtle freckles, representing her demonic and fae blend",
+    "hair": "Midnight black, often styled in elaborate updos reflecting her status",
+    "eyes": "Bright glowing yellow-green with slit pupils, hinting at her demonic lineage",
+    "notes": [
+      "horns: Two twisted obsidian horns curving backward from her forehead, a mark of her demonic heritage",
+      "tattoos: Intricate black tattoos representing her court's sigils and rank as a guardian covering her shoulders and arms",
+      "armor: Dark, chitinous armor that melds with her form, adorned with an obsidian gemstone at its center, providing both protection and showcasing her rank",
+      "height_and_build: Tall and imposing, with a lithe yet muscular build indicative of her strength and agility"
+    ]
+  },
+  "personality": {
+    "traits": [
+      "general demeanor: Serious and tactical with an air of whimsical mystery; manipulative and cunning",
+      "loyalty: Fiercely loyal to Azrathar but her true intentions remain shrouded in secrecy",
+      "inner conflict: Resentful of her fae lineage, holding a deep-seated bitterness toward them, while simultaneously striving for acceptance and validation among the demons",
+      "behavior: Known to toy with others, especially those she perceives as threats or tools. Displays a tactical mindset and is willing to use manipulation to achieve her goals.",
+      "leadership style: Commands respect through fear and strength, often leveraging her powers to maintain authority."
+    ]
+  },
+  "lineage": {
+    "notes": [
+      "parents: ['High Fae parent (identity unknown)', 'Demon parent (identity unknown)']",
+      "heritage: Her existence is the result of a forbidden union between a powerful high fae and a demon, making her a unique hybrid."
+    ]
+  },
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_manipulation",
+      "description": "Can control shadows to cloak herself or create weapons; her command over darkness makes her a formidable opponent in stealth and combat"
+    },
+    {
+      "name": "dimensional_magic",
+      "description": "As the Guardian of the Sacred Gate, she can open rifts into the Abyssal Realm and summon creatures"
+    },
+    {
+      "name": "illusionary_glamour",
+      "description": "Adept at using illusions to deceive, alter her appearance, and manipulate others"
+    },
+    {
+      "name": "enhanced_agility_and_strength",
+      "description": "Possesses inhuman grace and formidable strength due to her hybrid nature"
+    }
+  ],
+  "relationships": {
+    "loyal_to": "Azrathar, Demon Lord of Shadows and Fear",
+    "subordinate": "{'Sylthar': 'A demon glamoured as a fae who serves under her and aids in her schemes'}",
+    "antagonistic_relationships": "['Develops a tension-filled, antagonistic relationship with the protagonist, Riven Nightshade, and the fae council members, viewing them as pawns or threats to her plans.']",
+    "notable_interactions": "['Secretly manipulates political tensions between the Northern and Southern Fae Courts', 'Uses her allure and power to sway lesser demons and fae to her side']"
+  },
+  "notes": null,
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

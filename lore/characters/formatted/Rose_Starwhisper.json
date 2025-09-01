@@ -1,0 +1,60 @@
+{
+  "id": "rose_starwhisper",
+  "name": "Rose_Starwhisper",
+  "titles": [
+    "Lady Rose of House Starwhisper"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "female",
+  "age": "746 years old",
+  "realm": "Northern Fae Courts",
+  "court": "Nightwhisper",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "Deep blue skin that shimmers faintly in the moonlight.",
+    "hair": "Long, wavy silvery hair that cascades down her back like starlight.",
+    "eyes": "Silver-blue eyes that glow with intelligence and curiosity.",
+    "notes": [
+      "ears: Delicately pointed, marking her noble lineage.",
+      "movements: Graceful and poised, exuding quiet strength."
+    ],
+    "attire": "Elegant robes embroidered with intricate silver patterns, reflecting her family's affinity for magic."
+  },
+  "personality": {
+    "traits": [
+      "kind and empowering: Rose is warm, friendly, and empathetic, always willing to help others.",
+      "intelligent and witty: Her scholarly passion for ancient texts and Fae lore makes her highly intelligent, with a playful sense of humor.",
+      "respects all: Despite her noble upbringing, she treats everyone with respect, making her approachable.",
+      "mentor and guide: She has a genuine desire to help, often serving as a teacher and guide, sharing her vast knowledge with those who seek it."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "expert_in_ancient_texts_and_runes",
+      "description": "Possesses a vast knowledge of ancient texts, runes, and Fae lore, making her a valuable resource for understanding prophecies, magical curses, and old languages."
+    },
+    {
+      "name": "light_magic_and_illusions",
+      "description": "Her magic allows her to create small illusions for entertainment or distraction, and she can cast protective barriers."
+    },
+    {
+      "name": "diplomatic_skill",
+      "description": "Her noble upbringing and experience in the court have made her skilled in etiquette and diplomacy."
+    }
+  ],
+  "relationships": {
+    "vesper_nightwhisper": "Cousin to Vesper on his mother's side. Their relationship is comfortable and familial, with Rose often teasing him playfully.",
+    "lilah_twilight": "Rose shares an immediate warmth and friendship with Lilah, quickly becoming her mentor and helping her navigate Fae society.",
+    "fae_court_staff_and_nobles": "Her friendly, diplomatic nature helps her maintain cordial relationships with others in the court."
+  },
+  "notes": null,
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

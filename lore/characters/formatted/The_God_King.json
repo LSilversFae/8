@@ -1,0 +1,48 @@
+{
+  "id": "the_god_king",
+  "name": "The God King",
+  "titles": [
+    "Sovereign of Divine Order"
+  ],
+  "species": null,
+  "gender": null,
+  "age": null,
+  "realm": null,
+  "court": null,
+  "affiliations": null,
+  "domains": [
+    "Creation",
+    "Balance",
+    "Law",
+    "Cosmic Harmony"
+  ],
+  "role": null,
+  "appearance": {
+    "skin": "Luminous starlight hue that shifts with divine energy, etched with celestial runes",
+    "hair": "Flowing silver-gold strands, resembling threads of pure mana or flowing light",
+    "eyes": "Radiant white-gold, like twin suns, reflecting the multiverse itself",
+    "attire": "Robes of starlaced etherium, woven from the first light and embroidered with the symbols of all realms"
+  },
+  "personality": {
+    "traits": [
+      "Just",
+      "Omniscient",
+      "Solemn",
+      "Measured",
+      "Benevolent yet Absolute"
+    ],
+    "temperament": "Speaks with clarity and gravitas; his presence inspires awe and reverence. Rarely shows emotion, but his words carry the weight of fate itself."
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [],
+  "relationships": {},
+  "notes": [
+    "role_in_council: Ruler of Elysion and head of the Council of the Gods, enforcer of divine law and maintainer of balance across all realms."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "Gods_and_Goddesses"
+  }
+}

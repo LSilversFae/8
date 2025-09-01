@@ -1,0 +1,30 @@
+{
+  "id": "eldoria",
+  "name": "Eldoria",
+  "titles": [],
+  "species": null,
+  "gender": null,
+  "age": null,
+  "realm": null,
+  "court": null,
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {},
+  "personality": {},
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [],
+  "relationships": {},
+  "notes": [
+    "Title: Goddess of Starlight and Balance",
+    "Realm: Elysion, the Realm of the Gods",
+    "Role: Eldoria is a celestial goddess who governs over starlight and balance. Her influence touches the realms of light and harmony, allowing her to channel and manipulate light energy. As a divine being, she played a significant role in the creation of the elven ancestors of Court Veilborn, infusing them with her essence and guiding their evolution.",
+    "Character Summary: Eldoria's character is a beautiful blend of light-hearted mischief and profound wisdom, embodying the stars' brightness and the balance they represent in the universe. Her presence in Elysion adds warmth, humor, and a touch of celestial intrigue to the divine court."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "Gods_and_Goddesses"
+  }
+}

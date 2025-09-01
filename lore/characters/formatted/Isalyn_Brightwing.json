@@ -1,0 +1,94 @@
+{
+  "id": "isalyn_brightwing",
+  "name": "Isalyn_Brightwing",
+  "titles": [],
+  "species": "High Solaryn Fae",
+  "gender": "female",
+  "age": "Appears to be in his mid-20s, but as a high fae elder, his true age stretches back several centuries.",
+  "realm": "Elarion",
+  "court": "Dawnspire",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "Her golden-tinged skin glows faintly as though kissed by eternal fire, with faint, ember-like veins running across her arms and chest that pulse with energy when she channels her divine wrath.",
+    "hair": "Her fiery auburn hair flows like liquid flame, flickering with brighter hues when she is angered or in battle. Strands of shimmering gold run through her locks, reflecting her divine lineage.",
+    "eyes": "Her intense amber eyes glow with the fierce light of a forge, radiating determination and a hint of righteous fury. In moments of heightened power, her gaze burns with molten golden light.",
+    "notes": [
+      "horns: Twin spiraling horns of radiant bronze rise elegantly from her temples, etched with glowing runes that represent the blessings of Pyraelis.",
+      "facial_features: Her features are sharp and striking, with high cheekbones and a strong jawline. Her presence commands respect, her expression often set in a determined scowl.",
+      "physique: Athletic and powerful, her build exudes strength and agility, reflecting the disciplined training and martial prowess of a seasoned general.",
+      "runes: Intricate runes glow faintly along her arms and collarbones, becoming more pronounced when she invokes Pyraelis's power. The symbols reflect her connection to divine wrath and justice."
+    ],
+    "attire": "Clad in ornate golden armor adorned with sunburst motifs, her battle garb radiates both beauty and intimidation. Her flowing crimson cloak shimmers like embers in the sunlight.",
+    "wings": "Her vast, fiery wings are composed of radiant light and flame, shifting between hues of orange, red, and gold. When she takes flight, trails of sparks and heat follow her."
+  },
+  "personality": {
+    "traits": [
+      "general demeanor: Fierce, unyielding, and intensely focused, Isalyn is a natural leader who demands excellence from herself and those around her. Her demeanor radiates strength and authority, making her both respected and feared.",
+      "inner conflicts: Though she projects an image of unwavering confidence, Isalyn is burdened by the fear of failure and the immense expectations tied to her divine lineage. She struggles to reconcile her fiery wrath with moments of doubt and vulnerability.",
+      "with others: Isalyn is commanding and often distant, valuing discipline and loyalty over personal connections. She respects strength and perseverance but has little patience for incompetence or insubordination. Despite her stern exterior, she harbors a deep sense of duty to protect her people.",
+      "loyalty: Her loyalty is absolute to the Southern Courts and their ideals of power and dominance. She is unwavering in her commitment to Pyraelis's vision of justice, even when it requires harsh measures.",
+      "leadership style: Isalyn leads with an iron will, using strict discipline and decisive action to maintain order and inspire fear in her enemies. She motivates her troops through example, standing fearlessly at the forefront of battle, embodying the fiery wrath she demands from her forces."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "wrathful_aegis",
+      "description": "Isalyn can summon a radiant shield imbued with divine wrath, capable of repelling physical and magical attacks while burning enemies who come into contact with it."
+    },
+    {
+      "name": "flame_of_justice",
+      "description": "A manifestation of her divine heritage, Isalyn wields a blazing weapon forged from Pyraelis's flame. This weapon cuts through illusions, shields, and darkness with searing precision."
+    },
+    {
+      "name": "divine_resonance",
+      "description": "Isalyn emits an aura of fiery righteousness, inspiring allies to fight with greater resolve and weakening the morale of her enemies."
+    },
+    {
+      "name": "solar_vanguard",
+      "description": "Harnessing her connection to sunlight, Isalyn can create temporary constructs of light such as spears, barriers, or platforms, using them tactically in battle."
+    },
+    {
+      "name": "righteous_purge",
+      "description": "With a single motion, Isalyn releases a wave of purifying fire that incinerates shadow-based magic, cleanses curses, and weakens enemies attuned to darkness."
+    },
+    {
+      "name": "emberstep",
+      "description": "Isalyn can teleport short distances by stepping into a burst of flame, leaving behind a burning trail that damages enemies who follow her path."
+    },
+    {
+      "name": "radiant_fury",
+      "description": "In moments of rage, Isalyn channels her divine wrath into explosive energy blasts that obliterate enemy ranks and scorch the battlefield."
+    },
+    {
+      "name": "phoenix_ascension",
+      "description": "Isalyn temporarily transforms into a fiery, phoenix-like form, gaining enhanced speed, strength, and regeneration. While in this form, she leaves trails of destructive fire in her wake."
+    },
+    {
+      "name": "sunlit_adjudicator",
+      "description": "Isalyn calls upon the judgment of Pyraelis, creating a searing beam of divine light that locks onto a target and delivers a devastating burst of radiant energy."
+    },
+    {
+      "name": "burning_faith",
+      "description": "Through sheer willpower, Isalyn can push past magical suppression and injuries, amplifying her abilities at the cost of her stamina and health."
+    },
+    {
+      "name": "divine_abilities",
+      "description": null,
+      "application": null
+    }
+  ],
+  "relationships": {},
+  "notes": [
+    "class: awakened",
+    "Title: High Fae General of the Southern Courts"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "southern_court"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "giselle",
+  "name": "Giselle",
+  "titles": [],
+  "species": "Divine Class High Queen Dryads",
+  "gender": "female",
+  "age": "30,000 years",
+  "realm": "Elarion",
+  "court": "Northern Fae Courts",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "Gisele's once radiant, warm golden-green skin now shimmers with a soft, ethereal glow, as if she's bathed in constant sunlight. Her fingertips are kissed with divine gold, radiating warmth and light.",
+    "wings": "Her wings have become intricate, leaf-like structures, veined with glowing gold, fluttering with both the joyful energy of her nature and the divine essence of the forests.",
+    "hair": "Her golden hair has deepened, cascading in flowing waves that resemble the glow of a setting sun through trees, shimmering with light and life.",
+    "attire": "Gisele wears a gown made of living vines and leaves, interwoven with threads of divine light. Golden flowers bloom and fade along her gown, reflecting her connection to the life force of the realm.",
+    "eyes": "Her brilliant, sparkling golden eyes are now deeper and more intense, radiating both the joy of life and the divine wisdom of the realms.",
+    "distinctive_features": "Gisele still radiates a warm, golden light, but it has become more ethereal, like sunlight streaming through a canopy. Flowers bloom along her hair and attire, infused with both nature's essence and divine light."
+  },
+  "personality": {
+    "traits": [
+      "Finds joy in the simplest things, such as the sound of rain or the way a flower blooms",
+      "Playful and carefree",
+      "Infectious happiness",
+      "Fiercely protective of her sisters",
+      "Loves to make others smile and finds beauty in everything around her",
+      "Joyful and Optimistic: Gisele remains the heart of her group, always exuding positivity and warmth, finding joy in the simplest things. Her laughter and light are infectious, brightening the darkest of times.",
+      "guardian of hope: Despite her carefree and playful demeanor, Gisele takes her role as protector seriously. She fiercely defends her sisters, the realm, and the natural world from any threat.",
+      "unifying force: As a unifying figure among her sisters, Gisele lifts spirits with her radiant energy, ensuring hope and unity even in dire moments."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "Radiant Glow (Enhanced)",
+      "description": "Her natural radiant glow has been elevated to a divine level. This light can now heal the land itself, restoring forests, revitalizing creatures, and soothing the emotions of all who come near.",
+      "application": null
+    },
+    {
+      "name": "sunbeam_burst",
+      "description": "Gisele can now summon beams of pure divine sunlight, capable of cutting through even the thickest darkness. This ability is especially devastating to enemies who thrive in shadow or dark magic.",
+      "application": "In battle, Gisele can unleash concentrated beams of sunlight to destroy enemies or barriers. It is particularly effective against Azrathar's shadow minions or the miasma threatening the realm."
+    },
+    {
+      "name": "Golden Mirage (Enhanced)",
+      "description": "She can create radiant afterimages of herself that confuse and mislead enemies. These illusions now interact with the environment, shimmering and blending with nature, making it difficult to pinpoint her true location.",
+      "application": "During combat or moments of evasion, Gisele uses these illusions to mislead enemies, making it hard for them to discern her true form from her radiant mirages."
+    },
+    {
+      "name": "Nature's Blessing",
+      "description": "Gisele can awaken the natural forces around her, causing plants and trees to grow rapidly. She can summon nature spirits and create protective barriers, ensnare enemies with roots, or bring forth powerful forest entities to aid her.",
+      "application": "In both defense and offense, Gisele can call upon nature to form living shields or offensive vines, ensuring her protection and that of her allies. She can also summon powerful spirits to assist her in battle."
+    }
+  ],
+  "relationships": {
+    "king_riven": "{'relationship': 'Father figure', 'perception': 'Tries to bring light and joy to him, believing he needs more happiness in his life.'}",
+    "sisters": "{'Serenity': 'Co-conspirator in causing playful chaos', 'Gisele': 'Respects and admires her wisdom', 'Alyssa': 'Playfully encourages her to join activities, even if only briefly'}",
+    "sorren_voidwalker": "{'relationship': 'Sees Sorren as a source of endless amusement, often teasing him but always with affection.'}"
+  },
+  "notes": [
+    "origin: Born from King Riven's magic",
+    "order_of_birth: 3"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

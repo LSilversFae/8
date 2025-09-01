@@ -1,0 +1,90 @@
+{
+  "id": "caelirion_nightshade",
+  "name": "Caelirion Nightshade",
+  "titles": [
+    "Heir of Harmony, Child of Light and Shadow"
+  ],
+  "species": null,
+  "gender": null,
+  "age": null,
+  "realm": null,
+  "court": null,
+  "affiliations": null,
+  "domains": [
+    "Unity",
+    "Primordial Balance",
+    "Creation and Destruction",
+    "Dream and Flame"
+  ],
+  "role": "Prophesied fulcrum of all realms; Caelirion is born to unify light and darkness. His existence holds the power to birth or end empires, to sire a new dragon lineage, and to either awaken or forever banish the abyss. As the only known Primordial to manifest in physical form, he is revered and feared across all realms—gods, dragons, fae, and demons alike tread carefully in his presence.",
+  "appearance": {
+    "skin": "Moonlit bronze veined with flickers of cosmic gold and twilight shadow, his skin radiates equilibrium, glowing subtly between polarities.",
+    "hair": "Long waves of pale gold intertwined with strands of shadow-black, constantly shifting like starlit currents across his shoulders.",
+    "eyes": "One eye gleams with Lilah's inner light—a vibrant lilac flame. The other holds Riven's argent void, swirling with endless shadow and time.",
+    "attire": "Wears a divine mantle of starlight and shadowleaf, stitched with threads from both the Dreaming Realm and the Abyss. His cloak vanishes into mist when danger nears."
+  },
+  "personality": {
+    "traits": [
+      "Empathic and visionary",
+      "Introspective and observant",
+      "Gentle, but formidable when provoked",
+      "Inherently torn between mercy and wrath"
+    ],
+    "temperament": "Caelirion often moves and speaks as if dreaming. He feels more than he explains, and his silence is heavy with meaning. Yet in moments of crisis, he becomes luminous with certainty, an echo of ancient divinity rising."
+  },
+  "lineage": {
+    "father": "Riven Nightshade – High Fae King, Master of Shadow and Ruin",
+    "mother": "Lilah Twilight – Goddess of Light and Queen of Elarion",
+    "essence": "Primordial Being who chose to incarnate physically through Riven and Lilah, retaining eternal knowledge within a mortal form",
+    "primordial": {
+      "type": "The Seventh Flame – Balance Incarnate",
+      "origin": "Caelirion is the only known manifestation of the Seventh Flame, a hidden primordial force beyond the Six elemental progenitors of existence. Where they embodied raw aspects of creation, destruction, time, void, chaos, and form—he is their unifying counterpart, a balancing force who remained dormant until the multiverse stood on the brink.",
+      "status": "Fully awakened. Caelirion retains the entirety of his primordial memory and identity. From the moment of his birth, he possessed complete awareness of his nature, lineage, and purpose. He walks among the realms not as a child learning the world, but as an ancient force veiled in youthful form, wielding his abilities with instinctive precision and sovereign will.",
+      "role": "Caelirion was not born of cosmic chaos like the others, but of choice. He is the failsafe of the cosmos—the flame that harmonizes all others. His existence is a convergence of divine, fae, and dragonic bloodlines, destined to either mend the fractured weave of creation or bring about its quiet undoing."
+    }
+  },
+  "prophecy": {
+    "name": "The Heir of Harmony",
+    "description": "Caelirion is destined to either unify light and shadow or become the abyss reborn. If raised in love and balance, he will restore the cosmic weave. If corrupted, he will inherit Azrathar's mantle and bring the gods to ruin.",
+    "lore_fragment": "'One born of night and dawn, when starlight sleeps and shadow mourns—shall walk as fire between fate's bones. The child shall forge or fracture worlds.'",
+    "powers_foretold": [
+      "Sire of a new dragon race",
+      "Binder or breaker of demonic realms",
+      "Restorer of primordial ley-lines",
+      "Bearer of the Balance Flame—capable of unmaking creation to begin anew"
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Dreamsung Genesis",
+      "description": "Caelirion can manifest objects, creatures, and environments directly from the Dreamweave—the subconscious layer of all realms. Unlike mere illusion, these constructs are fully real and imbued with narrative essence, meaning they often reflect symbolic truths or fulfill unspoken destinies."
+    },
+    {
+      "name": "Equinox Reversal",
+      "description": "At will, Caelirion can invert the polarity of magic, turning light into shadow and chaos into order. This allows him to neutralize enemy powers, reverse spells mid-casting, or transform a destructive force into healing energy. It is the purest expression of his balancing nature."
+    },
+    {
+      "name": "Veilwalk",
+      "description": "Surpassing standard teleportation, Veilwalk lets Caelirion phase through the interstitial spaces between realms—time, shadow, memory, and light—without leaving a trace. While others use gates or spells to shift realms, he simply exists on multiple planes simultaneously."
+    },
+    {
+      "name": "Flame of the Seventh Truth",
+      "description": "A primordial fire that only Caelirion can summon. It burns neither hot nor cold but reveals the true nature of anything it touches—exposing lies, banishing glamours, and unraveling enchantments. It can ignite divine weapons, purge corrupted relics, or silence eldritch horrors."
+    },
+    {
+      "name": "Axis Pulse",
+      "description": "A cosmic resonance Caelirion can emit from his core, synchronizing ley lines, healing rifts between realms, or disintegrating chaotic nodes. When unleashed in full force, it resonates across dimensions, resetting unstable magic in a region-wide radius."
+    },
+    {
+      "name": "Silent Ascendancy",
+      "description": "Caelirion can activate his full primordial form for brief moments—shifting into a radiant, starlit silhouette of himself where he becomes intangible to time, immune to physical harm, and capable of rewriting small fragments of causality (e.g., making an event 'un-happen'). This ability is exhausting and used only in dire moments."
+    }
+  ],
+  "relationships": {},
+  "notes": null,
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

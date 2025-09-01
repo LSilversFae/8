@@ -1,0 +1,111 @@
+{
+  "id": "jarek_nightstorm",
+  "name": "Jarek_Nightstorm",
+  "titles": [
+    "northern court councilmen"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "male",
+  "age": "Appears to be in his late twenties (True age: Over a century)",
+  "realm": "Elarion",
+  "court": "Court Nightshade",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "notes": [
+      "height_and_build: Jarek stands tall at 6'4\" with a lean, muscular build that showcases his strength and agility.",
+      "aura: A heavy, oppressive aura of deep water surrounds him, making those near him feel as though they are sinking into the depths. His presence commands awe and fear",
+      "horns: Sharp horns adorn his head",
+      "tattoos: ['Intricate tattoos curl around his arms and shoulders, occasionally glowing faintly when he channels his powers, especially during intense moments of emotion.', 'A constellation tattoo on his face, which sometimes glows, suggesting his divine heritage.']"
+    ],
+    "skin": "His skin has taken on a deep, oceanic blue hue, almost black in low light, with silver markings that mimic the waves and currents of the sea. The silver veins glow faintly, especially in darkness.",
+    "hair": "His black hair flows like water, with streaks of dark blue and silver, moving as though submerged even on dry land.",
+    "wings": "Jarek now has massive wings made of dark, abyssal water that glistens like the surface of the ocean at night. They flow and ripple, constantly shifting between solid and liquid forms, giving him both the power of flight and water manipulation.",
+    "eyes": "His eyes glow a haunting blue, resembling the depths of the ocean, with silver flecks that move like currents, hinting at his mastery of the abyss.",
+    "distinctive_features": "['The constellation tattoo on his face', 'The glowing tattoos on his arms and shoulders']"
+  },
+  "personality": {
+    "traits": [
+      "Intelligent & Cunning: Sharp-minded, master strategist, and tactician.",
+      "Mischievous & Playful: Enjoys games, riddles, and teasing with humor that balances between light-hearted and darkly sinister.",
+      "Reserved & Stoic: Keeps emotions well-guarded and rarely expresses vulnerability.",
+      "Fiercely Loyal: His loyalty, once given, is absolute, especially to his wife, Elysia, and his closest friend, Marek.",
+      "Confidence bordering on arrogance",
+      "Deep fear of vulnerability",
+      "general demeanor: Jarek is intelligent, cunning, and always seems to be several steps ahead of those around him.",
+      "humor: Darkly sinister with an edge, balancing between light-hearted banter and a darker, more sinister wit."
+    ],
+    "virtues": [
+      "Master strategist and tactician",
+      "Formidable warrior",
+      "Fiercely protective of those he loves"
+    ],
+    "flaws": [
+      "Struggles with expressing vulnerability",
+      "Hesitant to fully open up to others"
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_manipulation",
+      "description": "Jarek can control shadows, using them to create weapons, conceal himself, or bind enemies."
+    },
+    {
+      "name": "ice_manipulation",
+      "description": "He can summon and control ice, shaping it into weapons, armor, or barriers. He can lower the temperature in his immediate surroundings, creating frost and snow even in warm environments."
+    },
+    {
+      "name": "darkness_manipulation",
+      "description": "He can envelop an area in darkness, making it impossible to see or sense anything within the shadows."
+    },
+    {
+      "name": "portal_opening",
+      "description": "By merging shadows, Jarek can create portals that allow him to travel across short and long distances."
+    },
+    {
+      "name": "dual_environment_mastery",
+      "description": "Equally adept in water and on land. He can breathe underwater and move with the same agility and strength as he does on land."
+    },
+    {
+      "name": "hydrokinetic_control",
+      "description": "Jarek can manipulate water, particularly dark waters, to create tendrils, barriers, or even devastating waves."
+    },
+    {
+      "name": "abyssal_vision",
+      "description": "Jarek can see in total darkness, both in the depths of the ocean and on land. This ability also allows him to sense magical energies and hidden threats."
+    },
+    {
+      "name": "soul_of_the_abyss",
+      "description": "He can draw strength from the abyss, using it to heal wounds or enhance his abilities."
+    },
+    {
+      "name": "corrosion_and_decay",
+      "description": "His touch can cause objects or enemies to corrode and decay, turning them to dust over time."
+    },
+    {
+      "name": "echoes_of_the_deep",
+      "description": "He can channel the voices and memories of the abyss to gather information or intimidate foes."
+    },
+    {
+      "name": "divine_abilities",
+      "description": null,
+      "application": null
+    }
+  ],
+  "relationships": {
+    "wife": "Elysia Nightstorm",
+    "closest_friend": "Marek Grimveil"
+  },
+  "notes": [
+    "class: divine",
+    "divine_lineage: Abyssidon, God of the Abyss and Dark Waters."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

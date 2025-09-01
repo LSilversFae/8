@@ -1,0 +1,47 @@
+{
+  "id": "thyrenos",
+  "name": "Thyrenos",
+  "titles": [
+    "God of Wisdom and Time"
+  ],
+  "species": null,
+  "gender": null,
+  "age": null,
+  "realm": null,
+  "court": null,
+  "affiliations": null,
+  "domains": [
+    "Wisdom",
+    "Time",
+    "Knowledge"
+  ],
+  "role": null,
+  "appearance": {
+    "skin": "Deep violet skin that shimmers like the night sky",
+    "hair": "Long silver hair flowing like liquid mercury",
+    "eyes": "Twin orbs of swirling galaxies",
+    "attire": "Robes made of ethereal mist and stardust, shifting in patterns of ancient runes"
+  },
+  "personality": {
+    "traits": [
+      "Calm",
+      "Introspective",
+      "Patient",
+      "Speaks in riddles and cryptic phrases"
+    ],
+    "temperament": "Prefers to observe rather than intervene unless absolutely necessary"
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [],
+  "relationships": {},
+  "notes": [
+    "class: supreme",
+    "role_in_council: One of the six gods on the council of Elysion, often serving as the voice of reason and contemplation."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "Gods_and_Goddesses"
+  }
+}

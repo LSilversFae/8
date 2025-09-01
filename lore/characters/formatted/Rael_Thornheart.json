@@ -1,0 +1,66 @@
+{
+  "id": "rael_thornheart",
+  "name": "Rael_Thornheart",
+  "titles": [],
+  "species": "High Shadow Fae",
+  "gender": "male",
+  "age": "3200",
+  "realm": "Elarion",
+  "court": "Grimshadow",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "notes": [
+      "height_and_build: Tall and imposing",
+      "horns: Onyx-black, spiraled horns curving back from his brow",
+      "aura: He exudes the essence of the forest—wild, untamed, and powerful. Animals and nature respond to his presence, and a constant rustling of leaves surrounds him, even in still air​​.",
+      "facial_features: Sharp and angular, with high cheekbones, a chiseled jawline, and pointed ears",
+      "clothing: Fur-lined cloak draped over his broad shoulders, leather straps crisscrossing his chest, with various weapons and pouches at his waist"
+    ],
+    "skin": "His skin, once earthy and shadowed, now carries a deeper, more primal hue, like the bark of ancient trees. His body is marked with swirling green and gold vines, glowing faintly in the dark, representing his connection to the god of the hunt.",
+    "hair": "Long, dark with hints of silver and deep blue, pulled back in a rough, practical style",
+    "wings": "Rael now has wings made of shadowy vines and leaves, appearing natural yet otherworldly. They move silently and can grow larger or shift form to suit his needs, blending with the forest around him.",
+    "eyes": "His eyes glow a deep, forest green, shining like those of a predator in the night, with golden flecks indicating his divine lineage."
+  },
+  "personality": {
+    "traits": [
+      "Patient, observant, and incredibly perceptive",
+      "Prefers the silence of the wilderness over the chaos of village life",
+      "general demeanor: Stoic, disciplined, and exudes an air of authority that commands respect",
+      "inner conflict: Despite his seemingly cold and detached demeanor, he is fiercely protective of those he cares for",
+      "relationship with his people: Respected by the elders and feared by the younger members for his ruthless efficiency and unyielding standards",
+      "potential romance: May experience a romantic relationship that challenges his cold exterior and helps him discover more about his divine heritage"
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "primary_elements",
+      "description": null,
+      "application": null
+    },
+    {
+      "name": "divine_abilities",
+      "description": null,
+      "application": null
+    },
+    {
+      "name": "attributes_bestowed_by_Ferraxis",
+      "description": null,
+      "application": null
+    }
+  ],
+  "relationships": {},
+  "notes": [
+    "class: supreme",
+    "Title: Northern Court Councilman",
+    "divine_lineage: Ferraxis, God of the Hunt and Wilderness Tracking"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

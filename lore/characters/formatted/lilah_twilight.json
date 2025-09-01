@@ -1,0 +1,36 @@
+{
+  "id": "lilah_twilight",
+  "name": "lilah_twilight",
+  "titles": [
+    "Queen of the Northern Kingdom and Goddess of Light"
+  ],
+  "species": "Goddess",
+  "gender": null,
+  "age": null,
+  "realm": null,
+  "court": null,
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {},
+  "personality": {
+    "traits": [
+      "before awakening: Gentle, compassionate, and curious. Lilah possesses a kind heart and an unyielding empathy for others, always willing to help and heal.",
+      "after awakening: After embracing her true identity as the Goddess of Light, Lilah becomes more confident, powerful, and wise. However, she retains her compassion, showing a fierce determination to protect those she loves.",
+      "inner conflict: Despite her divine nature, she struggles with accepting her power and the responsibilities that come with it, constantly torn between her mortal emotions and godly duties.",
+      "ignorance to love: Having no prior experience with love, Lilah is initially naive to the concept of romance, which leads to inner turmoil when she feels drawn to Riven Nightshade."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [],
+  "relationships": {},
+  "notes": [
+    "class: legendary"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

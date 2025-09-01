@@ -1,0 +1,102 @@
+{
+  "id": "elysia_nightstorm",
+  "name": "Elysia_Nightstorm",
+  "titles": [
+    "Divine Guardian of the Sacred Moon Waters (unknown to her)"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "female",
+  "age": "Appears to be in her late twenties (true age unknown, as is common with fae)",
+  "realm": "Elarion",
+  "court": "Nightshade",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "Elysia's skin has taken on a shimmering, oceanic glow, like light reflecting off deep waters. Her body is marked with glowing silver runes that represent the ancient powers of the abyss.",
+    "wings": "Her wings are made of water and shadow, with swirling currents flowing through them. They are translucent but powerful, allowing her to fly or shift between the physical and shadow realms.",
+    "hair": "Her dark hair flows like liquid, with streaks of silver and deep blue. It moves as though suspended in water, giving her a serene yet powerful presence.",
+    "notes": [
+      "ears: Long and elegantly pointed, showcasing her fae heritage",
+      "features: Flawless with a distinctive mark on her shoulder, the emblem of her connection to the Abyss and her divine lineage",
+      "aura: She radiates the calm and crushing power of the ocean depths. Her aura makes those around her feel both awe and fear, as though standing on the edge of a deep, dark sea.",
+      "height_and_build: Tall and slender with an ethereal, graceful presence, typical of the high fae",
+      "jewelry: ['Wears accessories made from rare seashells and pearls, enhancing her connection to water', 'A small silver circlet with a sapphire gem that matches her eye color']",
+      "markings: Faint bioluminescent markings run along her arms, glowing softly in moonlight or when she uses her powers"
+    ],
+    "eyes": "Her eyes glow a brilliant deep blue, with swirling currents of silver that move like the tides, reflecting the vastness of the ocean and her divine connection to the abyss.",
+    "attire": "Elysia's attire is always elegant, often dark with intricate patterns that shimmer like the night sea, embroidered with symbols of her court. She wears accessories made from rare seashells and pearls, enhancing her connection to water, along with a small silver circlet with a sapphire gem that matches her eye color.",
+    "distinctive_features": "['An intricate web-like scar on her left hand that glows faintly when she channels her magic', 'Eyes that occasionally swirl with shades of blue and silver, reflecting her mood or the flow of her powers', 'Long, sharp nails painted in shades of deep blue and silver, resembling the depths of the ocean']"
+  },
+  "personality": {
+    "traits": [
+      "Playful and teasing, especially towards the more uptight members of the court, with risqué or exotic tales that make them blush",
+      "Fiercely loyal to those she cares about and capable of great depth and compassion, though she rarely shows this softer side",
+      "Seductive and mysterious, using her beauty and wit to navigate fae politics",
+      "Cunning and shrewd, with an innate understanding of power dynamics",
+      "Charming and flirtatious, knowing how to use her allure to gain advantages or information",
+      "Mischievous, often enjoying the reactions she gets when pushing boundaries",
+      "Constantly displays affection towards her mate, often in a sensual and seductive manner, making others blush or feel uncomfortable with her boldness",
+      "general demeanor: Elysia is a master of contradiction. She appears demure and soft-spoken, yet she is cunning and shrewd, always aware of the shifting dynamics around her. She delights in stirring the pot, using her seductive charm to draw secrets out of others while keeping her own tightly guarded.",
+      "leadership style: Elysia leads through charm, intelligence, and manipulation. She prefers to guide others subtly, influencing them with her words and actions rather than overt displays of power."
+    ],
+    "virtues": [
+      "Master of seduction and manipulation, skilled in unearthing secrets",
+      "Clever and intoxicating, with a reputation as a dangerous beauty",
+      "Highly perceptive, able to anticipate the motives and desires of others",
+      "Resilient, both mentally and emotionally, able to endure the hardships of court life",
+      "Intelligent strategist, adept at playing the long game in fae politics"
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "divine_abilities",
+      "description": null,
+      "application": null
+    },
+    {
+      "name": "Enhanced Night Vision",
+      "description": "Can see clearly in darkness, a trait common among the Nightshade Fae"
+    },
+    {
+      "name": "Minor Healing",
+      "description": "Can heal minor wounds by channeling the water's restorative properties, though she sees this as another trick"
+    },
+    {
+      "name": "Shadow Weaving",
+      "description": "Capable of weaving shadows into tangible forms, such as weapons or barriers, useful in both combat and stealth"
+    },
+    {
+      "name": "Bioluminescent Glow",
+      "description": "When submerged in water or using her powers, her skin emits a faint glow, providing light and making her appear more ethereal"
+    },
+    {
+      "name": "Dreamweaving",
+      "description": "Elysia can weave subtle illusions into the minds of others, guiding their dreams or influencing their thoughts while they sleep, though this ability requires great concentration and is rarely used."
+    },
+    {
+      "name": "Shaping Shadows and Mist",
+      "description": "Like Jarek, Elysia can blend shadows and water to create illusions, but hers tend to be more delicate and ephemeral, making her illusions seem almost real."
+    },
+    {
+      "name": "Hypnotic Speech",
+      "description": "Her voice can lull or entice those who listen, especially when she's speaking about love or desire, adding weight to her words in the court's endless games. This ability can be both a tool of seduction and a weapon in negotiation."
+    }
+  ],
+  "relationships": {
+    "partner": "{'name': 'Jarek Nightstorm', 'relationship': 'Elysia shares a complex and passionate bond with Jarek, marked by equal measures of love, rivalry, and respect. They are well-matched in cunning and ambition, often playing intricate games of power and seduction with each other. Elysia is known for constantly displaying her affection towards Jarek in ways that often make those around them blush or feel uncomfortable, especially with the sensual, seductive things she says.', 'pregnant': 'One of the first fea females pregnant due to Lilah reviving the realm and the fae. Pregnant by her mate Jarek.'}",
+    "royal_court": "{'relationship': 'Elysia is both admired and feared in the royal court. Her beauty, wit, and ability to unearth secrets make her a valuable ally and a dangerous enemy. She maintains a circle of friends who admire her daring nature, though many would not hesitate to turn on her if it served their purposes.'}",
+    "display_of_affection": "Often displays affection with her mate in the presence of others, saying sensual and seductive things that frequently cause those around her to blush or feel flustered."
+  },
+  "notes": [
+    "class: awakened",
+    "Title: Northern Court Councilman"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

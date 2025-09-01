@@ -1,0 +1,77 @@
+{
+  "id": "erika_nightwhisper",
+  "name": "Erika_Nightwhisper",
+  "titles": [
+    "High Priestess of The Northern Fae Courts",
+    "Northern Court Councilmen"
+  ],
+  "species": "['High Shadow High Fae', 'Demigod']",
+  "gender": "female",
+  "age": "Appears to be in her mid-20s but is centuries old",
+  "realm": "Elarion",
+  "court": "Nightwhisper",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "Erika's skin has taken on a subtle, silvery glow, with faint, labyrinth-like patterns appearing across her arms and legs. These markings shift and change when she uses her divine powers.",
+    "wings": "Her wings are made of shimmering threads of light and shadow, reflecting her control over both the mind and fate. They are ethereal, shifting in shape and size depending on her will, allowing her to glide between realities.",
+    "eyes": "Erika's eyes glow silver, with faint patterns resembling labyrinths within them. Her gaze is calm and calculating, as though she can see the fate of anyone she meets.",
+    "hair": "Her dark hair now carries silver threads, shimmering like strands of fate. It moves gently, as though blown by a breeze from another realm.",
+    "notes": [
+      "aura: A quiet, powerful aura of inevitability surrounds her. Those in her presence feel as though they are walking a path that has already been laid out, with Erika as the guiding force",
+      "rings: She wears multiple rings, each unique, which might symbolize different realms of power or aspects of her abilities.",
+      "height_and_build: Tall with a commanding presence, Erika exudes grace and strength, perfectly embodying the regal and intimidating aura of a High Fae Demigod."
+    ]
+  },
+  "personality": {
+    "traits": [
+      "Her understanding of the mind's intricacies makes her an expert in manipulation, negotiation, and reading others, making her a formidable high priestess. She is fiercely loyal and devoted to her mate Vesper and her court, viewing her role as a sacred duty. Despite her cunning nature, Erika remains mysterious and reserved, rarely revealing more than necessary.",
+      "general demeanor: Erika is cunning, intuitive, and a master of deception and strategy.",
+      "leadership style: She commands respect with her decisive and authoritative demeanor, often exuding an air of intimidation mixed with allure.",
+      "relationship with vesper: Erika shares a deep and complex bond with her mate, Vesper Nightwhisper. Their relationship is a balance of light and shadow, passion and restraint, and they draw strength from one another. Vesper serves as her anchor when her power becomes overwhelming, while she offers him the stability and warmth he sometimes lacks.",
+      "loyalty to court: Her loyalty to her court and village is unwavering, and she commands great respect among her people, who see her as their protector and guide."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "mental_maze_creation",
+      "description": "The ability to create mental mazes, allowing her to trap others in elaborate illusions within their minds, making her a master of deception and manipulation."
+    },
+    {
+      "name": "shadow_manipulation",
+      "description": "As a Shadow High Fae, Erika can manipulate shadows, moving through them with ease, making her an expert in stealth and espionage."
+    },
+    {
+      "name": "telepathic_bond",
+      "description": "She shares a telepathic bond with her mate Vesper, allowing them to communicate over great distances without words."
+    },
+    {
+      "name": "dark_elemental_magic",
+      "description": "Erika possesses dark elemental magic, particularly related to darkness and cold, which she can channel into offensive spells, defensive barriers, or summon shadows to aid her in battle."
+    },
+    {
+      "name": "ancestral_magic",
+      "description": "Her powers are tied to her lineage as a Scion of Kalethar and Vorelith, giving her access to ancient, formidable magic."
+    },
+    {
+      "name": "divine_abilities",
+      "description": null,
+      "application": null
+    }
+  ],
+  "relationships": {
+    "relationship_with_vesper": "Erika shares a deep and complex bond with her mate, Vesper Nightwhisper. Their relationship is a balance of light and shadow, passion and restraint, and they draw strength from one another.",
+    "relationship_with_court": "Her loyalty to her court and village is unwavering, and she commands great respect among her people, who see her as their protector and guide."
+  },
+  "notes": [
+    "class: supreme"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

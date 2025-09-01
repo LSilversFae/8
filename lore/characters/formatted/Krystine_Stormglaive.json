@@ -1,0 +1,70 @@
+{
+  "id": "krystine_stormglaive",
+  "name": "Krystine_Stormglaive",
+  "titles": [
+    "Lady Krystine of House Stormglaive",
+    "Knight of the Royal Order"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "female",
+  "age": "888",
+  "realm": "Elarion",
+  "court": "The Veilborn",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "skin": "Silvery-blue, shimmering faintly, giving her an ethereal glow",
+    "hair": "Long, white hair cascading in loose, soft waves resembling freshly fallen snow",
+    "eyes": "Intense and radiant blue, holding an unwavering, fierce determination",
+    "notes": [
+      "horns: Small, elegantly curved horns rising from her forehead, a defining mark of her Veilborn lineage",
+      "sigil: An intricate, glowing sigil etched onto her forehead, symbolizing her family's ancient lineage and prowess as a knight",
+      "height_and_build: Tall and athletic, embodying a blend of strength and grace, typical of a seasoned warrior"
+    ],
+    "attire": "{'main': \"Deep blue attire richly embroidered with gold and silver threads featuring a ram's head motif, reflecting her strength and resilience\", 'armor': 'Beautiful yet functional armor allowing for grace and speed expected of an elite warrior'}"
+  },
+  "personality": {
+    "traits": [
+      "Strong sense of honor, responsibility, and commitment",
+      "Caring and compassionate toward those she trusts",
+      "Intelligent and tactical with a strategic mind",
+      "Stoic but possesses a quiet strength and determination",
+      "general demeanor: Disciplined, fiercely loyal, and dedicated to her duty",
+      "soft side: Krystine reveals a deeply caring and compassionate side only to those she trusts, especially when feeling a sense of responsibility or care for those she protects.",
+      "inner conflict: Struggles with balancing her role as a warrior and her compassionate side, which emerges in moments of vulnerability."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "combat_skills",
+      "description": "['Master combatant highly skilled in various forms of weaponry, including swords, spears, daggers, and bows.', 'Expert in hand-to-hand combat, making her one of the most formidable knights in the kingdom.']"
+    },
+    {
+      "name": "veilborn_magic",
+      "description": null,
+      "application": null
+    },
+    {
+      "name": "tactical_prowess",
+      "description": "Highly skilled in battlefield tactics and strategies, capable of analyzing threats and using the environment to her advantage."
+    },
+    {
+      "name": "shadow_fae_traits",
+      "description": "['Possesses enhanced vision in darkness, allowing her to see clearly even in the darkest conditions.', 'Has natural resistance to cold temperatures and ice-based magic, enabling her to thrive in harsh environments.']"
+    }
+  ],
+  "relationships": {
+    "draven": "{'relation': 'Cousin', 'dynamic': \"Defined by mutual respect and understanding. They often sparred together in their youth, honing each other's skills. Draven values her loyalty and strength.\"}",
+    "lilah": "{'relation': 'Charge', 'dynamic': 'Serves as both protector and mentor. Initially approached her role with a sense of duty but developed a deep, protective bond over time. She sees Lilah as someone worth protecting and becomes more open and compassionate toward her.'}",
+    "other_court_members": "Maintains a professional yet friendly relationship with other members of the royal court, earning their respect through her unwavering dedication and prowess."
+  },
+  "notes": null,
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

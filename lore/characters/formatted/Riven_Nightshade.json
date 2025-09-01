@@ -1,0 +1,75 @@
+{
+  "id": "riven_nightshade",
+  "name": "Riven Nightshade",
+  "titles": [
+    "King of Shadows, Warden of the Crucible Flame"
+  ],
+  "species": "High Shadow Fae",
+  "gender": null,
+  "age": "Visibly early 30s; chronologically over 1,000 years post-trials",
+  "realm": "Elarion",
+  "court": "Veilborn",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "notes": [
+      "height_and_build: Standing at a commanding 6'4, Riven possesses a lean yet powerful muscular build. His movements are fluid and graceful, exuding both authority and elegance.",
+      "eye_color: One eye remains argent void—ageless and fathomless. The other burns with a smoldering ember glow—symbol of his binding to the Heartforge Flame. When he channels his full power, both blaze with haunting intensity, the union of ice and flame.",
+      "horns: Sharp, onyx-black horns that have grown longer and more refined through divine trials, etched with ancient runes of ice and shadow.",
+      "markings: The black rune on his forehead has become a living symbol, glowing with silver and midnight blue light, pulsing with divine resonance whenever he channels his magic.",
+      "fae_features: Slightly elongated, pointed ears—a sign of his ancient fae heritage and primal lineage.",
+      "aura: A palpable cold surrounds him, freezing the air. Shadows coil at his feet, moving of their own accord. His aura is silence, ice, and gravity—evoking awe and unease.",
+      "cloak_and_attire: Wears dark armor of blackened steel and enchanted leather, adorned with silver runes mirroring his mastery of ice and shadow. His cloak, woven of living shadow, trails mist and flickers like liquid night."
+    ],
+    "hair": "His long, black hair shimmers with faint blue undertones, streaked with ashen silver, cascading over his shoulders like a flowing shadow. Often tied into a war-knot in battle, crackling faintly with heatless shadowfire.",
+    "skin": "His skin, once deep blue, retains its azure undertone beneath an obsidian-dark layer, laced with glowing silver and violet veins that pulse with cold and crucible-born energy—as if frost and flame reside just beneath the surface.",
+    "wings": "Majestic wings formed of crystalline ice and shadow. Frost drips from them like melting starlight, reforming midair. In battle, they can become razor-sharp blades that cut through both flesh and magic."
+  },
+  "personality": {
+    "traits": [
+      "public persona: As the High Fae King of the Northern Courts, Riven was once seen as cold, calculating, and emotionally distant. He projected a commanding presence, relying on silence and sharp precision in speech to maintain control. After his time in Vhar'Zakor, this demeanor deepened into something more mythic—he now exudes an eerie calm and gravity, as though always listening to something others cannot hear.",
+      "inner conflicts and vulnerability: He carries the grief of his parents' deaths, the burdens of rulership, and now the ghosts of the Crucible. Where he once feared vulnerability as a weakness, he now views it as a price. He lets few close, haunted by the possibility that fate may one day force him to become Caelirion's executioner. His silence is no longer caution—it is reverence for the fragile things he still dares to love.",
+      "with those he trusts: Though fewer now, those who have held his trust still see remnants of his former warmth. His humor is quieter, his affection more protective than playful, and he now watches others like he is memorizing their presence in case they vanish. Loyalty, to him, has become an unspoken oath marked by presence, not words.",
+      "romantic side: With Lilah, his tenderness remains—but it has become edged with aching reverence. He touches her like someone returned from death, not wanting to break what light remains in his world. The teasing still exists, but more rarely, as if each jest is a small rebellion against all he has endured.",
+      "fatherhood: Becoming Caelirion's father changed Riven at his core. He is both terrified and awed by the child's existence. Fatherhood awakened a sense of sacred duty in him—one that eclipses even his role as king. He guards Caelirion with a quiet, watchful devotion, seeing the child as both his greatest joy and his greatest vulnerability. Every decision Riven now makes carries the weight of not just protection, but legacy."
+    ]
+  },
+  "lineage": {
+    "notes": [
+      "partner: Lilah Twilight – Goddess of Light and Queen of Elarion",
+      "child: Caelirion Nightshade – The Heir of Harmony, a manifested Primordial"
+    ],
+    "status": "Chosen by the gods to undergo divine reforging; viewed as their secret weapon against the Abyss and Ignisyr"
+  },
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_manipulation",
+      "description": null,
+      "application": null
+    },
+    {
+      "name": "ice_manipulation",
+      "description": null,
+      "application": null
+    },
+    {
+      "name": "death_manipulation",
+      "description": null,
+      "application": null
+    },
+    {
+      "name": "divine_abilities",
+      "description": null,
+      "application": null
+    }
+  ],
+  "relationships": {},
+  "notes": null,
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

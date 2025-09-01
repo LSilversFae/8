@@ -1,0 +1,46 @@
+{
+  "id": "liora",
+  "name": "Liora",
+  "titles": [
+    "Goddess of Serenity and Nature"
+  ],
+  "species": null,
+  "gender": null,
+  "age": null,
+  "realm": null,
+  "court": null,
+  "affiliations": null,
+  "domains": [
+    "Serenity",
+    "Vitality",
+    "Nature"
+  ],
+  "role": null,
+  "appearance": {
+    "skin": "Emerald green skin with delicate vines and flowers blooming across her body",
+    "hair": "Thick braids of living ivy and blossoms",
+    "eyes": "Jade-like glowing eyes",
+    "attire": "Dress of petals and leaves that changes with the seasons"
+  },
+  "personality": {
+    "traits": [
+      "Gentle",
+      "Nurturing",
+      "Compassionate",
+      "Protective"
+    ],
+    "temperament": "Has a soothing presence but a fierce protective streak for the natural world"
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [],
+  "relationships": {},
+  "notes": [
+    "role_in_council: One of the six gods on the council of Elysion, acting as the guardian of nature and balance."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "Gods_and_Goddesses"
+  }
+}

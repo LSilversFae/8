@@ -1,0 +1,83 @@
+{
+  "id": "valdris",
+  "name": "Valdris",
+  "titles": [
+    "lead assassin"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "male",
+  "age": "2,000 years old",
+  "realm": "Elarion",
+  "court": "Grimshadow",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "notes": [
+      "height_and_build: Valdris is tall and lithe, his frame honed to perfection through centuries of shadowcraft and silent pursuits. His movements are fluid and deliberate, exuding predatory grace.",
+      "ears: Elongated and sharply pointed, his ears are a hallmark of his fae lineage, enhancing his ethereal, otherworldly appearance.",
+      "cloak: His cloak, woven from the essence of shadows, moves as though alive, shrouding him in near-total invisibility in the dark.",
+      "weapon: Valdris wields twin shadow-blades forged from his own magic, their edges constantly flickering with a dark, smoke-like energy."
+    ],
+    "skin": "His skin is a pale, sapphire blue, faintly shimmering with a spectral glow when exposed to moonlight or magic. Silvery, intricate runes etch across his form, glowing subtly with divine energy during moments of intense focus or combat.",
+    "hair": "His hair is an inky black cascade, streaked with silver threads that catch the light, giving the impression of a starry night sky. It is often loosely tied back, ensuring practicality during his missions.",
+    "eyes": "Valdris's piercing silver eyes glow faintly in the dark, radiating an intimidating focus. When he channels his divine heritage, his gaze becomes almost hypnotic, like moonlight reflected on still water.",
+    "attire": "He wears shadow silk garments that shift and ripple like living darkness, blending seamlessly with his environment. His armor is lightweight but reinforced with shadow-forged steel, adorned with delicate, ancient runic engravings."
+  },
+  "personality": {
+    "traits": [
+      "public demeanor: To those who encounter him, Valdris is the embodiment of quiet intensity. He exudes an air of stoic detachment, his presence alone enough to unsettle even the bravest souls.",
+      "among allies: Among trusted comrades in the Grimshadow Court, Valdris reveals a more thoughtful and measured side. Though still reserved, he shares his insights and strategizes with precision. His loyalty and dedication to his court are evident in his every action.",
+      "inner world: Beneath his professional exterior lies a conflicted soul, balancing the isolation of his role as an assassin with a quiet yearning for connection and purpose beyond death and shadows."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_manipulation",
+      "description": "Valdris can shape shadows into tools, weapons, or protective barriers. His mastery allows him to control darkness with surgical precision."
+    },
+    {
+      "name": "shadow_walking",
+      "description": "An unmatched ability to teleport short distances through shadows, rendering him untraceable."
+    },
+    {
+      "name": "enhanced_stealth",
+      "description": "His movements are utterly silent, blending seamlessly into his surroundings, making him nearly impossible to detect."
+    },
+    {
+      "name": "umbral_shields",
+      "description": "Summons shadowy barriers to deflect attacks, both magical and physical."
+    },
+    {
+      "name": "dark_energy_mastery",
+      "description": "Channels potent dark energy for devastating spells or combat enhancements."
+    },
+    {
+      "name": "illusion_crafting",
+      "description": "Weaves intricate illusions from shadow and whispers, deceiving or disorienting his enemies."
+    },
+    {
+      "name": "predators_grace",
+      "description": "Inherited from Eryndra, Valdris moves with unmatched fluidity and precision, allowing him to strike swiftly and evade harm."
+    },
+    {
+      "name": "fae_aura_suppression",
+      "description": "Suppresses his magical presence, making him invisible to magical detection."
+    }
+  ],
+  "relationships": {
+    "loyalty_to_court": "Valdris is deeply loyal to the Grimshadow Court, viewing his role as assassin not only as duty but as a sacred calling.",
+    "professional_bonds": "While distant, he shares mutual respect with the court's strategists and warriors, often collaborating on critical missions.",
+    "romantic_potential": "A potential romantic connection may arise with someone who can navigate the layers of his reserved nature and reach the vulnerable core of his soul, offering him solace beyond the shadows."
+  },
+  "notes": [
+    "class: divine"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

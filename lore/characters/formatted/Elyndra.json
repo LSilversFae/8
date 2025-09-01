@@ -1,0 +1,27 @@
+{
+  "id": "elyndra",
+  "name": "Elyndra",
+  "titles": [],
+  "species": "High Shadow Fae",
+  "gender": "female",
+  "age": "around 2000 years",
+  "realm": "Elarion",
+  "court": "Veilborne",
+  "affiliations": null,
+  "domains": [],
+  "role": "High Healer of the Court Veilborn, introduced in book 1 chapter 24.",
+  "appearance": {},
+  "personality": {},
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [],
+  "relationships": {},
+  "notes": [
+    "description: She had seen more cases of the Snow Glory Illness than anyone else."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}

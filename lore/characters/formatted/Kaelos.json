@@ -1,0 +1,46 @@
+{
+  "id": "kaelos",
+  "name": "Kaelos",
+  "titles": [
+    "God of Flame and Forge"
+  ],
+  "species": null,
+  "gender": null,
+  "age": null,
+  "realm": null,
+  "court": null,
+  "affiliations": null,
+  "domains": [
+    "Fire",
+    "Craftsmanship",
+    "Destruction"
+  ],
+  "role": null,
+  "appearance": {
+    "skin": "Molten lava-like skin with cracks that pulse with intense heat",
+    "hair": "Crown of fire",
+    "eyes": "Smoldering coals",
+    "attire": "Armor forged from the heart of a volcano, eternally warm to the touch"
+  },
+  "personality": {
+    "traits": [
+      "Passionate",
+      "Temperamental",
+      "Creative",
+      "Loyal"
+    ],
+    "temperament": "Driven by both creation and destruction, with a love for crafting destinies"
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [],
+  "relationships": {},
+  "notes": [
+    "role_in_council: One of the six gods on the council of Elysion, responsible for shaping and reforging the fate of the world."
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "Gods_and_Goddesses"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "lythia",
+  "name": "Lythia",
+  "titles": [
+    "assassin"
+  ],
+  "species": "High Shadow Fae",
+  "gender": "female",
+  "age": "2,000 years old",
+  "realm": "Elarion",
+  "court": "Grimshadow",
+  "affiliations": null,
+  "domains": [],
+  "role": null,
+  "appearance": {
+    "notes": [
+      "height_and_build: Lythia is slender and lithe, her frame honed for agility and speed. Her movements are deliberate, with an almost supernatural stillness when at rest and graceful precision when in motion.",
+      "ears: Her pointed ears are adorned with thin, silver chains and shadowstone pendants, symbols of her divine lineage.",
+      "cloak: Her cloak is an artifact of her lineage, made from shadow veils themselves. It flutters soundlessly, allowing her to become one with the shadows.",
+      "weapon: Lythia wields twin crescent-shaped daggers, their edges laced with shadow-forged runes that amplify her precision and lethality."
+    ],
+    "skin": "Her skin is a soft, dusky gray that seems to fade into the shadows, marked by faint, iridescent patterns that shimmer like a hidden map when touched by moonlight.",
+    "hair": "Lythia's hair is a cascading waterfall of deep ebony, with subtle violet highlights that catch the light. It is often tied in intricate knots or braids to ensure practicality in the field.",
+    "eyes": "Her eyes are a striking shade of twilight violet, their depths glimmering with secrets and an unyielding focus. They glow faintly when she channels her divine powers.",
+    "attire": "Lythia wears a form-fitting suit of shadow silk interwoven with silver threads that reflect no light. The fabric seems to ripple and shift, blending her form with the surrounding darkness."
+  },
+  "personality": {
+    "traits": [
+      "public demeanor: Lythia exudes an air of quiet intensity. Her calm, measured presence makes her seem unshakable, and her sharp gaze often leaves those around her feeling as though she sees through them.",
+      "among allies: Among her allies in the Grimshadow Court, Lythia reveals a thoughtful and strategic mind. She is a patient listener and offers sharp, insightful advice, earning the trust of her peers.",
+      "inner world: Beneath her composed exterior, Lythia is deeply introspective, often contemplating the nature of her existence and the meaning of her actions. She carries a quiet yearning for freedom and self-discovery."
+    ]
+  },
+  "lineage": {},
+  "prophecy": {},
+  "abilities": [
+    {
+      "name": "shadow_pathfinding",
+      "description": "Inherited from Nythorath, Lythia can navigate and manipulate hidden paths through the shadows, allowing her to traverse unseen routes and evade detection."
+    },
+    {
+      "name": "veil of silence",
+      "description": "A gift from Zarithea, Lythia can envelop herself in an aura of silence, nullifying sound around her and rendering her utterly undetectable by hearing."
+    },
+    {
+      "name": "phantom strike",
+      "description": "Lythia channels shadow energy into her daggers, delivering precise, devastating strikes that disrupt magical barriers."
+    },
+    {
+      "name": "umbral camouflage",
+      "description": "Allows Lythia to seamlessly blend with her surroundings, rendering her invisible even to magical detection."
+    },
+    {
+      "name": "shadow tether",
+      "description": "Creates a link of shadow energy that can ensnare enemies or pull herself swiftly toward an object or target."
+    },
+    {
+      "name": "eclipse precision",
+      "description": "Enhances her reflexes and accuracy in combat, allowing her to execute flawless, rapid attacks."
+    },
+    {
+      "name": "nythorath's intuition",
+      "description": "Grants her an uncanny ability to sense hidden threats, traps, and secrets, making her an unparalleled scout and assassin."
+    },
+    {
+      "name": "zarithea's embrace",
+      "description": "Summons a protective veil of shadows that absorbs damage and deflects light-based attacks."
+    }
+  ],
+  "relationships": {
+    "loyalty_to_court": "Lythia views her service to the Grimshadow Court as a sacred duty, honoring the legacy of her divine parents through her work.",
+    "professional_bonds": "Her calm and methodical nature makes her a valued team member. She has a strong mutual respect with her fellow assassins, often serving as a voice of reason in high-pressure situations.",
+    "romantic_potential": "Lythia's reserved nature hides a deep capacity for connection. She may find herself drawn to someone who shares her introspection and appreciates the quiet strength she embodies."
+  },
+  "notes": [
+    "class: divine"
+  ],
+  "source": {
+    "file": "lore\\characters\\characters.json",
+    "category": "characters",
+    "group": "northern_court"
+  }
+}
