@@ -913,6 +913,7 @@ def normalize_creatures_route():
     scan_dir = payload.get("scan")
     outdir = Path(payload.get("outdir") or default_outdir)
     split = bool(payload.get("split", True))
+    by_region = bool(payload.get("by_region", False))
     write_index = bool(payload.get("index", True))
     output_combined = payload.get("output")
     mappings_path = payload.get("mappings")
@@ -948,7 +949,14 @@ def normalize_creatures_route():
         for e in all_entries:
             name = e.get("name") or e.get("id") or "creature"
             safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in name)
-            path = outdir / f"{safe}.json"
+            # Optional region subfolder
+            subdir = outdir
+            if by_region:
+                reg = e.get("region") or "Uncategorized"
+                reg_safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in str(reg))
+                subdir = outdir / reg_safe
+                subdir.mkdir(parents=True, exist_ok=True)
+            path = subdir / f"{safe}.json"
             save_json_util(path, e)
             written_files.append(str(path))
         if write_index:

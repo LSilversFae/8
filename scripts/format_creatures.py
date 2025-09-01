@@ -31,6 +31,22 @@ def normalize_creature(name: str, raw: Dict[str, Any], context: Dict[str, Any]) 
     if location:
         location = canonicalize_with_synonyms(location, SYNONYMS.get("location", {}), title_case=True)
 
+    # Derive a higher-level region from location or grouping if provided
+    region: Optional[str] = None
+    if location:
+        loc_l = location.lower()
+        for needle, value in (SYNONYMS.get("region", {}) or {}).items():
+            try:
+                if needle in loc_l:
+                    region = value
+                    break
+            except Exception:
+                continue
+    if not region:
+        grp = context.get("group")
+        if isinstance(grp, str) and grp.strip():
+            region = grp.strip()
+
     desc = clean_text(raw.get("description"))
 
     abilities_raw = raw.get("abilities") or raw.get("powers")
@@ -60,6 +76,7 @@ def normalize_creature(name: str, raw: Dict[str, Any], context: Dict[str, Any]) 
         "name": display,
         "kind": kind,
         "location": location,
+        "region": region,
         "description": desc,
         "abilities": abilities,
         "danger_level": danger,
@@ -110,6 +127,7 @@ def build_index(entries: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
             "name": e.get("name"),
             "kind": e.get("kind"),
             "location": e.get("location"),
+            "region": e.get("region"),
             "group": e.get("source", {}).get("group"),
         }
         for e in entries
@@ -130,6 +148,12 @@ SYNONYMS: Dict[str, Dict[str, str]] = {
         "wraithwood": "Wraithwood Forest",
         "the abyss": "Abyss",
         "abyss": "Abyss",
+    },
+    "region": {
+        "northern": "Northern Region",
+        "wraithwood": "Wraithwood",
+        "abyss": "Abyss",
+        "elarion": "Elarion",
     },
 }
 

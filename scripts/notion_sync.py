@@ -203,7 +203,8 @@ def list_files_for(category: str) -> List[Path]:
     base = CATEGORY_DIRS.get(category)
     if not base or not base.exists():
         return []
-    return sorted([p for p in base.glob("*.json")])
+    # Include nested folders to allow organizing by region/area
+    return sorted([p for p in base.glob("**/*.json")])
 
 
 def find_file_by_name_or_source(name: str, category: str) -> Optional[Path]:

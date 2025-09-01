@@ -11,6 +11,18 @@
     "wraithwood": "Wraithwood Forest",
     "abyss": "Abyss",
     "the abyss": "Abyss"
+  },
+  "region": {
+    "northern kingdom": "Northern Kingdom",
+    "southern kingdom": "Southern Kingdom",
+    "mountains": "Mountains",
+    "mountain": "Mountains",
+    "wraithwood": "Wraithwood",
+    "elarion": "Elarion",
+    "elysion": "Elysion",
+    "nythralkar": "Nythralkar",
+    "ignisyr": "Ignisyr",
+    "dreaming realm": "Dreaming Realm",
+    "abyss": "Abyss"
   }
 }
-
