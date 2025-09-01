@@ -1,0 +1,15 @@
+{
+  "Name": { "json": "name", "type": "title" },
+  "ID": { "json": "id", "type": "rich_text" },
+  "Species": { "json": "species", "type": "select" },
+  "Gender": { "json": "gender", "type": "select" },
+  "Age": { "json": "age", "type": "rich_text" },
+  "Realm": { "json": "realm", "type": "select" },
+  "Court": { "json": "court", "type": "select" },
+  "Titles": { "json": "titles", "type": "multi_select" },
+  "Domains": { "json": "domains", "type": "multi_select" },
+  "Role": { "json": "role", "type": "rich_text" },
+  "File Path": { "json": "source.file", "type": "rich_text" },
+  "Category": { "json": "source.category", "type": "select" }
+}
+

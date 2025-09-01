@@ -73,6 +73,19 @@ except Exception as e:
     print(f"Warning: realms normalizer not available: {e}")
     normalize_realms_file = None
 
+# Notion full sync utilities (characters)
+try:
+    from scripts.notion_sync import (
+        push_characters_to_notion as push_chars_full,
+        pull_characters_from_notion as pull_chars_full,
+        CHAR_MAPPING_PATH,
+    )
+except Exception as e:
+    print(f"Warning: notion sync utilities not available: {e}")
+    push_chars_full = None
+    pull_chars_full = None
+    CHAR_MAPPING_PATH = None
+
 # -------- INDEXING --------
 def build_category_index(category):
     """Build index of entries from JSON files inside category folder."""
@@ -307,6 +320,35 @@ def sync_all():
         else:
             results[category] = {"status": "⚠️ Skipped (no DB ID configured)"}
     return jsonify(results)
+
+
+# -------- CHARACTER FULL SYNC (JSON <-> Notion) --------
+@app.route('/push-characters-to-notion', methods=['POST', 'GET'])
+def push_characters_to_notion_route():
+    if push_chars_full is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = push_chars_full(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/pull-characters-from-notion', methods=['POST', 'GET'])
+def pull_characters_from_notion_route():
+    if pull_chars_full is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = pull_chars_full(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/getLore', methods=['GET'])
 def get_lore():
