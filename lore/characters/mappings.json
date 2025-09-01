@@ -1,0 +1,25 @@
+{
+  "species": {
+    "high fae": "Fae",
+    "fae": "Fae",
+    "faerie": "Fae",
+    "dryads": "Dryad",
+    "dragonkin": "Dragon",
+    "dragons": "Dragon",
+    "mortal": "Human",
+    "mortals": "Human"
+  },
+  "realm": {
+    "elarion": "Elarion",
+    "the abyss": "Abyss",
+    "abyss": "Abyss",
+    "dreamweave": "Dreaming Realm",
+    "dreaming realm": "Dreaming Realm"
+  },
+  "court": {
+    "northern fae courts": "Northern Court",
+    "northern court": "Northern Court",
+    "shadow court": "Shadow Court"
+  }
+}
+

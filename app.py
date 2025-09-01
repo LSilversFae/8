@@ -5,6 +5,7 @@ from pathlib import Path
 from notion_client import Client
 from dotenv import load_dotenv
 from difflib import get_close_matches
+from typing import List
 
 # Load environment variables
 load_dotenv()
@@ -36,6 +37,20 @@ app = Flask(__name__)
 LORE_ROOT = Path("lore")
 INDEX_DIR = LORE_ROOT / "indexes"
 CATEGORIES = ["characters", "creatures", "magic", "plots", "realms"]
+
+# Import normalizer utilities (for character normalization route)
+try:
+    from scripts.format_characters import (
+        normalize_file as normalize_character_file,
+        save_json as save_json_util,
+        build_index as build_character_index,
+        set_synonyms as set_character_synonyms,
+        load_synonyms as load_character_synonyms,
+    )
+except Exception as e:
+    print(f"Warning: character normalizer not available: {e}
+")
+    normalize_character_file = None
 
 # -------- INDEXING --------
 def build_category_index(category):
@@ -299,6 +314,76 @@ def get_lore():
                     })
 
     return jsonify({"error": f"No lore entry found for '{subject}'"}), 404
+
+
+# -------- NORMALIZATION ROUTE --------
+@app.route('/normalize-characters', methods=['POST', 'GET'])
+def normalize_characters_route():
+    if normalize_character_file is None:
+        return jsonify({"error": "Character normalizer module not available"}), 500
+
+    # Defaults
+    default_input = LORE_ROOT / "characters" / "characters.json"
+    default_outdir = LORE_ROOT / "characters" / "formatted"
+    payload = request.get_json(silent=True) or {}
+
+    input_path = payload.get("input")
+    scan_dir = payload.get("scan")
+    outdir = Path(payload.get("outdir") or default_outdir)
+    split = bool(payload.get("split", True))
+    write_index = bool(payload.get("index", True))
+    output_combined = payload.get("output")
+    mappings_path = payload.get("mappings")
+
+    inputs: List[Path] = []
+    if input_path:
+        inputs = [Path(input_path)]
+    elif scan_dir:
+        inputs = list(Path(scan_dir).glob("*.json"))
+    elif default_input.exists():
+        inputs = [default_input]
+    else:
+        return jsonify({"error": "No input provided and default characters.json not found"}), 400
+
+    # Load synonyms and set in module
+    if mappings_path:
+        synonyms = load_character_synonyms(Path(mappings_path))
+    else:
+        default_map = LORE_ROOT / "characters" / "mappings.json"
+        synonyms = load_character_synonyms(default_map)
+    set_character_synonyms(synonyms)
+
+    all_entries = []
+    for p in inputs:
+        try:
+            all_entries.extend(normalize_character_file(p))
+        except Exception as e:
+            return jsonify({"error": f"Failed to normalize {p}", "details": str(e)}), 500
+
+    written_files = []
+    if split:
+        outdir.mkdir(parents=True, exist_ok=True)
+        for e in all_entries:
+            name = e.get("name") or e.get("id") or "character"
+            safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in name)
+            path = outdir / f"{safe}.json"
+            save_json_util(path, e)
+            written_files.append(str(path))
+        if write_index:
+            idx_path = outdir / "_index.json"
+            save_json_util(idx_path, build_character_index(all_entries))
+            written_files.append(str(idx_path))
+
+    if output_combined:
+        out_path = Path(output_combined)
+        save_json_util(out_path, {"characters": all_entries})
+        written_files.append(str(out_path))
+
+    return jsonify({
+        "status": "ok",
+        "count": len(all_entries),
+        "written": written_files,
+    })
 
 
 if __name__ == '__main__':

@@ -230,15 +230,28 @@ def normalize_character(entry: Dict[str, Any], context: Dict[str, Any]) -> Dict[
     domains = clean_list(entry.get("domain") or entry.get("domains")) or []
     role = clean_text(entry.get("role_in_cosmic_order") or entry.get("role"))
 
+    # Canonicalize species/realm/court with synonyms if available
+    species = clean_text(entry.get("species"))
+    if species:
+        species = canonicalize_with_synonyms(species, SYNONYMS.get("species", {}))
+
+    realm = clean_text(entry.get("realm") or context.get("realm"))
+    if realm:
+        realm = canonicalize_with_synonyms(realm, SYNONYMS.get("realm", {}), title_case=True)
+
+    court = clean_text(entry.get("court") or context.get("court"))
+    if court:
+        court = canonicalize_with_synonyms(court, SYNONYMS.get("court", {}), title_case=True)
+
     out: Dict[str, Any] = {
         "id": re.sub(r"[^a-z0-9_]+", "_", name.lower()),
         "name": name,
         "titles": titles,
-        "species": clean_text(entry.get("species")),
+        "species": species,
         "gender": clean_text(entry.get("gender")),
         "age": clean_text(entry.get("age")),
-        "realm": clean_text(entry.get("realm") or context.get("realm")),
-        "court": clean_text(entry.get("court") or context.get("court")),
+        "realm": realm,
+        "court": court,
         "affiliations": clean_list(entry.get("affiliations")),
         "domains": domains,
         "role": role,
@@ -351,6 +364,75 @@ def build_index(entries: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     ]
 
 
+# ---------------- Synonyms support ----------------
+# Module-level synonyms dictionary used by normalization.
+SYNONYMS: Dict[str, Dict[str, str]] = {
+    # Defaults; can be overridden or extended via load_synonyms()/set_synonyms()
+    "species": {
+        "high fae": "Fae",
+        "fae": "Fae",
+        "faerie": "Fae",
+        "dryads": "Dryad",
+        "dryad": "Dryad",
+        "dragon": "Dragon",
+        "dragons": "Dragon",
+        "dragonkin": "Dragon",
+        "human": "Human",
+        "mortal": "Human",
+        "mortals": "Human",
+    },
+    "realm": {
+        "elarion": "Elarion",
+        "the abyss": "Abyss",
+        "abyss": "Abyss",
+        "dreaming realm": "Dreaming Realm",
+        "dreamweave": "Dreaming Realm",
+        "dream": "Dreaming Realm",
+    },
+    "court": {
+        "northern fae courts": "Northern Court",
+        "northern court": "Northern Court",
+        "southern court": "Southern Court",
+        "shadow court": "Shadow Court",
+    },
+}
+
+
+def canonicalize_with_synonyms(value: str, mapping: Dict[str, str], title_case: bool = False) -> str:
+    key = value.strip().lower()
+    if key in mapping:
+        return mapping[key]
+    # Fallback: title-case or return cleaned
+    return value.title() if title_case else value
+
+
+def load_synonyms(path: Optional[Path]) -> Dict[str, Dict[str, str]]:
+    """Load synonyms JSON and merge into defaults. Returns merged mapping."""
+    merged = {k: dict(v) for k, v in SYNONYMS.items()}
+    if not path:
+        return merged
+    if not path.exists():
+        return merged
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        for section, m in data.items():
+            if not isinstance(m, dict):
+                continue
+            sect = section.lower()
+            merged.setdefault(sect, {})
+            # normalize keys to lowercase for matching
+            merged[sect].update({str(k).lower(): str(v) for k, v in m.items()})
+    except Exception:
+        pass
+    return merged
+
+
+def set_synonyms(synonyms: Dict[str, Dict[str, str]]) -> None:
+    """Replace module-level synonyms mapping."""
+    global SYNONYMS
+    SYNONYMS = synonyms
+
+
 def main():
     ap = argparse.ArgumentParser(description="Normalize character JSON files.")
     src = ap.add_mutually_exclusive_group(required=True)
@@ -361,6 +443,7 @@ def main():
     ap.add_argument("--output", type=str, help="Path to write combined normalized JSON")
     ap.add_argument("--split", action="store_true", help="Write one JSON per character into --outdir")
     ap.add_argument("--index", action="store_true", help="Also write a compact index JSON next to outputs")
+    ap.add_argument("--mappings", type=str, help="Optional path to synonyms mapping JSON")
 
     args = ap.parse_args()
 
@@ -370,6 +453,10 @@ def main():
     else:
         root = Path(args.scan)
         inputs = [p for p in root.glob("*.json")]
+
+    # Load synonyms if provided
+    synonyms = load_synonyms(Path(args.mappings)) if args.mappings else SYNONYMS
+    set_synonyms(synonyms)
 
     all_entries: List[Dict[str, Any]] = []
     for p in inputs:
@@ -399,4 +486,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
