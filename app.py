@@ -6,6 +6,8 @@ from notion_client import Client
 from dotenv import load_dotenv
 from difflib import get_close_matches
 from typing import List
+import threading
+import time
 
 # Load environment variables
 load_dotenv()
@@ -109,6 +111,12 @@ except Exception as e:
     push_realms_full = None
     pull_realms_full = None
     ensure_realms_schema = None
+    push_plots_full = None
+    pull_plots_full = None
+    ensure_plots_schema = None
+    push_magic_full = None
+    pull_magic_full = None
+    ensure_magic_schema = None
     push_plots_full = None
     pull_plots_full = None
     ensure_plots_schema = None
@@ -578,6 +586,185 @@ def pull_magic_from_notion_route():
         return jsonify({"status": "ok", **result})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+# -------- BATCH ENSURE + PUSH --------
+def _check_secret():
+    secret = os.getenv("SYNC_SECRET")
+    if not secret:
+        return True
+    # Allow either header or query param
+    header = request.headers.get("X-Sync-Secret")
+    param = request.args.get("secret")
+    return header == secret or param == secret
+
+
+@app.route('/publish-all', methods=['POST', 'GET'])
+def publish_all():
+    if not _check_secret():
+        return jsonify({"error": "Unauthorized"}), 401
+    results = {}
+    # Characters
+    if ensure_chars_schema and push_chars_full and os.getenv("CHARACTER_DB_ID"):
+        try:
+            ensure_res = ensure_chars_schema(None)
+            push_res = push_chars_full(None)
+            results["characters"] = {"ensure": ensure_res, "push": push_res}
+        except Exception as e:
+            results["characters"] = {"error": str(e)}
+    # Creatures
+    if ensure_creatures_schema and push_creatures_full and os.getenv("CREATURES_DB_ID"):
+        try:
+            ensure_res = ensure_creatures_schema(None)
+            push_res = push_creatures_full(None)
+            results["creatures"] = {"ensure": ensure_res, "push": push_res}
+        except Exception as e:
+            results["creatures"] = {"error": str(e)}
+    # Realms
+    if ensure_realms_schema and push_realms_full and os.getenv("REALMS_DB_ID"):
+        try:
+            ensure_res = ensure_realms_schema(None)
+            push_res = push_realms_full(None)
+            results["realms"] = {"ensure": ensure_res, "push": push_res}
+        except Exception as e:
+            results["realms"] = {"error": str(e)}
+    # Magic
+    if ensure_magic_schema and push_magic_full and os.getenv("MAGIC_DB_ID"):
+        try:
+            ensure_res = ensure_magic_schema(None)
+            push_res = push_magic_full(None)
+            results["magic"] = {"ensure": ensure_res, "push": push_res}
+        except Exception as e:
+            results["magic"] = {"error": str(e)}
+    # Plots
+    if ensure_plots_schema and push_plots_full and os.getenv("PLOTS_DB_ID"):
+        try:
+            ensure_res = ensure_plots_schema(None)
+            push_res = push_plots_full(None)
+            results["plots"] = {"ensure": ensure_res, "push": push_res}
+        except Exception as e:
+            results["plots"] = {"error": str(e)}
+
+    return jsonify({"status": "ok", "results": results})
+
+
+@app.route('/pull-all', methods=['POST', 'GET'])
+def pull_all():
+    if not _check_secret():
+        return jsonify({"error": "Unauthorized"}), 401
+    results = {}
+    if pull_chars_full and os.getenv("CHARACTER_DB_ID"):
+        try:
+            results["characters"] = pull_chars_full(None)
+        except Exception as e:
+            results["characters"] = {"error": str(e)}
+    if pull_creatures_full and os.getenv("CREATURES_DB_ID"):
+        try:
+            results["creatures"] = pull_creatures_full(None)
+        except Exception as e:
+            results["creatures"] = {"error": str(e)}
+    if pull_realms_full and os.getenv("REALMS_DB_ID"):
+        try:
+            results["realms"] = pull_realms_full(None)
+        except Exception as e:
+            results["realms"] = {"error": str(e)}
+    if pull_magic_full and os.getenv("MAGIC_DB_ID"):
+        try:
+            results["magic"] = pull_magic_full(None)
+        except Exception as e:
+            results["magic"] = {"error": str(e)}
+    if pull_plots_full and os.getenv("PLOTS_DB_ID"):
+        try:
+            results["plots"] = pull_plots_full(None)
+        except Exception as e:
+            results["plots"] = {"error": str(e)}
+
+    return jsonify({"status": "ok", "results": results})
+
+
+# -------- AUTO SYNC SCHEDULER --------
+def _bool_env(name: str, default: bool = False) -> bool:
+    val = os.getenv(name)
+    if val is None:
+        return default
+    return str(val).strip().lower() in ("1", "true", "yes", "on")
+
+
+def _do_publish_all_internal():
+    results = {}
+    try:
+        if ensure_chars_schema and push_chars_full and os.getenv("CHARACTER_DB_ID"):
+            results["characters"] = {"ensure": ensure_chars_schema(None), "push": push_chars_full(None)}
+        if ensure_creatures_schema and push_creatures_full and os.getenv("CREATURES_DB_ID"):
+            results["creatures"] = {"ensure": ensure_creatures_schema(None), "push": push_creatures_full(None)}
+        if ensure_realms_schema and push_realms_full and os.getenv("REALMS_DB_ID"):
+            results["realms"] = {"ensure": ensure_realms_schema(None), "push": push_realms_full(None)}
+        if ensure_magic_schema and push_magic_full and os.getenv("MAGIC_DB_ID"):
+            results["magic"] = {"ensure": ensure_magic_schema(None), "push": push_magic_full(None)}
+        if ensure_plots_schema and push_plots_full and os.getenv("PLOTS_DB_ID"):
+            results["plots"] = {"ensure": ensure_plots_schema(None), "push": push_plots_full(None)}
+    except Exception as e:
+        results["error"] = str(e)
+    return results
+
+
+def _do_pull_all_internal():
+    results = {}
+    try:
+        if pull_chars_full and os.getenv("CHARACTER_DB_ID"):
+            results["characters"] = pull_chars_full(None)
+        if pull_creatures_full and os.getenv("CREATURES_DB_ID"):
+            results["creatures"] = pull_creatures_full(None)
+        if pull_realms_full and os.getenv("REALMS_DB_ID"):
+            results["realms"] = pull_realms_full(None)
+        if pull_magic_full and os.getenv("MAGIC_DB_ID"):
+            results["magic"] = pull_magic_full(None)
+        if pull_plots_full and os.getenv("PLOTS_DB_ID"):
+            results["plots"] = pull_plots_full(None)
+    except Exception as e:
+        results["error"] = str(e)
+    return results
+
+
+def _start_scheduler_if_enabled():
+    # Only run when a token is present and at least one DB ID is configured
+    if not os.getenv("NOTION_TOKEN"):
+        return
+    if not any(os.getenv(k) for k in [
+        "CHARACTER_DB_ID", "CREATURES_DB_ID", "REALMS_DB_ID", "MAGIC_DB_ID", "PLOTS_DB_ID"
+    ]):
+        return
+
+    interval_minutes = int(os.getenv("AUTO_SYNC_INTERVAL_MINUTES", "60"))
+    pull_on_start = _bool_env("AUTO_PULL_ON_START", True)
+    publish_on_start = _bool_env("AUTO_PUBLISH_ON_START", False)
+    pull_each_cycle = _bool_env("AUTO_PULL_EACH_CYCLE", True)
+    publish_each_cycle = _bool_env("AUTO_PUBLISH_EACH_CYCLE", False)
+
+    def worker():
+        # initial delay allows the app to finish booting
+        time.sleep(3)
+        if pull_on_start:
+            _do_pull_all_internal()
+        if publish_on_start:
+            _do_publish_all_internal()
+        while True:
+            time.sleep(interval_minutes * 60)
+            if pull_each_cycle:
+                _do_pull_all_internal()
+            if publish_each_cycle:
+                _do_publish_all_internal()
+
+    try:
+        t = threading.Thread(target=worker, name="auto-sync", daemon=True)
+        t.start()
+        print(f"Auto-sync scheduler started: every {interval_minutes} min")
+    except Exception as e:
+        print(f"Failed to start auto-sync scheduler: {e}")
+
+
+# Kick off scheduler at import time
+_start_scheduler_if_enabled()
 
 
 # -------- HEALTH CHECKS --------
