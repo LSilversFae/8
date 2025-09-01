@@ -125,6 +125,24 @@ def get_db_property_types(notion: Client, db_id: str) -> Dict[str, str]:
     return types
 
 
+def _danger_bucket(text: Any) -> str:
+    try:
+        s = (text or "").strip().lower()
+    except Exception:
+        s = ""
+    if not s:
+        return "Unknown"
+    if any(k in s for k in ("extreme", "catastrophic", "mythic")):
+        return "Extreme"
+    if any(k in s for k in ("very high", "extremely high", "deadly", "lethal", "high")):
+        return "High"
+    if any(k in s for k in ("moderate", "medium")):
+        return "Moderate"
+    if any(k in s for k in ("low", "minor")):
+        return "Low"
+    return "Unknown"
+
+
 def get_by_path(obj: Dict[str, Any], path: str) -> Any:
     cur: Any = obj
     for part in path.split("."):
@@ -317,6 +335,12 @@ def push_to_notion(category: str, mapping_path: Optional[Path] = None) -> Dict[s
             entry.setdefault("source", {})
             entry["source"]["file"] = str(p)
             entry["source"].setdefault("category", category)
+
+            # Derive normalized fields for certain categories
+            if category == "creatures":
+                # Bucket the verbose danger_level into a short select-friendly value
+                if "danger_level" in entry and "danger_level_bucket" not in entry:
+                    entry["danger_level_bucket"] = _danger_bucket(entry.get("danger_level"))
 
             props = build_properties_from_json(entry, mapping, actual_types)
 

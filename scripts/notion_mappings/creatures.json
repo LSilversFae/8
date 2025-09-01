@@ -5,7 +5,7 @@
   "Realm": { "json": "realm", "type": "select" },
   "Region": { "json": "region", "type": "rich_text" },
   "Location": { "json": "location", "type": "multi_select" },
-  "Danger Level": { "json": "danger_level", "type": "select" },
+  "Danger Level": { "json": "danger_level_bucket", "type": "select" },
   "Description": { "json": "description", "type": "rich_text" },
   "File Path": { "json": "source.file", "type": "rich_text" },
   "Category": { "json": "source.category", "type": "select" }
