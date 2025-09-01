@@ -63,6 +63,7 @@ try:
         build_index as build_creatures_index,
         load_synonyms as load_creatures_synonyms,
         set_synonyms as set_creatures_synonyms,
+        build_region_bundles as build_creatures_region_bundles,
     )
 except Exception as e:
     print(f"Warning: creatures normalizer not available: {e}")
@@ -914,6 +915,7 @@ def normalize_creatures_route():
     outdir = Path(payload.get("outdir") or default_outdir)
     split = bool(payload.get("split", True))
     by_region = bool(payload.get("by_region", False))
+    region_bundles = bool(payload.get("region_bundles", False))
     write_index = bool(payload.get("index", True))
     output_combined = payload.get("output")
     mappings_path = payload.get("mappings")
@@ -963,6 +965,15 @@ def normalize_creatures_route():
             idx_path = outdir / "_index.json"
             save_json_util(idx_path, build_creatures_index(all_entries))
             written_files.append(str(idx_path))
+
+        if region_bundles:
+            bundles = build_creatures_region_bundles(all_entries)
+            base = outdir / "regions"
+            for region, data in bundles.items():
+                rsafe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in region)
+                rpath = base / f"{rsafe}.json"
+                save_json_util(rpath, data)
+                written_files.append(str(rpath))
 
     if output_combined:
         out_path = Path(output_combined)

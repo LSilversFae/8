@@ -5,7 +5,8 @@ import argparse
 import json
 import re
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, DefaultDict
+from collections import defaultdict
 
 # Reuse utilities from character formatter to stay consistent
 import sys
@@ -156,6 +157,44 @@ SYNONYMS: Dict[str, Dict[str, str]] = {
         "elarion": "Elarion",
     },
 }
+
+
+# -------- Region bundles (per-region JSON grouped by danger) --------
+def danger_bucket(text: Optional[str]) -> str:
+    if not text:
+        return "Unknown"
+    t = str(text).lower()
+    # coarse bucketing; adjust as needed
+    if any(k in t for k in ("extreme", "mythic", "catastrophic")):
+        return "Extreme"
+    if any(k in t for k in ("very high", "extremely high", "deadly", "lethal", "high")):
+        return "High"
+    if any(k in t for k in ("moderate", "medium")):
+        return "Moderate"
+    if any(k in t for k in ("low", "minor")):
+        return "Low"
+    return "Unknown"
+
+
+def build_region_bundles(entries: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+    """Aggregate creatures into per-region bundles categorized by danger level.
+
+    Returns mapping: region -> { region, categories: { Danger: [entries...] } }
+    """
+    bundles: Dict[str, Dict[str, Any]] = {}
+    for e in entries:
+        region = e.get("region") or "Uncategorized"
+        bucket = danger_bucket(e.get("danger_level"))
+        if region not in bundles:
+            bundles[region] = {"region": region, "categories": defaultdict(list)}  # type: ignore
+        bundles[region]["categories"][bucket].append(e)  # type: ignore
+
+    # Convert inner defaultdicts to plain dicts
+    for r, b in list(bundles.items()):
+        cats = b.get("categories", {})
+        if isinstance(cats, defaultdict):
+            bundles[r]["categories"] = dict(cats)  # type: ignore
+    return bundles
 
 
 def main():
