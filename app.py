@@ -80,6 +80,26 @@ except Exception as e:
     print(f"Warning: realms normalizer not available: {e}")
     normalize_realms_file = None
 
+# Magic normalizer (optional)
+try:
+    from scripts.format_magic import (
+        normalize_file as normalize_magic_file,
+        save as save_magic_json,
+    )
+except Exception as e:
+    print(f"Warning: magic normalizer not available: {e}")
+    normalize_magic_file = None
+
+# Plots normalizer (optional)
+try:
+    from scripts.format_plots import (
+        normalize_file as normalize_plots_file,
+        save as save_plots_json,
+    )
+except Exception as e:
+    print(f"Warning: plots normalizer not available: {e}")
+    normalize_plots_file = None
+
 # Notion full sync utilities (characters)
 try:
     from scripts.notion_sync import (
@@ -916,6 +936,37 @@ def health_notion():
         status["message"] = f"Query failed: {e}"
     return jsonify(status)
 
+
+# -------- MAPPING VALIDATOR --------
+@app.route('/validate-mapping/<category>', methods=['GET'])
+def validate_mapping(category):
+    try:
+        from scripts.notion_sync import get_env_client_for, get_db_property_types, load_mapping
+    except Exception as e:
+        return jsonify({"error": f"Validator unavailable: {e}"}), 500
+    try:
+        notion, db_id = get_env_client_for(category)
+        actual = get_db_property_types(notion, db_id)
+        mp = load_mapping(None, category=category)
+        mismatches = []
+        missing = []
+        for prop, spec in mp.items():
+            mtype = spec.get("type")
+            atype = actual.get(prop)
+            if atype is None:
+                missing.append(prop)
+            elif atype != mtype:
+                mismatches.append({"property": prop, "mapping_type": mtype, "actual_type": atype})
+        extras = [p for p in actual.keys() if p not in mp]
+        return jsonify({
+            "database_id": db_id,
+            "missing_in_db": missing,
+            "type_mismatches": mismatches,
+            "unmapped_properties": extras,
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 @app.route('/getLore', methods=['GET'])
 def get_lore():
     subject = request.args.get("subject")
@@ -1207,23 +1258,6 @@ def normalize_realms_route():
     input_path = payload.get("input")
     scan_dir = payload.get("scan")
     outdir = Path(payload.get("outdir") or default_outdir)
-try:
-    from scripts.format_magic import (
-        normalize_file as normalize_magic_file,
-        save as save_magic_json,
-    )
-except Exception as e:
-    print(f"Warning: magic normalizer not available: {e}")
-    normalize_magic_file = None
-
-try:
-    from scripts.format_plots import (
-        normalize_file as normalize_plots_file,
-        save as save_plots_json,
-    )
-except Exception as e:
-    print(f"Warning: plots normalizer not available: {e}")
-    normalize_plots_file = None
     split = bool(payload.get("split", True))
     write_index = bool(payload.get("index", True))
     output_combined = payload.get("output")

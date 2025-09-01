@@ -19,7 +19,9 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
+import hashlib
+import time
 
 from notion_client import Client
 from dotenv import load_dotenv
@@ -69,6 +71,18 @@ def save_json(path: Path, data: Any) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
+# ---------------- Retry / Backoff ----------------
+def _with_retry(func, *args, **kwargs):
+    delays = [0.2, 0.5, 1.0, 2.0]
+    for i, d in enumerate(delays):
+        try:
+            return func(*args, **kwargs)
+        except Exception as e:
+            if i == len(delays) - 1:
+                raise
+            time.sleep(d)
+
+
 def get_env_client_for(category: str) -> tuple[Client, str]:
     token = os.getenv("NOTION_TOKEN")
     if not token:
@@ -97,6 +111,18 @@ def load_mapping(path: Optional[Path] = None, *, category: Optional[str] = None)
         raise ValueError("Invalid mapping JSON format")
     # Normalize keys to strings
     return {str(k): {"json": str(v.get("json")), "type": str(v.get("type"))} for k, v in data.items()}
+
+
+def get_db_property_types(notion: Client, db_id: str) -> Dict[str, str]:
+    """Return actual Notion property types for a database."""
+    db = _with_retry(notion.databases.retrieve, db_id)
+    props = db.get("properties", {})
+    types: Dict[str, str] = {}
+    for name, spec in props.items():
+        t = spec.get("type")
+        if isinstance(t, str):
+            types[name] = t
+    return types
 
 
 def get_by_path(obj: Dict[str, Any], path: str) -> Any:
@@ -173,11 +199,14 @@ def from_notion_prop(prop_type: str, prop_obj: Dict[str, Any]):
     return "".join([x.get("plain_text", "") for x in arr]) if arr else None
 
 
-def build_properties_from_json(entry: Dict[str, Any], mapping: Dict[str, Dict[str, str]]) -> Dict[str, Any]:
+def build_properties_from_json(entry: Dict[str, Any], mapping: Dict[str, Dict[str, str]], actual_types: Optional[Dict[str, str]] = None) -> Dict[str, Any]:
     props: Dict[str, Any] = {}
     for notion_prop, spec in mapping.items():
         path = spec.get("json")
         typ = spec.get("type")
+        # Auto-adapt to actual Notion type if present
+        if actual_types and notion_prop in actual_types:
+            typ = actual_types[notion_prop]
         val = get_by_path(entry, path)
         payload = to_notion_prop(typ, val)
         if payload is not None:
@@ -235,10 +264,43 @@ def safe_filename(name: str) -> str:
     return base or "character"
 
 
+# ---------------- Incremental state ----------------
+def _syncstate_path(category: str) -> Path:
+    return LORE_ROOT / f".syncstate_{category}.json"
+
+
+def _load_syncstate(category: str) -> Dict[str, Any]:
+    p = _syncstate_path(category)
+    if p.exists():
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+
+def _save_syncstate(category: str, state: Dict[str, Any]) -> None:
+    p = _syncstate_path(category)
+    p.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def _hash_mapped(entry: Dict[str, Any], mapping: Dict[str, Dict[str, str]], actual_types: Optional[Dict[str, str]]) -> str:
+    # Only hash mapped values to decide if push is needed
+    acc: List[Tuple[str, Any]] = []
+    for prop, spec in mapping.items():
+        typ = actual_types.get(prop) if actual_types else spec.get("type")
+        path = spec.get("json")
+        acc.append((prop, typ, get_by_path(entry, path)))
+    raw = json.dumps(acc, ensure_ascii=False, sort_keys=True)
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()
+
+
 def push_to_notion(category: str, mapping_path: Optional[Path] = None) -> Dict[str, Any]:
     notion, db_id = get_env_client_for(category)
     mapping = load_mapping(mapping_path, category=category)
     files = list_files_for(category)
+    actual_types = get_db_property_types(notion, db_id)
+    state = _load_syncstate(category)
 
     created = 0
     updated = 0
@@ -256,29 +318,35 @@ def push_to_notion(category: str, mapping_path: Optional[Path] = None) -> Dict[s
             entry["source"]["file"] = str(p)
             entry["source"].setdefault("category", category)
 
-            props = build_properties_from_json(entry, mapping)
+            props = build_properties_from_json(entry, mapping, actual_types)
+
+            # Incremental: skip if hash unchanged
+            h = _hash_mapped(entry, mapping, actual_types)
+            st = state.get(str(p)) or {}
+            if st.get("hash") == h and st.get("page_id"):
+                continue
 
             page_id = entry.get("source", {}).get("notion_page_id")
             used_page_id = None
             if page_id:
                 try:
-                    notion.pages.update(page_id=page_id, properties=props)
+                    _with_retry(notion.pages.update, page_id=page_id, properties=props)
                     updated += 1
                     used_page_id = page_id
                 except Exception:
                     used_page_id = None
             if not used_page_id:
                 # Fallback to matching by Name
-                res = notion.databases.query(
+                res = _with_retry(notion.databases.query,
                     database_id=db_id,
                     filter={"property": "Name", "title": {"equals": name}},
                 )
                 if res.get("results"):
                     used_page_id = res["results"][0]["id"]
-                    notion.pages.update(page_id=used_page_id, properties=props)
+                    _with_retry(notion.pages.update, page_id=used_page_id, properties=props)
                     updated += 1
                 else:
-                    created_page = notion.pages.create(parent={"database_id": db_id}, properties=props)
+                    created_page = _with_retry(notion.pages.create, parent={"database_id": db_id}, properties=props)
                     used_page_id = created_page.get("id")
                     created += 1
 
@@ -290,17 +358,39 @@ def push_to_notion(category: str, mapping_path: Optional[Path] = None) -> Dict[s
                     save_json(p, entry)
                 except Exception:
                     pass
+
+            # Append long description as page content blocks (avoid property limits)
+            try:
+                desc = get_by_path(entry, "description") or get_by_path(entry, "summary")
+                if used_page_id and isinstance(desc, str) and len(desc) > 800:
+                    # Avoid re-append if unchanged
+                    dh = hashlib.sha256(desc.encode("utf-8")).hexdigest()
+                    if st.get("desc_hash") != dh:
+                        _with_retry(notion.blocks.children.append, used_page_id, children=[{
+                            "object": "block",
+                            "type": "paragraph",
+                            "paragraph": {"rich_text": [{"type": "text", "text": {"content": desc[:2000]}}]}
+                        }])
+                        st["desc_hash"] = dh
+            except Exception:
+                pass
+
+            # Update incremental state
+            st["hash"] = h
+            st["page_id"] = used_page_id
+            state[str(p)] = st
         except Exception as e:
             # Best-effort logging; continue
             print(f"Failed to sync '{p.name}': {e}")
             continue
-
+    _save_syncstate(category, state)
     return {"created": created, "updated": updated, "total": created + updated}
 
 
 def pull_from_notion(category: str, mapping_path: Optional[Path] = None) -> Dict[str, Any]:
     notion, db_id = get_env_client_for(category)
     mapping = load_mapping(mapping_path, category=category)
+    actual_types = get_db_property_types(notion, db_id)
 
     # Paginate through DB
     results: List[Dict[str, Any]] = []
@@ -476,6 +566,24 @@ def ensure_schema(category: str, mapping_path: Optional[Path] = None) -> Dict[st
                 "error": f"Failed to add properties: {e}",
                 "attempted": list(to_add.keys()),
             }
+
+    # Extra: ensure creatures->realms relation if category is creatures and REALMS_DB_ID exists
+    if category == "creatures":
+        realmd_id = os.getenv("REALMS_DB_ID")
+        if realmd_id:
+            rel_name = "Realm Link"
+            if rel_name not in current_props:
+                try:
+                    notion.databases.update(db_id, properties={
+                        rel_name: {
+                            "relation": {"database_id": realmd_id, "single_property": {"rollup": {"function": "show_original"}}}
+                        }
+                    })  # type: ignore
+                    added.append(rel_name)
+                    db = notion.databases.retrieve(db_id)
+                    current_props = db.get("properties", {})
+                except Exception:
+                    pass
 
     return {
         "updated": True,
