@@ -1,0 +1,11 @@
+{
+  "Name": { "json": "name", "type": "title" },
+  "ID": { "json": "id", "type": "rich_text" },
+  "Type": { "json": "type", "type": "select" },
+  "School": { "json": "school", "type": "select" },
+  "Description": { "json": "description", "type": "rich_text" },
+  "Domains": { "json": "domains", "type": "multi_select" },
+  "File Path": { "json": "source.file", "type": "rich_text" },
+  "Category": { "json": "source.category", "type": "select" }
+}
+

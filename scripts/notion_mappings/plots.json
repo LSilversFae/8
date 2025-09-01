@@ -1,0 +1,10 @@
+{
+  "Name": { "json": "name", "type": "title" },
+  "ID": { "json": "id", "type": "rich_text" },
+  "Arc": { "json": "arc", "type": "select" },
+  "Status": { "json": "status", "type": "select" },
+  "Summary": { "json": "summary", "type": "rich_text" },
+  "File Path": { "json": "source.file", "type": "rich_text" },
+  "Category": { "json": "source.category", "type": "select" }
+}
+

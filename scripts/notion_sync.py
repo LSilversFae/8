@@ -32,23 +32,31 @@ LORE_ROOT = Path("lore")
 CHAR_DIR = LORE_ROOT / "characters" / "formatted"
 CREATURES_DIR = LORE_ROOT / "creatures" / "formatted"
 REALMS_DIR = LORE_ROOT / "realms" / "formatted"
+PLOTS_DIR = LORE_ROOT / "plots" / "formatted"
+MAGIC_DIR = LORE_ROOT / "magic" / "formatted"
 
 MAPPINGS_DIR = Path("scripts") / "notion_mappings"
 CHAR_MAPPING_PATH = MAPPINGS_DIR / "characters.json"
 CREATURES_MAPPING_PATH = MAPPINGS_DIR / "creatures.json"
 REALMS_MAPPING_PATH = MAPPINGS_DIR / "realms.json"
+PLOTS_MAPPING_PATH = MAPPINGS_DIR / "plots.json"
+MAGIC_MAPPING_PATH = MAPPINGS_DIR / "magic.json"
 
 # Category helpers
 CATEGORY_DIRS: Dict[str, Path] = {
     "characters": CHAR_DIR,
     "creatures": CREATURES_DIR,
     "realms": REALMS_DIR,
+    "plots": PLOTS_DIR,
+    "magic": MAGIC_DIR,
 }
 
 CATEGORY_MAPPING_PATHS: Dict[str, Path] = {
     "characters": CHAR_MAPPING_PATH,
     "creatures": CREATURES_MAPPING_PATH,
     "realms": REALMS_MAPPING_PATH,
+    "plots": PLOTS_MAPPING_PATH,
+    "magic": MAGIC_MAPPING_PATH,
 }
 
 
@@ -356,6 +364,8 @@ __all__ = [
     "CHAR_MAPPING_PATH",
     "CREATURES_MAPPING_PATH",
     "REALMS_MAPPING_PATH",
+    "PLOTS_MAPPING_PATH",
+    "MAGIC_MAPPING_PATH",
 ]
 
 
@@ -457,3 +467,27 @@ def ensure_creatures_schema(mapping_path: Optional[Path] = None) -> Dict[str, An
 
 def ensure_realms_schema(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
     return ensure_schema("realms", mapping_path)
+
+
+def push_plots_to_notion(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return push_to_notion("plots", mapping_path)
+
+
+def pull_plots_from_notion(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return pull_from_notion("plots", mapping_path)
+
+
+def ensure_plots_schema(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return ensure_schema("plots", mapping_path)
+
+
+def push_magic_to_notion(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return push_to_notion("magic", mapping_path)
+
+
+def pull_magic_from_notion(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return pull_from_notion("magic", mapping_path)
+
+
+def ensure_magic_schema(mapping_path: Optional[Path] = None) -> Dict[str, Any]:
+    return ensure_schema("magic", mapping_path)

@@ -90,6 +90,12 @@ try:
         push_realms_to_notion as push_realms_full,
         pull_realms_from_notion as pull_realms_full,
         ensure_realms_schema as ensure_realms_schema,
+        push_plots_to_notion as push_plots_full,
+        pull_plots_from_notion as pull_plots_full,
+        ensure_plots_schema as ensure_plots_schema,
+        push_magic_to_notion as push_magic_full,
+        pull_magic_from_notion as pull_magic_full,
+        ensure_magic_schema as ensure_magic_schema,
     )
 except Exception as e:
     print(f"Warning: notion sync utilities not available: {e}")
@@ -103,6 +109,12 @@ except Exception as e:
     push_realms_full = None
     pull_realms_full = None
     ensure_realms_schema = None
+    push_plots_full = None
+    pull_plots_full = None
+    ensure_plots_schema = None
+    push_magic_full = None
+    pull_magic_full = None
+    ensure_magic_schema = None
 
 # -------- INDEXING --------
 def build_category_index(category):
@@ -477,6 +489,92 @@ def pull_realms_from_notion_route():
     try:
         mp = Path(mapping_path) if mapping_path else None
         result = pull_realms_full(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+# -------- PLOTS FULL SYNC --------
+@app.route('/ensure-plots-schema', methods=['POST', 'GET'])
+def ensure_plots_schema_route():
+    if ensure_plots_schema is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = ensure_plots_schema(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/push-plots-to-notion', methods=['POST', 'GET'])
+def push_plots_to_notion_route():
+    if push_plots_full is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = push_plots_full(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/pull-plots-from-notion', methods=['POST', 'GET'])
+def pull_plots_from_notion_route():
+    if pull_plots_full is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = pull_plots_full(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+# -------- MAGIC FULL SYNC --------
+@app.route('/ensure-magic-schema', methods=['POST', 'GET'])
+def ensure_magic_schema_route():
+    if ensure_magic_schema is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = ensure_magic_schema(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/push-magic-to-notion', methods=['POST', 'GET'])
+def push_magic_to_notion_route():
+    if push_magic_full is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = push_magic_full(mp)
+        return jsonify({"status": "ok", **result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/pull-magic-from-notion', methods=['POST', 'GET'])
+def pull_magic_from_notion_route():
+    if pull_magic_full is None:
+        return jsonify({"error": "Notion sync module not available"}), 500
+    payload = request.get_json(silent=True) or {}
+    mapping_path = payload.get("mapping")
+    try:
+        mp = Path(mapping_path) if mapping_path else None
+        result = pull_magic_full(mp)
         return jsonify({"status": "ok", **result})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
