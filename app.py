@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+﻿from flask import Flask, jsonify, request
 import os
 import json
 from pathlib import Path
@@ -13,7 +13,7 @@ load_dotenv()
 # --- Notion API setup ---
 NOTION_TOKEN = os.getenv("NOTION_TOKEN")
 if not NOTION_TOKEN:
-    raise ValueError("❌ Missing NOTION_TOKEN in environment variables")
+    raise ValueError("âŒ Missing NOTION_TOKEN in environment variables")
 
 notion = Client(auth=NOTION_TOKEN)
 
@@ -28,7 +28,7 @@ NOTION_DATABASES = {
 # Sanity check (warn instead of crash for optional DBs)
 for category, db_id in NOTION_DATABASES.items():
     if not db_id:
-        print(f"⚠️ Warning: No DB ID set for {category}. Sync for this category will be skipped.")
+        print(f"âš ï¸ Warning: No DB ID set for {category}. Sync for this category will be skipped.")
 
 # --- Flask setup ---
 app = Flask(__name__)
@@ -125,7 +125,7 @@ def build_category_index(category):
                     "category": category
                 })
         except Exception as e:
-            print(f"⚠️ Error reading {file}: {e}")
+            print(f"âš ï¸ Error reading {file}: {e}")
             continue
 
     return index
@@ -226,21 +226,21 @@ def sync_index_to_notion(category):
                 )
             synced += 1
         except Exception as e:
-            print(f"❌ Failed to sync {entry['name']}: {e}")
+            print(f"âŒ Failed to sync {entry['name']}: {e}")
 
-    return {"status": f"✅ Synced {synced} {category} entries", "count": synced}
+    return {"status": f"âœ… Synced {synced} {category} entries", "count": synced}
 
 
 # -------- ROUTES --------
 @app.route('/')
 def home():
-    return "🧚 Welcome to the Notion Lore API for Fae-Lore-Vault"
+    return "ðŸ§š Welcome to the Notion Lore API for Fae-Lore-Vault"
 
 
 @app.route('/generate-indexes', methods=['POST', 'GET'])
 def generate_indexes():
     master_index = generate_master_index()
-    return jsonify({"status": "✅ Indexes generated", "masterindex": master_index})
+    return jsonify({"status": "âœ… Indexes generated", "masterindex": master_index})
 
 
 @app.route('/get-masterindex', methods=['GET'])
@@ -304,7 +304,7 @@ def related(name):
         # fallback fuzzy search if not exact match
         possible = get_close_matches(name, crosslinks.keys(), n=3, cutoff=0.6)
         return jsonify({
-            "status": "❌ No exact match",
+            "status": "âŒ No exact match",
             "closest_matches": possible
         })
 
@@ -333,7 +333,7 @@ def sync_all():
         if db_id:  # only sync configured DBs
             results[category] = sync_index_to_notion(category)
         else:
-            results[category] = {"status": "⚠️ Skipped (no DB ID configured)"}
+            results[category] = {"status": "âš ï¸ Skipped (no DB ID configured)"}
     return jsonify(results)
 
 
@@ -652,3 +652,4 @@ def normalize_realms_route():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
