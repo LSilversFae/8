@@ -1,0 +1,538 @@
+{
+    "magic_Levels_of_mastery_and_abilities": {
+        "description": "Levels of mastery and A comprehensive list of all magical abilities, descriptions, and associations with specific characters, clans, or courts.",
+        "levels_of_mastery": {
+            "class": {
+                "None": {
+                    "description": "No knowledge or experience with the skill or magic.",
+                    "traits": [
+                        "Unable to use the ability.",
+                        "Requires guidance or external help.",
+                        "Unaware of potential power or how to tap into it."
+                    ]
+                },
+                "Novice": {
+                    "description": "The character has just begun learning the ability. They understand its basic principles but lack control or finesse.",
+                    "traits": [
+                        "Occasional success with small effects.",
+                        "Prone to mistakes and unintended consequences.",
+                        "Requires a mentor or guide to develop further."
+                    ]
+                },
+                "Awakened": {
+                    "description": "The character becomes aware of their deeper potential. They have unlocked the ability and can use it more intentionally.",
+                    "traits": [
+                        "Abilities become more reliable.",
+                        "Can execute intermediate techniques with concentration.",
+                        "First signs of a personal connection with the ability.",
+                        "May experience surges or fluctuations as they adjust to their power."
+                    ]
+                },
+                "Divine": {
+                    "description": "Mastery that reflects the domain of gods, where the ability is powerful and refined but still bound by certain rules.",
+                    "traits": [
+                        "Can wield abilities with ease and precision.",
+                        "Powers gain significance on a spiritual or divine level.",
+                        "Connection to ancient or godly forces may appear."
+                    ]
+                },
+                "Supreme": {
+                    "description": "The character has reached an apex of control and power, wielding the ability with unmatched expertise.",
+                    "traits": [
+                        "Rarely experiences failure with the ability.",
+                        "Perfect synergy between skill and magic.",
+                        "Capable of using powers creatively.",
+                        "Can perform feats that inspire awe or reshape reality on a localized scale."
+                    ]
+                },
+                "Legendary": {
+                    "description": "This level represents an almost mythic mastery. The character becomes a figure of legend, transcending mortal comprehension.",
+                    "traits": [
+                        "Abilities reshape regions, destinies, or the flow of time.",
+                        "Magic use becomes instinctive, almost effortless.",
+                        "Feats become immortalized in stories and prophecies.",
+                        "Seen as the embodiment of a particular force or ideal."
+                    ]
+                }
+            }
+        },            
+        "abilities_list": [
+            {
+                "name": "shadow_manipulation",
+                "source_line": "Fae_and_All_Creatures.json (Line 23)"
+            },
+            {
+                "name": "umbral_shields",
+                "source_line": "Fae_and_All_Creatures.json (Line 24)"
+            },
+            {
+                "name": "shadow_walking",
+                "source_line": "Fae_and_All_Creatures.json (Line 25)"
+            },
+            {
+                "name": "night_vision",
+                "source_line": "Fae_and_All_Creatures.json (Line 26)"
+            },
+            {
+                "name": "enhanced_stealth",
+                "source_line": "Fae_and_All_Creatures.json (Line 27)"
+            },
+            {
+                "name": "fae_aura_suppression",
+                "source_line": "Fae_and_All_Creatures.json (Line 28)"
+            },
+            {
+                "name": "cold_resistance",
+                "source_line": "Fae_and_All_Creatures.json (Line 29)"
+            },
+            {
+                "name": "dark_energy_mastery",
+                "source_line": "Fae_and_All_Creatures.json (Line 30)"
+            },
+            {
+                "name": "shadow_weaving",
+                "source_line": "Fae_and_All_Creatures.json (Line 31)"
+            },
+            {
+                "name": "wraithbinding",
+                "source_line": "Fae_and_All_Creatures.json (Line 32)"
+            },
+            {
+                "name": "illusion_crafting",
+                "source_line": "Fae_and_All_Creatures.json (Line 33)"
+            },
+            {
+                "name": "healing_touch",
+                "source_line": "Fae_and_All_Creatures.json (Line 34)"
+            },
+            {
+                "name": "Dreamweaver’s Lullaby",
+                "source_line": "Characters.json (Line 147)"
+            },
+            {
+                "name": "Phantasmal Drift",
+                "source_line": "Characters.json (Line 154)"
+            },
+            {
+                "name": "Ethereal Slumber",
+                "source_line": "Characters.json (Line 161)"
+            },
+            {
+                "name": "Dream Sight",
+                "source_line": "Characters.json (Line 168)"
+            },
+            {
+                "name": "primary_elemental_affinities",
+                "source_line": "Characters.json (Line 455)"
+            },
+            {
+                "name": "shadow_manipulation",
+                "source_line": "Characters.json (Line 36)"
+            },
+            {
+                "name": "ice_manipulation",
+                "source_line": "Characters.json (Line 250)"
+            },
+            {
+                "name": "death_manipulation",
+                "source_line": "Characters.json (Line 467)"
+            },
+            {
+                "name": "darkness_manipulation",
+                "source_line": "Characters.json (Line 251)"
+            },
+            {
+                "name": "divine_abilities",
+                "source_line": "Characters.json (Line 473)"
+            },
+            {
+                "name": "primordial_darkness_manipulation",
+                "source_line": "Characters.json (Line 684)"
+            },
+            {
+                "name": "demonic_glamour",
+                "source_line": "Characters.json (Line 687)"
+            },
+            {
+                "name": "shadowstep",
+                "source_line": "Characters.json (Line 690)"
+            },
+            {
+                "name": "darkfire_conjuration",
+                "source_line": "Characters.json (Line 693)"
+            },
+            {
+                "name": "mind_corruption",
+                "source_line": "Characters.json (Line 696)"
+            },
+            {
+                "name": "healing_magic",
+                "source_line": "Characters.json (Line 764)"
+            },
+            {
+                "name": "empathic_connection",
+                "source_line": "Characters.json (Line 770)"
+            },
+            {
+                "name": "enchanting_charms",
+                "source_line": "Characters.json (Line 773)"
+            },
+            {
+                "name": "radiant_glow",
+                "source_line": "Characters.json (Line 1289)"
+            },
+            {
+                "name": "sunbeam_burst",
+                "source_line": "Characters.json (Line 1293)"
+            },
+            {
+                "name": "golden_mirage",
+                "source_line": "Characters.json (Line 1296)"
+            },
+            {
+                "name": "mana_absorption",
+                "source_line": "Characters.json (Line 1299)"
+            },
+            {
+                "name": "Moonshadow Veil",
+                "source_line": "Characters.json (Line 1813)"
+            },
+            {
+                "name": "Lunar Bind",
+                "source_line": "Characters.json (Line 1814)"
+            },
+            {
+                "name": "Reflection’s Insight",
+                "source_line": "Characters.json (Line 1815)"
+            },
+            {
+                "name": "Stealth and Strategy",
+                "source_line": "Characters.json (Line 1816)"
+            },
+            {
+                "name": "The Wraithwood Hunt (Shadow Fae Mating Ritual)",
+                "source_line": "Dark_Fae_Culture.json (Line 32)"
+            },
+            {
+                "name": "wind_manipulation",
+                "source_line": "courts.json (Line 15)"
+            },
+            {
+                "name": "shadowmeld",
+                "source_line": "courts.json (Line 16)"
+            },
+            {
+                "name": "celestial_sight",
+                "source_line": "courts.json (Line 17)"
+            },
+            {
+                "name": "aerial_combat_expertise",
+                "source_line": "courts.json (Line 18)"
+            },
+            {
+                "name": "stardust_pathways",
+                "source_line": "courts.json (Line 19)"
+            },
+            {
+                "name": "nature’s_cloak",
+                "source_line": "courts.json"
+            },
+            {
+                "name": "wind_whisper",
+                "source_line": "courts.json (Line 21)"
+            },
+            {
+                "name": "evasion_and_illusion",
+                "source_line": "courts.json (Line 22)"
+            },
+            {
+                "name": "shadow_weaving_for_healing",
+                "source_line": "courts.json (Line 54)"
+            },
+            {
+                "name": "shadowmist_infusion",
+                "source_line": "courts.json (Line 55)"
+            },
+            {
+                "name": "soul_soothing",
+                "source_line": "courts.json (Line 56)"
+            },
+            {
+                "name": "dark_energy_cleansing",
+                "source_line": "courts.json (Line 57)"
+            },
+            {
+                "name": "elemental_healing",
+                "source_line": "courts.json (Line 58)"
+            },
+            {
+                "name": "barrier_creation",
+                "source_line": "courts.json (Line 59)"
+            },
+            {
+                "name": "resonance_with_pain",
+                "source_line": "courts.json (Line 60)"
+            },
+            {
+                "name": "shadowbinding_for_recovery",
+                "source_line": "courts.json (Line 61)"
+            },
+            {
+                "name": "shadowbinding",
+                "source_line": "courts.json (Line 61)"
+            },
+            {
+                "name": "tidal_veil",
+                "source_line": "courts.json (Line 94)"
+            },
+            {
+                "name": "sea_song_enchantment",
+                "source_line": "courts.json (Line 95)"
+            },
+            {
+                "name": "abyssal_shifting",
+                "source_line": "courts.json (Line 96)"
+            },
+            {
+                "name": "spectral_weapons",
+                "source_line": "courts.json (Line 97)"
+            },
+            {
+                "name": "abyssal_energy_manipulation",
+                "source_line": "courts.json (Line 98)"
+            },
+            {
+                "name": "seductive_aura",
+                "source_line": "courts.json (Line 99)"
+            },
+            {
+                "name": "shadow_drain",
+                "source_line": "courts.json (Line 100)"
+            },
+            {
+                "name": "moonlit_illusions",
+                "source_line": "courts.json (Line 101)"
+            },
+            {
+                "name": "shadow_manipulation",
+                "source_line": "courts.json (Line 134)"
+            },
+            {
+                "name": "spirit_communion",
+                "source_line": "courts.json (Line 128)"
+            },
+            {
+                "name": "astral_projection",
+                "source_line": "courts.json (Line 136)"
+            },
+            {
+                "name": "ethereal_healing",
+                "source_line": "courts.json (Line 137)"
+            },
+            {
+                "name": "veil_creation",
+                "source_line": "courts.json (Line 138)"
+            },
+            {
+                "name": "nightfall_blessing",
+                "source_line": "courts.json (Line 139)"
+            },
+            {
+                "name": "divine_protection",
+                "source_line": "courts.json (Line 140)"
+            },
+            {
+                "name": "mystic_runes",
+                "source_line": "courts.json (Line 141)"
+            },
+            {
+                "name": "soulbinding",
+                "source_line": "courts.json (Line 142)"
+            },
+            {
+                "name": "divine_blessings",
+                "source_line": "courts.json (Line 179)"
+            },
+            {
+                "name": "warrior_spirit",
+                "source_line": "courts.json (Line 180)"
+            },
+            {
+                "name": "shadow_infusion",
+                "source_line": "courts.json (Line 181)"
+            },
+            {
+                "name": "enhanced_senses",
+                "source_line": "courts.json (Line 182)"
+            },
+            {
+                "name": "natures_bond",
+                "source_line": "courts.json (Line 183)"
+            },
+            {
+                "name": "warfare_tactics",
+                "source_line": "courts.json (Line 184)"
+            },
+            {
+                "name": "bloodrage",
+                "source_line": "courts.json (Line 185)"
+            },
+            {
+                "name": "beast_magic",
+                "source_line": "courts.json (Line 217)"
+            },
+            {
+                "name": "venom_manipulation",
+                "source_line": "courts.json (Line 218)"
+            },
+            {
+                "name": "swamp_manipulation",
+                "source_line": "courts.json (Line 219)"
+            },
+            {
+                "name": "monstrous_transformations",
+                "source_line": "courts.json (Line 220)"
+            },
+            {
+                "name": "shadow_corruption",
+                "source_line": "courts.json (Line 221)"
+            },
+            {
+                "name": "demonic_roar",
+                "source_line": "courts.json (Line 222)"
+            },
+            {
+                "name": "spectral_venom_constructs",
+                "source_line": "courts.json (Line 223)"
+            },
+            {
+                "name": "fog_of_the_abyss",
+                "source_line": "courts.json (Line 224)"
+            },
+            {
+                "name": "dark_regeneration",
+                "source_line": "courts.json (Line 225)"
+            },
+            {
+                "name": "umbral_shields",
+                "source_line": "courts.json (Line 258)"
+            },
+            {
+                "name": "night_vision",
+                "source_line": "courts.json (Line 259)"
+            },
+            {
+                "name": "enhanced_stealth",
+                "source_line": "courts.json (Line 260)"
+            },
+            {
+                "name": "shadow_walking",
+                "source_line": "courts.json (Line 261)"
+            },
+            {
+                "name": "dark_energy_mastery",
+                "source_line": "courts.json (Line 262)"
+            },
+            {
+                "name": "royal_shadowblood",
+                "source_line": "courts.json (Line 263)"
+            },
+            {
+                "name": "wraithbinding",
+                "source_line": "courts.json (Line 265)"
+            },
+            {
+                "name": "noble_shadowweaving",
+                "source_line": "courts.json (Line 266)"
+            },
+            {
+                "name": "presence_of_authority",
+                "source_line": "courts.json (Line 267)"
+            },
+            {
+                "name": "bloodbound_oaths",
+                "source_line": "courts.json (Line 268)"
+            },
+            {
+                "name": "Venomscale Shamans",
+                "source_line": "VyrZal.json (Line 10)"
+            },
+            {
+                "name": "Marshscale Warriors",
+                "source_line": "VyrZal.json (Line 11)"
+            },
+            {
+                "name": "Bogfang Raiders",
+                "source_line": "VyrZal.json (Line 12)"
+            },
+            {
+                "name": "Siltborn Artisans",
+                "source_line": "VyrZal.json (Line 13)"
+            },
+            {
+                "name": "Tanglethorn Hunters",
+                "source_line": "VyrZal.json (Line 14)"
+            },
+            {
+                "name": "Mirestalker Scouts",
+                "source_line": "VyrZal.json (Line 15)"
+            },
+            {
+                "name": "Slimescale Sentries",
+                "source_line": "VyrZal.json (Line 16)"
+            },
+            {
+                "name": "Bogbrute Elders",
+                "source_line": "VyrZal.json (Line 17)"
+            },
+            {
+                "name": "wind_manipulation",
+                "source_line": "Plots.json (Line 99)"
+            },
+            {
+                "name": "shadowmeld",
+                "source_line": "Plots.json (Line 100)"
+            },
+            {
+                "name": "celestial_sight",
+                "source_line": "Plots.json (Line 101)"
+            },
+            {
+                "name": "aerial_combat_expertise",
+                "source_line": "Plots.json (Line 102)"
+            },
+            {
+                "name": "shadow_weaving_for_healing",
+                "source_line": "Plots.json (Line 120)"
+            },
+            {
+                "name": "shadowmist_infusion",
+                "source_line": "Plots.json (Line 121)"
+            },
+            {
+                "name": "soul_soothing",
+                "source_line": "Plots.json (Line 122)"
+            },
+            {
+                "name": "elemental_healing",
+                "source_line": "Plots.json (Line 123)"
+            },
+            {
+                "name": "shadowbinding",
+                "source_line": "Plots.json (Line 141)"
+            },
+            {
+                "name": "tidal_veil",
+                "source_line": "Plots.json (Line 142)"
+            },
+            {
+                "name": "abyssal_energy_manipulation",
+                "source_line": "Plots.json (Line 143)"
+            },
+            {
+                "name": "moonlit_illusions",
+                "source_line": "Plots.json (Line 144)"
+            }
+        ]
+    }
+}

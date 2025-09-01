@@ -1,0 +1,50 @@
+{
+          "name": "Elarion",
+          "location": "realms.json > Ealrion (Line 3)",
+          "regions": {
+            "courts": [
+              { "name": "Court Darkwing", "location": "realms.json > courts > Court Darkwing"},
+              { "name": "Court Shadowborne", "location": "realms.json > courts > Court Shadowborne" },
+              { "name": "Court Nightshade", "location": "realms.json > courts > Court Nightshade" },
+              { "name": "Court Nightwhisper", "location": "realms.json > courts > Court Nightwhisper" },
+              { "name": "Court Grimshadow", "location": "realms.json > courts > Court Grimshadow" },
+              { "name": "Court Obsidianveil", "location": "realms.json > courts > Court Obsidianveil" },
+              { "name": "Court Veilborn", "location": "realms.json > courts > Court Veilborn" }
+            ],
+            "southern_courts": [
+              { "name": "Court Dawnspire", "location": "realms.json > courts > Court Dawnspire" },
+              { "name": "Court Starflame", "location": "realms.json > courts > Court Starflame " },
+              { "name": "Court Glimmervale", "location": "realms.json > courts > Court Glimmervale" },
+              { "name": "Court Luminalis", "location": "realms.json > courts > Court Luminalis" },
+              { "name": "Court Aurorae", "location": "realms.json > courts > Court Aurorae" }
+            ],
+            "swamp_lands": {
+              "Description": "Home to the VyrZal which is a race of beast-kin. see VyrZal.json",
+              "Villages": [
+                { "name": "Court Thornwater", "location": "realms.json > courts > Court Thornwater" },
+                { "name": "Court Eldermarsh", "location": "realms.json > courts > Court Eldermarsh" },
+                { "name": "Court Marrowmere", "location": "realms.json > courts > Court Marrowmere" }
+              ]
+            },
+            "mountains": {
+              "name": "Erebus Mountains",
+              "location": "realms.json > Ealrion > Erebus_Mountains"
+            },
+            "rivers_lakes_waterfalls": [
+              { "name": "Luminara Lake", "location": "realms.json > Ealrion > Luminara_Lake" },
+              { "name": "Radiant Falls", "location": "realms.json > Ealrion > Radiant_Falls" },
+              { "name": "Iceshadow Lake", "location": "realms.json > Ealrion > Iceshadow_Lake" },
+              { "name": "Sapphire Swell Lake", "location": "realms.json > Ealrion > Sapphire_Swell_Lake)" },
+              { "name": "Inferath Lake", "location": "realms.json > Ealrion > Inferath_Lake" },
+              { "name": "Starlit Waters River", "location": "realms.json > Ealrion > Starlit_Waters_River" },
+              { "name": "Triton's Reach River", "location": "realms.json > Ealrion > Triton's_Reach_River" }
+            ],
+            "seas": [
+              { "name": "Fathomless Sea", "location": "realms.json > Ealrion > Fathomless_Sea" },
+              { "name": "Oceanus Veil Sea", "location": "realms.json > Ealrion > Oceanus_Veil_Sea" },
+              { "name": "Seraphic Sea", "location": "realms.json > Ealrion > Seraphic_Sea" },
+              { "name": "Eldertide Sea", "location": "realms.json > Ealrion > Eldertide_Sea" },
+              { "name": "Abyssal Lagoon", "location": "realms.json > Ealrion > Abyssal_Lagoon" }
+            ]
+        }
+        }

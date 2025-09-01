@@ -1,0 +1,484 @@
+{
+  "mainindex": {
+    "characters_by_category": {
+          "northern_court_council_members": [
+            {"name":"Eamon_Darkrider",
+              "court": "Grimshadow",
+              "role": "Council Member",
+              "details_path": "characters.json > characters > northern_court > Eamon_Darkrider"            
+            },
+            {"name":"Elysia_Nightstorm",
+              "court": "Nightshade",
+              "role": "Council Member",
+              "details_path": "characters.json > characters > northern_court > Elysia_Nightstorm"
+            },
+            {"name": "Erika_Nightwhisper",
+                "court": "Nightwhisper",
+                "role": "Council Member",
+                "details_path": "characters.json > characters > northern_court > Erika_Nightwhisper"            
+            },
+            {"name":"Falcon_Shadeborn",
+              "court": "Darkwing",
+              "role": "Council Member",
+              "details_path": "characters.json > characters > northern_court > Falcon_Shadeborn"
+            },
+            {"name":"Jarek_Nightstorm",
+              "court": "Nightshade",
+              "role": "Council Member",
+              "details_path": "characters.json > characters > northern_court > Jarek_Nightstorm"
+            },
+            {"name":"Marek_Grimveil",
+              "court": "Shadowborne",
+              "role": "Council Member",
+              "details_path": "characters.json > characters > northern_court > Marek_Grimveil"
+            },
+            {"name":"Rael_Thornheart",
+              "court": "Grimshadow",
+              "role": "Council Member",
+              "details_path": "characters.json > characters > northern_court > Rael_Thornheart"
+            },
+            {"name":"Thalassa_Shadeborn",
+              "court": "Darkwing",
+              "role": "Council Member",
+              "details_path": "characters.json > characters > northern_court > Thalassa_Shadeborn"           
+            },
+            {"name":"Vesper_Nightwhisper",
+              "court": "Nightwhisper",
+              "role": "Council Member",
+              "details_path": "characters.json > characters > northern_court > Vesper_Nightwhisper"            
+            },
+            {"name":"Vespera_Grimveil",
+              "court": "Shadowborne",
+              "role": "Council Member",
+              "details_path": "characters.json > characters > northern_court > Vespera_Grimveil"
+            }
+          ],
+          "northern_court_dryads": [
+            {"name":"Alyssa",
+              "details_path": "characters.json > characters > northern_court > Alyssa"            
+            },
+            {"name":"Angelina",
+              "details_path": "characters.json > characters > northern_court > Angelina"            
+            },
+            {"name":"Gisele",
+              "details_path": "characters.json > characters > northern_court > Giselle"            
+            },
+            {"name":"Serenity",
+              "details_path": "characters.json > characters > northern_court > Serenity"            
+            }
+          ],
+          "Northern_Court_characters": [
+            {"name":"Caelirion Nightshade",
+              "details_path": "characters.json > characters > northern_court > Caelirion Nightshade"
+            },
+            {"name":"Draven_Ashenborn",
+              "details_path": "characters.json > characters > northern_court > Draven_Ashenborn"
+            },
+            {"name":"Elara",
+              "details_path": "characters.json > characters > northern_court > Elara"
+            },
+            {"name":"Elyndra",
+              "details_path": "characters.json > characters > northern_court > Elyndra"            
+            },
+            {"name":"Krystine_Stormglaive",
+              "details_path": "characters.json > characters > northern_court > Krystine_Stormglaive"            
+            },
+            {"name":"Nerisyth_Nyxtar",
+              "details_path": "characters.json > characters > northern_court > Nerisyth_Nyxtar"            
+            },
+            {"name":"Nyxion",
+              "details_path": "characters.json > characters > northern_court > Nyxion"
+            },
+            {"name":"Riven_Nightshade",
+              "details_path": "characters.json > characters > northern_court > Riven_Nightshade"            
+            },
+            {"name":"Rose_Starwhisper",
+              "details_path": "characters.json > characters > northern_court > Rose_Starwhisper"            
+            },
+            {"name":"Seraphina_Moonbane",
+              "details_path": "characters.json > characters > northern_court > Seraphina_Moonbane"            
+            },
+            {"name":"Sorren_Voidwalker",
+              "details_path": "characters.json > characters > northern_court > Sorren_Voidwalker"            
+            },
+            {"name":"Sylthar_Moonbane",
+              "details_path": "characters.json > characters > northern_court > Sylthar_Moonbane"            
+            },
+            {"name":"Valdris",
+              "details_path": "characters.json > characters > northern_court > Valdris"
+            },
+            {"name":"Zareth",
+              "details_path": "characters.json > characters > northern_court > Zareth"
+            }
+          ],
+          "Southern_Court_characters": [
+            {"name":"Cyris_Lumineth",
+              "title": "Southern Fae King",
+              "details_path": "characters.json > characters > northern_court > Cyris_Lumineth"            
+            },
+            {"name":"Isalyn_Brightwing",
+              "details_path": "characters.json > characters > northern_court > Isalyn_Brightwing"            
+            }
+          ],
+          "Council Gods": [
+            {"name":"The God King",
+            "details_path": "characters.json > characters > Gods_and_Goddesses > The God King"            
+            },
+            {"name":"Draelis",
+              "details_path": "characters.json > characters > Gods_and_Goddesses > Draelis"            
+            },
+            {"name":"Kaelos",
+              "details_path": "characters.json > characters > Gods_and_Goddesses > Kaelos"            
+            },
+            {"name":"Liora",
+              "details_path": "characters.json > characters > Gods_and_Goddesses > Liora"            
+            },
+            {"name":"Luminara",
+              "details_path": "characters.json > characters > Gods_and_Goddesses > Luminara"            
+            },
+            {"name":"Mortalis",
+              "details_path": "characters.json > characters > Gods_and_Goddesses > Mortalis"            
+            },
+            {"name":"Nyxralis",
+              "details_path": "characters.json > characters > demons > Nyxralis"            
+            },
+            {"name":"Thyrenos",
+              "details_path": "characters.json > characters > Gods_and_Goddesses > Thyrenos"            
+            }
+          ],
+          "Gods": [
+            {"name":"Eldoria", 
+              "details_path": "characters.json > characters > Gods_and_Goddesses > Eldoria"            
+            },
+            {"name":"Lilah_Twilight",
+              "details_path": "characters.json > characters >  northern_court > Lilah_Twilight"            
+            }
+          ],
+          "demons": [
+            {"name": "Azrathar",
+              "details_path": "characters.json > characters > demons > Azrathar"            
+            },
+            {"name": "Drakaroth",
+              "details_path": "characters.json > characters > demons > Drakaroth"            
+            },
+            {"name": "Kharvax",
+              "details_path": "characters.json > characters > demons > Kharvax"            
+            },
+            {"name": "Morvantos",
+              "details_path": "characters.json > characters > demons > Morvantos"            
+            },
+            {"name": "Nyxralis",
+              "details_path": "characters.json > characters > demons > Nyxralis"            
+            },
+            {"name": "Syndralis",
+              "details_path": "characters.json > characters > demons > Syndralis"            
+            },
+            {"name": "Thornak",
+              "details_path": "characters.json > characters > demons > Thornak"            
+            },
+            {"name": "Vorlathor",
+              "details_path": "characters.json > characters > demons > Vorlathor"            
+            },
+            {"name": "Xyvarn",
+              "details_path": "characters.json > characters > demons > Xyvarn"            
+            },
+            {"name": "Zaroth",
+              "details_path": "characters.json > characters > demons > Zaroth"            
+            }
+          ],
+          "dragons": [
+            {"name": "Rhazirae",
+              "details_path": "characters.json > characters > dragons > Rhazirae"            
+            }
+          ],
+          "elf": [
+            {"name": "Sylvara_Nightflame",
+              "details_path": "characters.json > characters > elf > Sylvara_Nightflame"            
+            }
+          ]
+    },       
+    "plots": {
+        "description": "Details about the major plots and subplots within the story with details_paths in Plots.json.",
+        "source_file": "Plots.json",
+        "plot_list": [
+            {
+                "name": "The Bitter Cold of the Northern Courts",
+                "details_path": "Plots.json > plots > The Bitter Cold of the Northern Courts (Line 45)"
+            },
+            {
+                "name": "The Snow Glory Illness",
+                "details_path": "Plots.json > plots > The Snow Glory Illness (Line 258)"
+            },
+            {
+                "name": "The Beast-Kin and their Grudge Against the Fae",
+                "details_path": "Plots.json > plots > The Beast-Kin and their Grudge Against the Fae (Line 273)"
+            },
+            {
+                "name": "Northern and Southern Court War",
+                "details_path": "Plots.json > plots > Northern and Southern Court War (Line 392)"
+            },
+            {
+                "name": "The Reemergence of the Demon Lord, Azrathar",
+                "details_path": "Plots.json > plots > The Reemergence of the Demon Lord, Azrathar (Line 511)"
+            }
+        ]
+    },
+    "realm": [
+        {
+          "name": "Elarion",
+          "details_path": "realms.json > Ealrion",
+          "description": "The realm where the main events unfold. It is home to Northern and Southern Courts and the swamp lands. It is the primary setting for the fae's conflict and the story's progression."
+        },
+        {
+          "name": "Elysion",
+          "details_path": "realms.json > Elysion.",
+          "description": "realm of the gods ruled by the God King"
+        },
+        {
+          "name": "Ignisyr",
+          "details_path": "realms.json > Ignisyr.",
+          "description": "realm of the Elder dragons ruled by the Dragon Queen."
+        },
+        {
+          "name": "Nythralkar",
+          "details_path": "realms.json > Nythralkar",
+          "description": "The Abyss of Shadows realm, ruled by the Demon Lord Azrathar."
+        }
+      ],
+    "elarion_wildlife": "see elarion_wildlife.json",  
+    "fae_and_creatures": {
+        "description": "Details of all fae and other creatures along with their attributes, roles, and exact details_path in relevant files.",
+        "source_files": [
+            "VyrZal.json",
+            "characters.json",
+            "courts.json",
+            "Plots.json",
+            "fae.json",
+            "creatures.json"
+        ],
+        "vyr'Zal": {
+          "description": "Information on the reptilian beast-kin race VyrZal and their society, with exact details_path in VyrZal.json.",
+          "source_file": "VyrZal.json",
+          "details_path": "VyrZal.json"
+        }
+      },
+    "dragons": " see dragons.json",  
+
+    "creatures": [
+        {
+            "name": "FrostWraiths",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "IceRevenants",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "ShadowDrakes",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "FrostbiteWolves",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "IceboundTreants",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "UmbralSpiders",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "MidnightStalkers",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "WhisperingWisps",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "FrostSprites",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "SnowGremlins",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "FrostWyrms",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "GlacierStalkers",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "FrostfireChimera",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "IceHarpies",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "IceboundGolems",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "SnowblindOwls",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "FrostbittenWisps",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "PhoenixMatriarchs",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "SunSerpents",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "SolarGriffins",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "EmberSprites",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "LightstalkerPanthers",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "SunflareManticores",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "DawnWisps",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "GoldenVines",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "LuminousMoths",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "SunfireDrakes",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "PyrestoneGargoyles",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "EmberwingFalcons",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "LavaMantises",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "RadiantBasilisks",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "SparklewingButterflies",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "SunMites",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "NoxfangHydras",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "MireWraiths",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "SwampDevourers",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "BileToads",
+            "details_path": "creatures.json"
+        },
+        {
+            "name": "BogSirens",
+            "details_path": "creatures.json"
+        }
+    ],
+    "races and fae": [
+        {
+            "name": "Vyr'Zal",
+            "details_path": "VyrZal.json"
+        },
+        {
+            "name": "Shadow Fae",
+            "details_path": "fae.json > Shadow Fae"
+        },
+        {
+            "name": "Shadowborne Healers",
+            "details_path": "courts.json > courts > Court Shadowborne (Line 278)"
+        },
+        {
+            "name": "Marshscale Warriors",
+            "details_path": "VyrZal.json > sub-races > Marshscale Warriors (Line 96)"
+        },
+        {
+            "name": "Mirestalker Scouts",
+            "details_path": "VyrZal.json > sub-races > Mirestalker Scouts (Line 132)"
+        },
+        {
+            "name": "Venomscale Shamans",
+            "details_path": "VyrZal.json > sub-races > Venomscale Shamans (Line 170)"
+        },
+        {
+            "name": "Bogfang Raiders",
+            "details_path": "VyrZal.json > Bogfang Raiders (Line 75)"
+        },
+        {
+            "name": "Siltborn Artisans",
+            "details_path": "VyrZal.json > Siltborn Artisans (Line 85)"
+        },
+        {
+            "name": "Tanglethorn Hunters",
+            "details_path": "VyrZal.json > Tanglethorn Hunters (Line 95)"
+        },
+        {
+            "name": "Slimescale Sentries",
+            "details_path": "VyrZal.json > Slimescale Sentries (Line 105)"
+        },
+        {
+            "name": "Bogbrute Elders",
+            "details_path": "VyrZal.json > Bogbrute Elders (Line 115)"
+        },
+        {
+            "name": "solaryn fae",
+            "details_path": "fae.json > solaryn_fae ()"
+        }
+    ],
+    "Visual References": {
+        "Character Images": "Include references to where character images can be found for better visualization.",
+        "source_file": "character images.pdf"
+    },
+    "magic_levels_and_abilities": {
+            "description": "Details about magic levels and the various magical abilities, powers, and skills possessed by fae and other magical creatures.",
+            "source_file": "magic_and_abilities.json"
+        },
+    "dark_fae_culture": {
+                "description": "An in-depth look at the traditions, rituals, festivals, and societal structure of the Dark Fae.",
+                "source_file": "fae.json"
+            }
+  }
+}
