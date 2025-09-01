@@ -12,10 +12,14 @@ load_dotenv()
 
 # --- Notion API setup ---
 NOTION_TOKEN = os.getenv("NOTION_TOKEN")
-if not NOTION_TOKEN:
-    raise ValueError("âŒ Missing NOTION_TOKEN in environment variables")
-
-notion = Client(auth=NOTION_TOKEN)
+notion = None
+if NOTION_TOKEN:
+    try:
+        notion = Client(auth=NOTION_TOKEN)
+    except Exception as e:
+        print(f"Warning: Failed to initialize Notion client: {e}")
+else:
+    print("Warning: NOTION_TOKEN not set; Notion sync routes will be disabled.")
 
 NOTION_DATABASES = {
     "characters": os.getenv("CHARACTER_DB_ID"),
