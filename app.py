@@ -48,8 +48,7 @@ try:
         load_synonyms as load_character_synonyms,
     )
 except Exception as e:
-    print(f"Warning: character normalizer not available: {e}
-")
+    print(f"Warning: character normalizer not available: {e}")
     normalize_character_file = None
 
 try:
