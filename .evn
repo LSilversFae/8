@@ -1,9 +1,0 @@
-# Notion API Token (get from Notion integration settings)
-NOTION_TOKEN=your_secret_notion_token_here
-
-# Notion Database IDs (copy from each DB in Notion)
-CHARACTER_DB_ID=xxxxxxxx
-PLOTS_DB_ID=xxxxxxxx
-MAGIC_DB_ID=xxxxxxxx
-CREATURES_DB_ID=xxxxxxxx
-REALMS_DB_ID=xxxxxxxx
