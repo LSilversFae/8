@@ -798,10 +798,68 @@ def _start_scheduler_if_enabled():
         except Exception as e:
             print(f"Auto-refactor creatures skipped: {e}")
 
+    def _maybe_refactor_magic():
+        try:
+            if normalize_magic_file is None:
+                return
+            formatted = LORE_ROOT / "magic" / "formatted"
+            existing = list(formatted.glob("**/*.json")) if formatted.exists() else []
+            src = LORE_ROOT / "magic" / "magic_and_abilities.json"
+            if len(existing) < 5 and src.exists():
+                entries = normalize_magic_file(src)
+                written = 0
+                formatted.mkdir(parents=True, exist_ok=True)
+                for e in entries:
+                    name = e.get("name") or e.get("id") or "magic"
+                    safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in name)
+                    save_json_util(formatted / f"{safe}.json", e)
+                    written += 1
+                # backup + compact
+                try:
+                    orig = src.read_text(encoding="utf-8")
+                    (src.parent / "magic_and_abilities.json.bak").write_text(orig, encoding="utf-8")
+                except Exception:
+                    pass
+                compact = {"note": "Data split into lore/magic/formatted", "total": len(entries)}
+                save_json_util(src, compact)
+                print(f"Auto-refactor magic completed: {written} entries")
+        except Exception as e:
+            print(f"Auto-refactor magic skipped: {e}")
+
+    def _maybe_refactor_plots():
+        try:
+            if normalize_plots_file is None:
+                return
+            formatted = LORE_ROOT / "plots" / "formatted"
+            existing = list(formatted.glob("**/*.json")) if formatted.exists() else []
+            src = LORE_ROOT / "plots" / "Plots.json"
+            if len(existing) < 3 and src.exists():
+                entries = normalize_plots_file(src)
+                written = 0
+                formatted.mkdir(parents=True, exist_ok=True)
+                for e in entries:
+                    name = e.get("name") or e.get("id") or "plot"
+                    safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in name)
+                    save_json_util(formatted / f"{safe}.json", e)
+                    written += 1
+                # backup + compact
+                try:
+                    orig = src.read_text(encoding="utf-8")
+                    (src.parent / "Plots.json.bak").write_text(orig, encoding="utf-8")
+                except Exception:
+                    pass
+                compact = {"note": "Data split into lore/plots/formatted", "total": len(entries)}
+                save_json_util(src, compact)
+                print(f"Auto-refactor plots completed: {written} entries")
+        except Exception as e:
+            print(f"Auto-refactor plots skipped: {e}")
+
     def worker():
         # initial delay allows the app to finish booting
         time.sleep(3)
         _maybe_refactor_creatures()
+        _maybe_refactor_magic()
+        _maybe_refactor_plots()
         if pull_on_start:
             _do_pull_all_internal()
         if publish_on_start:
@@ -1149,6 +1207,23 @@ def normalize_realms_route():
     input_path = payload.get("input")
     scan_dir = payload.get("scan")
     outdir = Path(payload.get("outdir") or default_outdir)
+try:
+    from scripts.format_magic import (
+        normalize_file as normalize_magic_file,
+        save as save_magic_json,
+    )
+except Exception as e:
+    print(f"Warning: magic normalizer not available: {e}")
+    normalize_magic_file = None
+
+try:
+    from scripts.format_plots import (
+        normalize_file as normalize_plots_file,
+        save as save_plots_json,
+    )
+except Exception as e:
+    print(f"Warning: plots normalizer not available: {e}")
+    normalize_plots_file = None
     split = bool(payload.get("split", True))
     write_index = bool(payload.get("index", True))
     output_combined = payload.get("output")
