@@ -24,5 +24,13 @@
     "ignisyr": "Ignisyr",
     "dreaming realm": "Dreaming Realm",
     "abyss": "Abyss"
+  },
+  "realm": {
+    "elarion": "Elarion",
+    "elysion": "Elysion",
+    "nythralkar": "Nythralkar",
+    "ignisyr": "Ignisyr",
+    "dreaming realm": "Dreaming Realm",
+    "abyss": "Abyss"
   }
 }

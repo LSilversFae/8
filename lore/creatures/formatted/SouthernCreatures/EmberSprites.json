@@ -1,0 +1,19 @@
+{
+  "id": "embersprites",
+  "name": "EmberSprites",
+  "kind": "Fiery Creatures",
+  "location": "Southern Courts",
+  "region": "SouthernCreatures",
+  "description": "Ember Sprites are small, fiery creatures that resemble glowing, winged humanoids. They are usually about a foot tall and have bright red, orange, and yellow flames for hair. Their eyes sparkle like embers, and they leave trails of sparks wherever they fly.",
+  "abilities": [
+    "Generate and manipulate fire, creating small explosions and firestorms.",
+    "Play pranks using their powers, and in large swarms, they can cause devastating fires that spread rapidly."
+  ],
+  "danger_level": "Medium to high. While a single Ember Sprite is not very threatening, a swarm of them can cause significant destruction, especially if they band together to ignite an area.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bogsirens",
+  "name": "BogSirens",
+  "kind": "Humanoid Water Creatures",
+  "location": "Swamp Lands",
+  "region": "SwampCreatures",
+  "description": "Bog Sirens are deceptively beautiful, humanoid creatures with long, flowing hair made of waterweed and scales that shimmer like emeralds. They sing haunting melodies that echo through the swamp.",
+  "abilities": [
+    "Possess hypnotic voices that lure prey into the deeper, more dangerous parts of the swamp.",
+    "Attack with razor-sharp claws and teeth, draining their victims' life energy.",
+    "Can manipulate water, creating whirlpools or pulling victims underwater to drown them."
+  ],
+  "danger_level": "Medium to high. Their hypnotic abilities and cunning make them exceptionally dangerous.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SwampCreatures"
+  }
+}

@@ -987,6 +987,98 @@ def normalize_creatures_route():
     })
 
 
+# -------- CREATURES REFACTOR (split + rewrite source as lightweight index) --------
+@app.route('/refactor-creatures', methods=['POST', 'GET'])
+def refactor_creatures_route():
+    if normalize_creatures_file is None:
+        return jsonify({"error": "Creatures normalizer module not available"}), 500
+
+    default_input = LORE_ROOT / "creatures" / "creatures.json"
+    default_outdir = LORE_ROOT / "creatures" / "formatted"
+    payload = request.get_json(silent=True) or {}
+
+    input_path = Path(payload.get("input") or default_input)
+    outdir = Path(payload.get("outdir") or default_outdir)
+    by_region = bool(payload.get("by_region", True))
+    region_bundles = bool(payload.get("region_bundles", True))
+    rewrite_source = bool(payload.get("rewrite_source", True))
+    mappings_path = payload.get("mappings")
+
+    # Synonyms
+    if mappings_path:
+        synonyms = load_creatures_synonyms(Path(mappings_path))
+    else:
+        default_map = LORE_ROOT / "creatures" / "mappings.json"
+        synonyms = load_creatures_synonyms(default_map)
+    set_creatures_synonyms(synonyms)
+
+    # Normalize from the single source file
+    try:
+        entries = normalize_creatures_file(input_path)
+    except Exception as e:
+        return jsonify({"error": f"Failed to normalize {input_path}", "details": str(e)}), 500
+
+    written: List[str] = []
+
+    # Write per-creature split files (nested by region if requested)
+    outdir.mkdir(parents=True, exist_ok=True)
+    for e in entries:
+        name = e.get("name") or e.get("id") or "creature"
+        safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in name)
+        sub = outdir
+        if by_region:
+            reg = e.get("region") or "Uncategorized"
+            reg_safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in str(reg))
+            sub = outdir / reg_safe
+            sub.mkdir(parents=True, exist_ok=True)
+        path = sub / f"{safe}.json"
+        save_json_util(path, e)
+        written.append(str(path))
+
+    # Build and write region bundles
+    bundle_index = []
+    if region_bundles:
+        try:
+            from scripts.format_creatures import build_region_bundles as _build_bundles
+        except Exception as e:
+            return jsonify({"error": "Region bundle helper missing", "details": str(e)}), 500
+        bundles = _build_bundles(entries)
+        base = outdir / "regions"
+        base.mkdir(parents=True, exist_ok=True)
+        for region, data in bundles.items():
+            rsafe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in region)
+            rpath = base / f"{rsafe}.json"
+            save_json_util(rpath, data)
+            bundle_index.append({"region": region, "file": str(rpath)})
+            written.append(str(rpath))
+
+    # Rewrite the original creatures.json to a compact index
+    if rewrite_source and default_input.exists():
+        compact = {
+            "creatures_by_region": bundle_index,
+            "total": len(entries),
+            "note": "Data split into lore/creatures/formatted (per-creature) and lore/creatures/formatted/regions (bundles).",
+        }
+        try:
+            # simple backup
+            try:
+                orig_text = default_input.read_text(encoding="utf-8")
+                (default_input.parent / "creatures.json.bak").write_text(orig_text, encoding="utf-8")
+            except Exception:
+                pass
+            save_json_util(default_input, compact)
+        except Exception as e:
+            return jsonify({"error": "Failed to rewrite source creatures.json", "details": str(e)}), 500
+
+    return jsonify({
+        "status": "ok",
+        "split_count": len(entries),
+        "bundle_count": len(bundle_index),
+        "written": written,
+        "rewrote_source": bool(rewrite_source),
+    })
+
+
 # -------- REALMS NORMALIZATION ROUTE --------
 @app.route('/normalize-realms', methods=['POST', 'GET'])
 def normalize_realms_route():

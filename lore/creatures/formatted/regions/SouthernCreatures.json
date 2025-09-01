@@ -1,0 +1,347 @@
+{
+  "region": "SouthernCreatures",
+  "categories": {
+    "Extreme": [
+      {
+        "id": "phoenixmatriarchs",
+        "name": "PhoenixMatriarchs",
+        "kind": "Firebirds",
+        "location": "Southern Courts",
+        "region": "SouthernCreatures",
+        "description": "The Phoenix Matriarchs are ancient, majestic firebirds with wingspans reaching up to 30 feet. Their feathers blaze with intense shades of red, orange, and gold, and their eyes burn with the heat of molten lava. They radiate heat so powerful that the air around them shimmers, and when they fly, embers fall like rain from their wings.",
+        "abilities": [
+          "Control over fire and heat, capable of incinerating entire forests with a single flap of their wings.",
+          "Regenerate from their ashes, making them nearly immortal.",
+          "Their tears possess incredible healing properties."
+        ],
+        "danger_level": "Extremely high. Their mastery over fire and regenerative abilities make them one of the most formidable creatures in the Southern Fae Courts. Only the most powerful Solaryn Fae dare to approach them.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "sunfiredrakes",
+        "name": "SunfireDrakes",
+        "kind": "Dragon-like Creatures",
+        "location": "Southern Fae Courts Mountain Region",
+        "region": "SouthernCreatures",
+        "description": "Resembling smaller dragons with scales that shine like molten gold, Sunfire Drakes are agile and swift. They have large, leathery wings and tails tipped with spikes that glow with inner heat. Sunfire Drakes bask in the sun atop the highest cliffs, drawing power from its rays.",
+        "abilities": [
+          "Breathe streams of fire that burn hotter than the sun.",
+          "Their scales radiate heat, making it difficult to approach them.",
+          "Create firestorms that spread rapidly across the mountains."
+        ],
+        "danger_level": "Extremely high. They are territorial and will attack anyone who ventures too close to their sun-bathed perches.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      }
+    ],
+    "High": [
+      {
+        "id": "sunserpents",
+        "name": "SunSerpents",
+        "kind": "Snake-like Creatures",
+        "location": "Southern Courts",
+        "region": "SouthernCreatures",
+        "description": "Sun Serpents are massive, snake-like creatures that can grow up to 100 feet in length. Their scales glisten like molten gold, and they radiate a heat so intense that the ground sizzles beneath them. Their eyes glow with an inner fire, and their forked tongues flicker like flames.",
+        "abilities": [
+          "Control fire and light, exhaling blasts of scorching flame that can melt stone.",
+          "Blind prey by emitting intense bursts of light.",
+          "Their venom is extremely potent and causes victims to burn from the inside out."
+        ],
+        "danger_level": "Very high. Their size, strength, and mastery of fire make them formidable opponents, and their venom is lethal even to powerful fae.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "solargriffins",
+        "name": "SolarGriffins",
+        "kind": "Majestic Beasts",
+        "location": "Southern Courts",
+        "region": "SouthernCreatures",
+        "description": "Solar Griffins are majestic creatures with the body of a lion and the wings and head of a golden eagle. Their feathers glow with a radiant light, and their eyes shine like miniature suns. The tips of their wings and claws smolder with golden flames, and they leave a trail of warmth wherever they walk.",
+        "abilities": [
+          "Generate solar flares from their wings, blinding and burning enemies with radiant heat.",
+          "Their claws can melt through armor.",
+          "Capable of healing themselves by basking in sunlight."
+        ],
+        "danger_level": "High. Solar Griffins are fierce hunters and protectors of the Southern Fae Courts. While they can be tamed by powerful fae, they are aggressive toward intruders or threats.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "radiantsylphs",
+        "name": "RadiantSylphs",
+        "kind": "Elemental Spirits",
+        "location": "Southern Courts",
+        "region": "SouthernCreatures",
+        "description": "Radiant Sylphs are elemental wind spirits with bodies made of light and air. They appear as ethereal, glowing figures with translucent wings that shimmer like rainbows. Their hair flows like sunlight, and they can take on the form of a gentle breeze or a raging whirlwind.",
+        "abilities": [
+          "Manipulate wind and light, creating blinding gusts that disorient and cut through enemies.",
+          "Become intangible, making it nearly impossible to strike them with physical attacks.",
+          "Summon violent storms of light and wind that can tear apart entire landscapes when angered."
+        ],
+        "danger_level": "High. Their intangibility and ability to summon devastating storms make them dangerous opponents. They are elusive and challenging to catch, but once provoked, they become relentless.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "embersprites",
+        "name": "EmberSprites",
+        "kind": "Fiery Creatures",
+        "location": "Southern Courts",
+        "region": "SouthernCreatures",
+        "description": "Ember Sprites are small, fiery creatures that resemble glowing, winged humanoids. They are usually about a foot tall and have bright red, orange, and yellow flames for hair. Their eyes sparkle like embers, and they leave trails of sparks wherever they fly.",
+        "abilities": [
+          "Generate and manipulate fire, creating small explosions and firestorms.",
+          "Play pranks using their powers, and in large swarms, they can cause devastating fires that spread rapidly."
+        ],
+        "danger_level": "Medium to high. While a single Ember Sprite is not very threatening, a swarm of them can cause significant destruction, especially if they band together to ignite an area.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "lightstalkerpanthers",
+        "name": "LightstalkerPanthers",
+        "kind": "Feline Predators",
+        "location": "Southern Courts",
+        "region": "SouthernCreatures",
+        "description": "Lightstalker Panthers are large, feline predators with sleek, golden fur that glows faintly in the dark. Their eyes are bright white, and their bodies are adorned with swirling patterns that emit a soft, radiant light. Despite their luminous appearance, they are masters of stealth, able to manipulate light to become nearly invisible.",
+        "abilities": [
+          "Bend light around themselves, becoming invisible to the naked eye.",
+          "Create blinding flashes to disorient prey and move with incredible speed and agility.",
+          "Their claws and teeth can pierce even the toughest armor."
+        ],
+        "danger_level": "Medium. They are dangerous hunters but prefer to avoid conflict unless provoked or hungry. Their ability to blend into their surroundings makes them unpredictable and deadly when they decide to strike.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "pyrestonegargoyles",
+        "name": "PyrestoneGargoyles",
+        "kind": "Molten Stone Creatures",
+        "location": "Southern Fae Courts Mountain Region",
+        "region": "SouthernCreatures",
+        "description": "Pyrestone Gargoyles are stone-like creatures with bodies that resemble molten lava encased in rock. They perch on mountain ledges and cliffs, remaining motionless until disturbed. When awakened, their bodies crack open, revealing glowing veins of lava.",
+        "abilities": [
+          "Hurl molten rocks at their enemies and create waves of intense heat to drive off intruders.",
+          "Melt into pools of lava and reform elsewhere when enraged, making them difficult to kill."
+        ],
+        "danger_level": "Very high. They are nearly impervious to physical attacks and can endure even the harshest conditions.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "emberwingfalcons",
+        "name": "EmberwingFalcons",
+        "kind": "Firebirds",
+        "location": "Southern Fae Courts Mountain Region",
+        "region": "SouthernCreatures",
+        "description": "Emberwing Falcons are large birds of prey with feathers that glow like embers. Their wings emit sparks as they fly, and they leave a trail of smoke in their wake. These falcons nest in the highest peaks, where the air is thin and the sun is hottest.",
+        "abilities": [
+          "Launch fireballs from their talons and emit searing heat waves with each flap of their wings.",
+          "Dive at incredible speeds, leaving behind a trail of flames."
+        ],
+        "danger_level": "High. While not as physically imposing as other creatures, their speed and control over fire make them formidable hunters.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "lavamantises",
+        "name": "LavaMantises",
+        "kind": "Insectoid Predators",
+        "location": "Southern Fae Courts Mountain Region",
+        "region": "SouthernCreatures",
+        "description": "Resembling enormous praying mantises with bodies made of volcanic rock and lava, these creatures blend into the rocky mountainsides. Their scythe-like forelimbs glow with heat, and they can camouflage themselves perfectly against the warm, sunlit cliffs.",
+        "abilities": [
+          "Shoot jets of molten lava from their forelimbs.",
+          "Create steam clouds to obscure their movements.",
+          "Possess incredibly tough exoskeletons capable of withstanding even the strongest magical attacks."
+        ],
+        "danger_level": "Medium to high. They are aggressive and difficult to kill, but they tend to be solitary and prefer to ambush prey rather than pursue it.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      }
+    ],
+    "Moderate": [
+      {
+        "id": "sunflaremanticores",
+        "name": "SunflareManticores",
+        "kind": "Lion-like Creatures",
+        "location": "Southern Courts",
+        "region": "SouthernCreatures",
+        "description": "Sunflare Manticores are large, lion-like creatures with scorpion tails and a mane of flames. Their fur is golden, and their eyes glow with an inner fire. They have massive, bat-like wings covered in scales that shimmer with every movement, and their tails can strike with the speed of lightning.",
+        "abilities": [
+          "Breathe fire and shoot molten stingers from their tails, which explode on impact.",
+          "Absorb solar energy to enhance their strength and speed, becoming more powerful during the day.",
+          "Their roar creates shockwaves that can knock back opponents."
+        ],
+        "danger_level": "Medium. They are fierce and aggressive but can be avoided or reasoned with by experienced fae warriors. However, if provoked, they become ferocious opponents.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "dawnwisps",
+        "name": "DawnWisps",
+        "kind": "Ethereal Orbs",
+        "location": "Southern Courts",
+        "region": "SouthernCreatures",
+        "description": "Dawn Wisps are small, glowing orbs of light that float around the Southern Fae Courts. They emit a soft, warm light that is soothing to most creatures, but they can quickly turn aggressive if threatened. They often travel in clusters and are drawn to areas of high magic.",
+        "abilities": [
+          "Project beams of light that burn or blind enemies.",
+          "Merge together to form larger, more powerful wisps that emit concentrated blasts of light.",
+          "Their warmth can heal minor wounds and soothe pain, but they can also scorch those they see as threats."
+        ],
+        "danger_level": "Medium to low. Individually, they pose little threat, but in large numbers, they can overwhelm even powerful fae.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "goldenvines",
+        "name": "GoldenVines",
+        "kind": "Plant-like Creatures",
+        "location": "Southern Courts",
+        "region": "SouthernCreatures",
+        "description": "Golden Vines are sentient, plant-like creatures that grow throughout the Southern Kingdom's forests. They have thorny tendrils covered in small, golden flowers that emit a faint, sweet fragrance. These vines react to the presence of magic and are often used as traps or guardians by the Solaryn Fae.",
+        "abilities": [
+          "Ensnare and immobilize their prey, draining their life force to sustain themselves.",
+          "Release a pollen cloud that induces drowsiness or paralysis when threatened.",
+          "Regenerate from any damage."
+        ],
+        "danger_level": "Low to medium. While not inherently aggressive, they are dangerous to those who wander too close or try to harm them.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "radiantbasilisks",
+        "name": "RadiantBasilisks",
+        "kind": "Four-legged Lizards",
+        "location": "Southern Fae Courts Mountain Region",
+        "region": "SouthernCreatures",
+        "description": "These four-legged lizards have scales that glow with a golden light. Their eyes emit rays of heat that can burn or paralyze their prey. Radiant Basilisks prefer to bask on sunlit ledges during the day, gathering warmth to fuel their power.",
+        "abilities": [
+          "Channel intense heat through their gaze, turning their prey to ash.",
+          "Emit a blinding light from their scales, stunning attackers.",
+          "Their tails are lined with sharp, golden spines that they can launch at their enemies."
+        ],
+        "danger_level": "Medium. They are formidable but can be avoided if one is careful not to meet their gaze.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "sparklewingbutterflies",
+        "name": "SparklewingButterflies",
+        "kind": "Radiant Butterflies",
+        "location": "Southern Fae Courts Mountain Region",
+        "region": "SouthernCreatures",
+        "description": "Sparklewing Butterflies are large, radiant butterflies with wings that shimmer in all colors of the sun's spectrum. They flutter harmlessly through the mountains, but their beauty hides a deadly secret.",
+        "abilities": [
+          "Release clouds of sparkling, golden dust that cause intense heat and temporary blindness when threatened.",
+          "The dust is flammable, making them highly dangerous if exposed to open flames."
+        ],
+        "danger_level": "Low to medium. While not aggressive, they can cause harm if provoked, and their dust can ignite and cause widespread fires.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      }
+    ],
+    "Low": [
+      {
+        "id": "luminousmoths",
+        "name": "LuminousMoths",
+        "kind": "Glowing Insects",
+        "location": "Southern Courts",
+        "region": "SouthernCreatures",
+        "description": "Luminous Moths are large, glowing insects with wings that shimmer in all colors of the rainbow. They are about the size of a human hand and are usually harmless, fluttering around flowers and sources of light. They are often attracted to magic and areas of high energy.",
+        "abilities": [
+          "Create dazzling light displays that mesmerize and disorient predators or threats.",
+          "Release a dust that causes mild hallucinations or confusion when threatened.",
+          "Feed on small traces of magic, which can deplete an opponent's power over time."
+        ],
+        "danger_level": "Low. They are generally harmless and more of a nuisance than a threat, but their light displays can be disorienting in large numbers.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      },
+      {
+        "id": "sunmites",
+        "name": "SunMites",
+        "kind": "Glowing Insects",
+        "location": "Southern Fae Courts Mountain Region",
+        "region": "SouthernCreatures",
+        "description": "Small, glowing insects that resemble tiny suns, Sun Mites live in large swarms within the warm crevices of the mountains. They emit a gentle, radiant light and feed on the magical energy in the air.",
+        "abilities": [
+          "In large swarms, they can drain magic from their surroundings."
+        ],
+        "danger_level": "Low. Individually, they are harmless, but in large numbers, they can drain magic from their surroundings, posing a threat.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SouthernCreatures"
+        }
+      }
+    ]
+  }
+}

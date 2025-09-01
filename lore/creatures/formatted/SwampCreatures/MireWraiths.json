@@ -1,0 +1,20 @@
+{
+  "id": "mirewraiths",
+  "name": "MireWraiths",
+  "kind": "Ethereal Ghostly Creatures",
+  "location": "Swamp Lands",
+  "region": "SwampCreatures",
+  "description": "The Mire Wraiths are ethereal, ghostly creatures that drift silently through the swamp mists. They appear as tall, skeletal figures with tattered cloaks made of shadow and mist, and their eyes glow a haunting green. Their touch causes immediate decay, and they are drawn to the life force of living beings.",
+  "abilities": [
+    "Drain the life energy of their victims, causing rapid aging and weakening.",
+    "Become intangible, allowing them to pass through solid objects or avoid attacks.",
+    "Manipulate the swamp mist to create illusions, leading their prey deeper into dangerous territory."
+  ],
+  "danger_level": "Very high. Nearly impossible to kill with conventional weapons, and their ability to drain life force makes them exceptionally dangerous.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SwampCreatures"
+  }
+}

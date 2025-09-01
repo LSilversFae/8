@@ -1,0 +1,20 @@
+{
+  "id": "sunflaremanticores",
+  "name": "SunflareManticores",
+  "kind": "Lion-like Creatures",
+  "location": "Southern Courts",
+  "region": "SouthernCreatures",
+  "description": "Sunflare Manticores are large, lion-like creatures with scorpion tails and a mane of flames. Their fur is golden, and their eyes glow with an inner fire. They have massive, bat-like wings covered in scales that shimmer with every movement, and their tails can strike with the speed of lightning.",
+  "abilities": [
+    "Breathe fire and shoot molten stingers from their tails, which explode on impact.",
+    "Absorb solar energy to enhance their strength and speed, becoming more powerful during the day.",
+    "Their roar creates shockwaves that can knock back opponents."
+  ],
+  "danger_level": "Medium. They are fierce and aggressive but can be avoided or reasoned with by experienced fae warriors. However, if provoked, they become ferocious opponents.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

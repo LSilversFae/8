@@ -1,0 +1,20 @@
+{
+  "id": "goldenvines",
+  "name": "GoldenVines",
+  "kind": "Plant-like Creatures",
+  "location": "Southern Courts",
+  "region": "SouthernCreatures",
+  "description": "Golden Vines are sentient, plant-like creatures that grow throughout the Southern Kingdom's forests. They have thorny tendrils covered in small, golden flowers that emit a faint, sweet fragrance. These vines react to the presence of magic and are often used as traps or guardians by the Solaryn Fae.",
+  "abilities": [
+    "Ensnare and immobilize their prey, draining their life force to sustain themselves.",
+    "Release a pollen cloud that induces drowsiness or paralysis when threatened.",
+    "Regenerate from any damage."
+  ],
+  "danger_level": "Low to medium. While not inherently aggressive, they are dangerous to those who wander too close or try to harm them.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

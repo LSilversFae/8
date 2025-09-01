@@ -1,0 +1,20 @@
+{
+  "id": "solargriffins",
+  "name": "SolarGriffins",
+  "kind": "Majestic Beasts",
+  "location": "Southern Courts",
+  "region": "SouthernCreatures",
+  "description": "Solar Griffins are majestic creatures with the body of a lion and the wings and head of a golden eagle. Their feathers glow with a radiant light, and their eyes shine like miniature suns. The tips of their wings and claws smolder with golden flames, and they leave a trail of warmth wherever they walk.",
+  "abilities": [
+    "Generate solar flares from their wings, blinding and burning enemies with radiant heat.",
+    "Their claws can melt through armor.",
+    "Capable of healing themselves by basking in sunlight."
+  ],
+  "danger_level": "High. Solar Griffins are fierce hunters and protectors of the Southern Fae Courts. While they can be tamed by powerful fae, they are aggressive toward intruders or threats.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

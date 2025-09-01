@@ -1,0 +1,20 @@
+{
+  "id": "luminousmoths",
+  "name": "LuminousMoths",
+  "kind": "Glowing Insects",
+  "location": "Southern Courts",
+  "region": "SouthernCreatures",
+  "description": "Luminous Moths are large, glowing insects with wings that shimmer in all colors of the rainbow. They are about the size of a human hand and are usually harmless, fluttering around flowers and sources of light. They are often attracted to magic and areas of high energy.",
+  "abilities": [
+    "Create dazzling light displays that mesmerize and disorient predators or threats.",
+    "Release a dust that causes mild hallucinations or confusion when threatened.",
+    "Feed on small traces of magic, which can deplete an opponent's power over time."
+  ],
+  "danger_level": "Low. They are generally harmless and more of a nuisance than a threat, but their light displays can be disorienting in large numbers.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

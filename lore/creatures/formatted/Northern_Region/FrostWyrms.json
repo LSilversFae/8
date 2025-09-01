@@ -1,0 +1,20 @@
+{
+  "id": "frostwyrms",
+  "name": "FrostWyrms",
+  "kind": "Serpentine Dragons",
+  "location": "Northern Fae Courts Mountain Region",
+  "region": "Northern Region",
+  "description": "Frost Wyrms are enormous, serpentine dragons covered in scales made of ice and frost, coiling around the highest peaks. Their eyes glow with a pale blue light, and their breath is a freezing mist that crystallizes anything it touches. These creatures can blend into the snow, making them nearly invisible against the icy terrain.",
+  "abilities": [
+    "Exhale freezing winds capable of turning entire groups to ice.",
+    "Summon blizzards to obscure their movements and launch sharp ice shards from their tails.",
+    "Their scales are nearly impervious to most weapons."
+  ],
+  "danger_level": "Extremely high. They are territorial and highly aggressive, attacking anything that ventures too close to their lairs.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

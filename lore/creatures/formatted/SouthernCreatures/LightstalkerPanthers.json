@@ -1,0 +1,20 @@
+{
+  "id": "lightstalkerpanthers",
+  "name": "LightstalkerPanthers",
+  "kind": "Feline Predators",
+  "location": "Southern Courts",
+  "region": "SouthernCreatures",
+  "description": "Lightstalker Panthers are large, feline predators with sleek, golden fur that glows faintly in the dark. Their eyes are bright white, and their bodies are adorned with swirling patterns that emit a soft, radiant light. Despite their luminous appearance, they are masters of stealth, able to manipulate light to become nearly invisible.",
+  "abilities": [
+    "Bend light around themselves, becoming invisible to the naked eye.",
+    "Create blinding flashes to disorient prey and move with incredible speed and agility.",
+    "Their claws and teeth can pierce even the toughest armor."
+  ],
+  "danger_level": "Medium. They are dangerous hunters but prefer to avoid conflict unless provoked or hungry. Their ability to blend into their surroundings makes them unpredictable and deadly when they decide to strike.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

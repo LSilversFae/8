@@ -2,6 +2,7 @@
   "Name": { "json": "name", "type": "title" },
   "ID": { "json": "id", "type": "rich_text" },
   "Kind": { "json": "kind", "type": "select" },
+  "Realm": { "json": "realm", "type": "select" },
   "Region": { "json": "region", "type": "select" },
   "Location": { "json": "location", "type": "rich_text" },
   "Danger Level": { "json": "danger_level", "type": "select" },

@@ -1,0 +1,19 @@
+{
+  "id": "emberwingfalcons",
+  "name": "EmberwingFalcons",
+  "kind": "Firebirds",
+  "location": "Southern Fae Courts Mountain Region",
+  "region": "SouthernCreatures",
+  "description": "Emberwing Falcons are large birds of prey with feathers that glow like embers. Their wings emit sparks as they fly, and they leave a trail of smoke in their wake. These falcons nest in the highest peaks, where the air is thin and the sun is hottest.",
+  "abilities": [
+    "Launch fireballs from their talons and emit searing heat waves with each flap of their wings.",
+    "Dive at incredible speeds, leaving behind a trail of flames."
+  ],
+  "danger_level": "High. While not as physically imposing as other creatures, their speed and control over fire make them formidable hunters.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

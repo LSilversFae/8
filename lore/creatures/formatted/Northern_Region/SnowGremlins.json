@@ -1,0 +1,19 @@
+{
+  "id": "snowgremlins",
+  "name": "SnowGremlins",
+  "kind": "Goblin-like Creatures",
+  "location": "Northern Courts",
+  "region": "Northern Region",
+  "description": "Snow Gremlins are small, goblin-like creatures with pale blue skin, pointed ears, and large, mischievous eyes. They have sharp claws and teeth and often scavenge for food or shiny objects in the snow. These creatures are known for their cunning and ability to work together in small groups.",
+  "abilities": [
+    "Move quickly and silently, making them adept at stealing supplies or attacking in swarms.",
+    "Create minor snow or ice traps to immobilize prey temporarily."
+  ],
+  "danger_level": "Low. Individually, they pose little threat, but a group of them can cause problems, especially for wounded or distracted fae.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

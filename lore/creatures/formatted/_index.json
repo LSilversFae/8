@@ -4,6 +4,7 @@
     "name": "FrostWraiths",
     "kind": "Ethereal",
     "location": "Northern Courts",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -11,6 +12,7 @@
     "name": "IceRevenants",
     "kind": "Undead",
     "location": "Northern Courts",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -18,6 +20,7 @@
     "name": "ShadowDrakes",
     "kind": "Drake",
     "location": "Northern Courts",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -25,6 +28,7 @@
     "name": "FrostbiteWolves",
     "kind": "Beast",
     "location": "Northern Courts",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -32,6 +36,7 @@
     "name": "IceboundTreants",
     "kind": "Treant",
     "location": "Northern Courts",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -39,6 +44,7 @@
     "name": "UmbralSpiders",
     "kind": "Arachnids",
     "location": "Northern Courts",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -46,6 +52,7 @@
     "name": "MidnightStalkers",
     "kind": "Feline Predators",
     "location": "Northern Courts",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -53,6 +60,7 @@
     "name": "WhisperingWisps",
     "kind": "Ethereal Orbs",
     "location": "Northern Courts",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -60,6 +68,7 @@
     "name": "FrostSprites",
     "kind": "Winged Fae",
     "location": "Northern Courts",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -67,6 +76,7 @@
     "name": "SnowGremlins",
     "kind": "Goblin-like Creatures",
     "location": "Northern Courts",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -74,6 +84,7 @@
     "name": "FrostWyrms",
     "kind": "Serpentine Dragons",
     "location": "Northern Fae Courts Mountain Region",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -81,6 +92,7 @@
     "name": "GlacierStalkers",
     "kind": "Panther-like Predators",
     "location": "Northern Fae Courts Mountain Region",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -88,6 +100,7 @@
     "name": "FrostfireChimera",
     "kind": "Hybrid Beasts",
     "location": "Northern Fae Courts Mountain Region",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -95,6 +108,7 @@
     "name": "IceHarpies",
     "kind": "Humanoid Bird Creatures",
     "location": "Northern Fae Courts Mountain Region",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -102,6 +116,7 @@
     "name": "IceboundGolems",
     "kind": "Massive Elemental Beings",
     "location": "Northern Fae Courts Mountain Region",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -109,6 +124,7 @@
     "name": "SnowblindOwls",
     "kind": "Giant Owls",
     "location": "Northern Fae Courts Mountain Region",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -116,6 +132,7 @@
     "name": "FrostbittenWisps",
     "kind": "Ethereal Lights",
     "location": "Northern Fae Courts Mountain Region",
+    "region": "Northern Region",
     "group": "NorthernCreatures"
   },
   {
@@ -123,6 +140,7 @@
     "name": "PhoenixMatriarchs",
     "kind": "Firebirds",
     "location": "Southern Courts",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -130,6 +148,7 @@
     "name": "SunSerpents",
     "kind": "Snake-like Creatures",
     "location": "Southern Courts",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -137,6 +156,7 @@
     "name": "SolarGriffins",
     "kind": "Majestic Beasts",
     "location": "Southern Courts",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -144,6 +164,7 @@
     "name": "RadiantSylphs",
     "kind": "Elemental Spirits",
     "location": "Southern Courts",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -151,6 +172,7 @@
     "name": "EmberSprites",
     "kind": "Fiery Creatures",
     "location": "Southern Courts",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -158,6 +180,7 @@
     "name": "LightstalkerPanthers",
     "kind": "Feline Predators",
     "location": "Southern Courts",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -165,6 +188,7 @@
     "name": "SunflareManticores",
     "kind": "Lion-like Creatures",
     "location": "Southern Courts",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -172,6 +196,7 @@
     "name": "DawnWisps",
     "kind": "Ethereal Orbs",
     "location": "Southern Courts",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -179,6 +204,7 @@
     "name": "GoldenVines",
     "kind": "Plant-like Creatures",
     "location": "Southern Courts",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -186,6 +212,7 @@
     "name": "LuminousMoths",
     "kind": "Glowing Insects",
     "location": "Southern Courts",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -193,6 +220,7 @@
     "name": "SunfireDrakes",
     "kind": "Dragon-like Creatures",
     "location": "Southern Fae Courts Mountain Region",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -200,6 +228,7 @@
     "name": "PyrestoneGargoyles",
     "kind": "Molten Stone Creatures",
     "location": "Southern Fae Courts Mountain Region",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -207,6 +236,7 @@
     "name": "EmberwingFalcons",
     "kind": "Firebirds",
     "location": "Southern Fae Courts Mountain Region",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -214,6 +244,7 @@
     "name": "LavaMantises",
     "kind": "Insectoid Predators",
     "location": "Southern Fae Courts Mountain Region",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -221,6 +252,7 @@
     "name": "RadiantBasilisks",
     "kind": "Four-legged Lizards",
     "location": "Southern Fae Courts Mountain Region",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -228,6 +260,7 @@
     "name": "SparklewingButterflies",
     "kind": "Radiant Butterflies",
     "location": "Southern Fae Courts Mountain Region",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -235,6 +268,7 @@
     "name": "SunMites",
     "kind": "Glowing Insects",
     "location": "Southern Fae Courts Mountain Region",
+    "region": "SouthernCreatures",
     "group": "SouthernCreatures"
   },
   {
@@ -242,6 +276,7 @@
     "name": "NoxfangHydras",
     "kind": "Multi-headed Serpentine Beasts",
     "location": "Swamp Lands",
+    "region": "SwampCreatures",
     "group": "SwampCreatures"
   },
   {
@@ -249,6 +284,7 @@
     "name": "MireWraiths",
     "kind": "Ethereal Ghostly Creatures",
     "location": "Swamp Lands",
+    "region": "SwampCreatures",
     "group": "SwampCreatures"
   },
   {
@@ -256,6 +292,7 @@
     "name": "SwampDevourers",
     "kind": "Carnivorous Plants",
     "location": "Swamp Lands",
+    "region": "SwampCreatures",
     "group": "SwampCreatures"
   },
   {
@@ -263,6 +300,7 @@
     "name": "BileToads",
     "kind": "Amphibious Creatures",
     "location": "Swamp Lands",
+    "region": "SwampCreatures",
     "group": "SwampCreatures"
   },
   {
@@ -270,6 +308,7 @@
     "name": "BogSirens",
     "kind": "Humanoid Water Creatures",
     "location": "Swamp Lands",
+    "region": "SwampCreatures",
     "group": "SwampCreatures"
   }
 ]

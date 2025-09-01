@@ -1,0 +1,109 @@
+{
+  "region": "SwampCreatures",
+  "categories": {
+    "Extreme": [
+      {
+        "id": "noxfanghydras",
+        "name": "NoxfangHydras",
+        "kind": "Multi-headed Serpentine Beasts",
+        "location": "Swamp Lands",
+        "region": "SwampCreatures",
+        "description": "Noxfang Hydras are colossal, multi-headed serpentine beasts that dwell in the deepest parts of the swamplands. Each Hydra has between three to seven heads, each with glowing yellow eyes and rows of razor-sharp fangs dripping with venom. Their scales are dark green and covered in thick algae, allowing them to blend seamlessly with the swamp water.",
+        "abilities": [
+          "Regenerative abilities, able to regrow a head if one is severed.",
+          "Spit a corrosive venom that melts through armor and flesh.",
+          "Create massive whirlpools with their tails, pulling prey underwater."
+        ],
+        "danger_level": "Extremely high. They are territorial, aggressive, and nearly impossible to kill due to their regenerative capabilities.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SwampCreatures"
+        }
+      }
+    ],
+    "High": [
+      {
+        "id": "mirewraiths",
+        "name": "MireWraiths",
+        "kind": "Ethereal Ghostly Creatures",
+        "location": "Swamp Lands",
+        "region": "SwampCreatures",
+        "description": "The Mire Wraiths are ethereal, ghostly creatures that drift silently through the swamp mists. They appear as tall, skeletal figures with tattered cloaks made of shadow and mist, and their eyes glow a haunting green. Their touch causes immediate decay, and they are drawn to the life force of living beings.",
+        "abilities": [
+          "Drain the life energy of their victims, causing rapid aging and weakening.",
+          "Become intangible, allowing them to pass through solid objects or avoid attacks.",
+          "Manipulate the swamp mist to create illusions, leading their prey deeper into dangerous territory."
+        ],
+        "danger_level": "Very high. Nearly impossible to kill with conventional weapons, and their ability to drain life force makes them exceptionally dangerous.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SwampCreatures"
+        }
+      },
+      {
+        "id": "swampdevourers",
+        "name": "SwampDevourers",
+        "kind": "Carnivorous Plants",
+        "location": "Swamp Lands",
+        "region": "SwampCreatures",
+        "description": "Swamp Devourers are enormous, carnivorous plants that blend into the swamp's flora. They have massive, gaping mouths lined with sharp, thorny teeth and long, tendril-like vines that can extend to capture prey. These creatures often lie dormant, waiting for the scent of blood or movement to awaken them.",
+        "abilities": [
+          "Lash out with vine-like tendrils strong enough to crush bones and coated in a paralytic toxin.",
+          "Their digestive fluids are highly acidic and can dissolve flesh and bone within minutes.",
+          "Emit a sweet, floral scent that lures prey into their reach."
+        ],
+        "danger_level": "High. Incredibly dangerous due to their stealth and strength, and they can easily ambush even experienced fae or Vyr'Zal warriors.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SwampCreatures"
+        }
+      },
+      {
+        "id": "biletoads",
+        "name": "BileToads",
+        "kind": "Amphibious Creatures",
+        "location": "Swamp Lands",
+        "region": "SwampCreatures",
+        "description": "Bile Toads are gigantic, amphibious creatures with warty, slimy skin that secretes a thick, foul-smelling mucus. They are capable of growing up to 15 feet in length and have large mouths filled with rows of serrated teeth.",
+        "abilities": [
+          "Expel a highly acidic bile that melts through armor and flesh.",
+          "Secrete toxic mucus that causes severe burns upon contact and emits a stench that can incapacitate or disorient victims.",
+          "Capable of leaping great distances, making them highly unpredictable in battle."
+        ],
+        "danger_level": "High. Their powerful leaps, acidic bile, and toxic mucus make them formidable opponents.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SwampCreatures"
+        }
+      },
+      {
+        "id": "bogsirens",
+        "name": "BogSirens",
+        "kind": "Humanoid Water Creatures",
+        "location": "Swamp Lands",
+        "region": "SwampCreatures",
+        "description": "Bog Sirens are deceptively beautiful, humanoid creatures with long, flowing hair made of waterweed and scales that shimmer like emeralds. They sing haunting melodies that echo through the swamp.",
+        "abilities": [
+          "Possess hypnotic voices that lure prey into the deeper, more dangerous parts of the swamp.",
+          "Attack with razor-sharp claws and teeth, draining their victims' life energy.",
+          "Can manipulate water, creating whirlpools or pulling victims underwater to drown them."
+        ],
+        "danger_level": "Medium to high. Their hypnotic abilities and cunning make them exceptionally dangerous.",
+        "attributes": null,
+        "source": {
+          "file": "lore\\creatures\\creatures.json",
+          "category": "creatures",
+          "group": "SwampCreatures"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "noxfanghydras",
+  "name": "NoxfangHydras",
+  "kind": "Multi-headed Serpentine Beasts",
+  "location": "Swamp Lands",
+  "region": "SwampCreatures",
+  "description": "Noxfang Hydras are colossal, multi-headed serpentine beasts that dwell in the deepest parts of the swamplands. Each Hydra has between three to seven heads, each with glowing yellow eyes and rows of razor-sharp fangs dripping with venom. Their scales are dark green and covered in thick algae, allowing them to blend seamlessly with the swamp water.",
+  "abilities": [
+    "Regenerative abilities, able to regrow a head if one is severed.",
+    "Spit a corrosive venom that melts through armor and flesh.",
+    "Create massive whirlpools with their tails, pulling prey underwater."
+  ],
+  "danger_level": "Extremely high. They are territorial, aggressive, and nearly impossible to kill due to their regenerative capabilities.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SwampCreatures"
+  }
+}

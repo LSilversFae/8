@@ -1,0 +1,19 @@
+{
+  "id": "frostbittenwisps",
+  "name": "FrostbittenWisps",
+  "kind": "Ethereal Lights",
+  "location": "Northern Fae Courts Mountain Region",
+  "region": "Northern Region",
+  "description": "Small, ethereal balls of blue light that drift through the snow, Frostbitten Wisps seem harmless at first. However, they are known to lure travelers deeper into the mountains, where the cold is most intense.",
+  "abilities": [
+    "Emit an aura of intense cold capable of freezing anything that comes too close.",
+    "Create illusions, making travelers believe they're headed toward safety when they're actually walking toward danger."
+  ],
+  "danger_level": "Low to medium. They are dangerous in large numbers, but they can be avoided if one is cautious.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

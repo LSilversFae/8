@@ -1,0 +1,21 @@
+{
+  "id": "frostbitewolves",
+  "name": "FrostbiteWolves",
+  "kind": "Beast",
+  "location": "Northern Courts",
+  "region": "Northern Region",
+  "description": "Frostbite Wolves are large, muscular predators that roam the frozen forests and mountains. Their fur is a shimmering silver-blue, and their eyes glow with an eerie white light. They move silently through the snow, and their presence is often heralded by an unnatural drop in temperature.",
+  "abilities": [
+    "Have razor-sharp claws and teeth that can easily pierce armor.",
+    "Can exhale icy breath that freezes anything it touches.",
+    "Their bites inflict a curse that gradually drains the warmth and life from their victims.",
+    "Known to hunt in packs, coordinating their attacks to overwhelm even the strongest fae."
+  ],
+  "danger_level": "High. While a single wolf is manageable for a skilled fae warrior, an entire pack can be devastating.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

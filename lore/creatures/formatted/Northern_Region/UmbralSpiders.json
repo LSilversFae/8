@@ -1,0 +1,19 @@
+{
+  "id": "umbralspiders",
+  "name": "UmbralSpiders",
+  "kind": "Arachnids",
+  "location": "Northern Courts",
+  "region": "Northern Region",
+  "description": "Umbral Spiders are enormous, shadowy arachnids that lurk in the caves and dark forests of the Northern Kingdom. Their bodies are covered in a thick, black exoskeleton that blends into the darkness, and they have multiple glowing red eyes that pierce through the night. Long, spindly legs allow them to move silently and swiftly.",
+  "abilities": [
+    "Spin webs made of shadow to trap prey and drain their life force.",
+    "Inject venom that induces paralysis and vivid, horrifying hallucinations, weakening fae magic and leaving victims vulnerable."
+  ],
+  "danger_level": "Medium. Although not as deadly as the Frost Wraiths, they are incredibly dangerous in groups and can ambush their victims with ease.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

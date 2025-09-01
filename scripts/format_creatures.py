@@ -48,6 +48,27 @@ def normalize_creature(name: str, raw: Dict[str, Any], context: Dict[str, Any]) 
         if isinstance(grp, str) and grp.strip():
             region = grp.strip()
 
+    # Derive realm from explicit field, location, or region heuristics
+    realm: Optional[str] = None
+    realm_in = clean_text(raw.get("realm"))
+    if realm_in:
+        realm = canonicalize_with_synonyms(realm_in, SYNONYMS.get("realm", {}), title_case=True)
+    if not realm and location:
+        ll = location.lower()
+        for k, v in (SYNONYMS.get("realm", {}) or {}).items():
+            try:
+                if k in ll:
+                    realm = v
+                    break
+            except Exception:
+                continue
+    if not realm and region:
+        rl = str(region).lower()
+        for k, v in (SYNONYMS.get("realm", {}) or {}).items():
+            if k in rl:
+                realm = v
+                break
+
     desc = clean_text(raw.get("description"))
 
     abilities_raw = raw.get("abilities") or raw.get("powers")
@@ -78,6 +99,7 @@ def normalize_creature(name: str, raw: Dict[str, Any], context: Dict[str, Any]) 
         "kind": kind,
         "location": location,
         "region": region,
+        "realm": realm,
         "description": desc,
         "abilities": abilities,
         "danger_level": danger,
@@ -156,6 +178,14 @@ SYNONYMS: Dict[str, Dict[str, str]] = {
         "abyss": "Abyss",
         "elarion": "Elarion",
     },
+    "realm": {
+        "elarion": "Elarion",
+        "elysion": "Elysion",
+        "nythralkar": "Nythralkar",
+        "ignisyr": "Ignisyr",
+        "dreaming realm": "Dreaming Realm",
+        "abyss": "Abyss"
+    },
 }
 
 
@@ -208,6 +238,8 @@ def main():
     ap.add_argument("--split", action="store_true")
     ap.add_argument("--index", action="store_true")
     ap.add_argument("--mappings", type=str)
+    ap.add_argument("--by-region", action="store_true", help="When splitting, nest files under region subfolders")
+    ap.add_argument("--region-bundles", action="store_true", help="Also write per-region JSON grouped by danger level")
 
     args = ap.parse_args()
 
@@ -236,9 +268,22 @@ def main():
         for e in all_entries:
             name = e.get("name") or e.get("id") or "creature"
             safe = re.sub(r"[^a-zA-Z0-9._-]+", "_", name)
-            save_json(outdir / f"{safe}.json", e)
+            subdir = outdir
+            if args.by_region:
+                reg = e.get("region") or "Uncategorized"
+                reg_safe = re.sub(r"[^a-zA-Z0-9._-]+", "_", str(reg))
+                subdir = outdir / reg_safe
+                subdir.mkdir(parents=True, exist_ok=True)
+            save_json(subdir / f"{safe}.json", e)
         if args.index:
             save_json(Path(args.outdir) / "_index.json", build_index(all_entries))
+
+        if args.region_bundles:
+            bundles = build_region_bundles(all_entries)
+            base = Path(args.outdir) / "regions"
+            for region, data in bundles.items():
+                rsafe = re.sub(r"[^a-zA-Z0-9._-]+", "_", region)
+                save_json(base / f"{rsafe}.json", data)
 
     if args.output:
         save_json(Path(args.output), {"creatures": all_entries})

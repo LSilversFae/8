@@ -1,0 +1,19 @@
+{
+  "id": "glacierstalkers",
+  "name": "GlacierStalkers",
+  "kind": "Panther-like Predators",
+  "location": "Northern Fae Courts Mountain Region",
+  "region": "Northern Region",
+  "description": "Resembling giant, six-legged panthers with silvery fur that blends perfectly with the snow, Glacier Stalkers are master ambushers. They have sharp claws capable of cutting through stone and glowing blue eyes that can see in complete darkness.",
+  "abilities": [
+    "Silently stalk prey across icy landscapes with fur that naturally absorbs sound, making them almost impossible to hear.",
+    "Freeze surroundings to trap victims or create icy spikes that emerge from the ground."
+  ],
+  "danger_level": "Very high. Their stealth, speed, and ability to manipulate ice make them deadly hunters, especially to those unaware of their presence.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

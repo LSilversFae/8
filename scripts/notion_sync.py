@@ -196,6 +196,11 @@ def build_json_from_page(page: Dict[str, Any], mapping: Dict[str, Dict[str, str]
             continue
         value = from_notion_prop(typ, po)
         set_by_path(out, json_path, value)
+    # Persist Notion page id for round-trip updates
+    try:
+        set_by_path(out, "source.notion_page_id", page.get("id"))
+    except Exception:
+        pass
     return out
 
 
@@ -250,18 +255,38 @@ def push_to_notion(category: str, mapping_path: Optional[Path] = None) -> Dict[s
 
             props = build_properties_from_json(entry, mapping)
 
-            # Find existing page by Name
-            res = notion.databases.query(
-                database_id=db_id,
-                filter={"property": "Name", "title": {"equals": name}},
-            )
-            if res.get("results"):
-                page_id = res["results"][0]["id"]
-                notion.pages.update(page_id=page_id, properties=props)
-                updated += 1
-            else:
-                notion.pages.create(parent={"database_id": db_id}, properties=props)
-                created += 1
+            page_id = entry.get("source", {}).get("notion_page_id")
+            used_page_id = None
+            if page_id:
+                try:
+                    notion.pages.update(page_id=page_id, properties=props)
+                    updated += 1
+                    used_page_id = page_id
+                except Exception:
+                    used_page_id = None
+            if not used_page_id:
+                # Fallback to matching by Name
+                res = notion.databases.query(
+                    database_id=db_id,
+                    filter={"property": "Name", "title": {"equals": name}},
+                )
+                if res.get("results"):
+                    used_page_id = res["results"][0]["id"]
+                    notion.pages.update(page_id=used_page_id, properties=props)
+                    updated += 1
+                else:
+                    created_page = notion.pages.create(parent={"database_id": db_id}, properties=props)
+                    used_page_id = created_page.get("id")
+                    created += 1
+
+            # Save notion_page_id back to the file for future updates
+            if used_page_id:
+                entry.setdefault("source", {})
+                entry["source"]["notion_page_id"] = used_page_id
+                try:
+                    save_json(p, entry)
+                except Exception:
+                    pass
         except Exception as e:
             # Best-effort logging; continue
             print(f"Failed to sync '{p.name}': {e}")

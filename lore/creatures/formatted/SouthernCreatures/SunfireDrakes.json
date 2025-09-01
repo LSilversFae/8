@@ -1,0 +1,20 @@
+{
+  "id": "sunfiredrakes",
+  "name": "SunfireDrakes",
+  "kind": "Dragon-like Creatures",
+  "location": "Southern Fae Courts Mountain Region",
+  "region": "SouthernCreatures",
+  "description": "Resembling smaller dragons with scales that shine like molten gold, Sunfire Drakes are agile and swift. They have large, leathery wings and tails tipped with spikes that glow with inner heat. Sunfire Drakes bask in the sun atop the highest cliffs, drawing power from its rays.",
+  "abilities": [
+    "Breathe streams of fire that burn hotter than the sun.",
+    "Their scales radiate heat, making it difficult to approach them.",
+    "Create firestorms that spread rapidly across the mountains."
+  ],
+  "danger_level": "Extremely high. They are territorial and will attack anyone who ventures too close to their sun-bathed perches.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}
