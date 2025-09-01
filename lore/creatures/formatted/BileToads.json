@@ -1,0 +1,19 @@
+{
+  "id": "biletoads",
+  "name": "BileToads",
+  "kind": "Amphibious Creatures",
+  "location": "Swamp Lands",
+  "description": "Bile Toads are gigantic, amphibious creatures with warty, slimy skin that secretes a thick, foul-smelling mucus. They are capable of growing up to 15 feet in length and have large mouths filled with rows of serrated teeth.",
+  "abilities": [
+    "Expel a highly acidic bile that melts through armor and flesh.",
+    "Secrete toxic mucus that causes severe burns upon contact and emits a stench that can incapacitate or disorient victims.",
+    "Capable of leaping great distances, making them highly unpredictable in battle."
+  ],
+  "danger_level": "High. Their powerful leaps, acidic bile, and toxic mucus make them formidable opponents.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SwampCreatures"
+  }
+}

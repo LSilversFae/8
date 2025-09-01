@@ -1,0 +1,19 @@
+{
+  "id": "swampdevourers",
+  "name": "SwampDevourers",
+  "kind": "Carnivorous Plants",
+  "location": "Swamp Lands",
+  "description": "Swamp Devourers are enormous, carnivorous plants that blend into the swamp's flora. They have massive, gaping mouths lined with sharp, thorny teeth and long, tendril-like vines that can extend to capture prey. These creatures often lie dormant, waiting for the scent of blood or movement to awaken them.",
+  "abilities": [
+    "Lash out with vine-like tendrils strong enough to crush bones and coated in a paralytic toxin.",
+    "Their digestive fluids are highly acidic and can dissolve flesh and bone within minutes.",
+    "Emit a sweet, floral scent that lures prey into their reach."
+  ],
+  "danger_level": "High. Incredibly dangerous due to their stealth and strength, and they can easily ambush even experienced fae or Vyr'Zal warriors.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SwampCreatures"
+  }
+}

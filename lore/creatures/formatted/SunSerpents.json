@@ -1,0 +1,19 @@
+{
+  "id": "sunserpents",
+  "name": "SunSerpents",
+  "kind": "Snake-like Creatures",
+  "location": "Southern Courts",
+  "description": "Sun Serpents are massive, snake-like creatures that can grow up to 100 feet in length. Their scales glisten like molten gold, and they radiate a heat so intense that the ground sizzles beneath them. Their eyes glow with an inner fire, and their forked tongues flicker like flames.",
+  "abilities": [
+    "Control fire and light, exhaling blasts of scorching flame that can melt stone.",
+    "Blind prey by emitting intense bursts of light.",
+    "Their venom is extremely potent and causes victims to burn from the inside out."
+  ],
+  "danger_level": "Very high. Their size, strength, and mastery of fire make them formidable opponents, and their venom is lethal even to powerful fae.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

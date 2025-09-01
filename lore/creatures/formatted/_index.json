@@ -1,0 +1,275 @@
+[
+  {
+    "id": "frostwraiths",
+    "name": "FrostWraiths",
+    "kind": "Ethereal",
+    "location": "Northern Courts",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "icerevenants",
+    "name": "IceRevenants",
+    "kind": "Undead",
+    "location": "Northern Courts",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "shadowdrakes",
+    "name": "ShadowDrakes",
+    "kind": "Drake",
+    "location": "Northern Courts",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "frostbitewolves",
+    "name": "FrostbiteWolves",
+    "kind": "Beast",
+    "location": "Northern Courts",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "iceboundtreants",
+    "name": "IceboundTreants",
+    "kind": "Treant",
+    "location": "Northern Courts",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "umbralspiders",
+    "name": "UmbralSpiders",
+    "kind": "Arachnids",
+    "location": "Northern Courts",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "midnightstalkers",
+    "name": "MidnightStalkers",
+    "kind": "Feline Predators",
+    "location": "Northern Courts",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "whisperingwisps",
+    "name": "WhisperingWisps",
+    "kind": "Ethereal Orbs",
+    "location": "Northern Courts",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "frostsprites",
+    "name": "FrostSprites",
+    "kind": "Winged Fae",
+    "location": "Northern Courts",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "snowgremlins",
+    "name": "SnowGremlins",
+    "kind": "Goblin-like Creatures",
+    "location": "Northern Courts",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "frostwyrms",
+    "name": "FrostWyrms",
+    "kind": "Serpentine Dragons",
+    "location": "Northern Fae Courts Mountain Region",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "glacierstalkers",
+    "name": "GlacierStalkers",
+    "kind": "Panther-like Predators",
+    "location": "Northern Fae Courts Mountain Region",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "frostfirechimera",
+    "name": "FrostfireChimera",
+    "kind": "Hybrid Beasts",
+    "location": "Northern Fae Courts Mountain Region",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "iceharpies",
+    "name": "IceHarpies",
+    "kind": "Humanoid Bird Creatures",
+    "location": "Northern Fae Courts Mountain Region",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "iceboundgolems",
+    "name": "IceboundGolems",
+    "kind": "Massive Elemental Beings",
+    "location": "Northern Fae Courts Mountain Region",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "snowblindowls",
+    "name": "SnowblindOwls",
+    "kind": "Giant Owls",
+    "location": "Northern Fae Courts Mountain Region",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "frostbittenwisps",
+    "name": "FrostbittenWisps",
+    "kind": "Ethereal Lights",
+    "location": "Northern Fae Courts Mountain Region",
+    "group": "NorthernCreatures"
+  },
+  {
+    "id": "phoenixmatriarchs",
+    "name": "PhoenixMatriarchs",
+    "kind": "Firebirds",
+    "location": "Southern Courts",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "sunserpents",
+    "name": "SunSerpents",
+    "kind": "Snake-like Creatures",
+    "location": "Southern Courts",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "solargriffins",
+    "name": "SolarGriffins",
+    "kind": "Majestic Beasts",
+    "location": "Southern Courts",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "radiantsylphs",
+    "name": "RadiantSylphs",
+    "kind": "Elemental Spirits",
+    "location": "Southern Courts",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "embersprites",
+    "name": "EmberSprites",
+    "kind": "Fiery Creatures",
+    "location": "Southern Courts",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "lightstalkerpanthers",
+    "name": "LightstalkerPanthers",
+    "kind": "Feline Predators",
+    "location": "Southern Courts",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "sunflaremanticores",
+    "name": "SunflareManticores",
+    "kind": "Lion-like Creatures",
+    "location": "Southern Courts",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "dawnwisps",
+    "name": "DawnWisps",
+    "kind": "Ethereal Orbs",
+    "location": "Southern Courts",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "goldenvines",
+    "name": "GoldenVines",
+    "kind": "Plant-like Creatures",
+    "location": "Southern Courts",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "luminousmoths",
+    "name": "LuminousMoths",
+    "kind": "Glowing Insects",
+    "location": "Southern Courts",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "sunfiredrakes",
+    "name": "SunfireDrakes",
+    "kind": "Dragon-like Creatures",
+    "location": "Southern Fae Courts Mountain Region",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "pyrestonegargoyles",
+    "name": "PyrestoneGargoyles",
+    "kind": "Molten Stone Creatures",
+    "location": "Southern Fae Courts Mountain Region",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "emberwingfalcons",
+    "name": "EmberwingFalcons",
+    "kind": "Firebirds",
+    "location": "Southern Fae Courts Mountain Region",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "lavamantises",
+    "name": "LavaMantises",
+    "kind": "Insectoid Predators",
+    "location": "Southern Fae Courts Mountain Region",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "radiantbasilisks",
+    "name": "RadiantBasilisks",
+    "kind": "Four-legged Lizards",
+    "location": "Southern Fae Courts Mountain Region",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "sparklewingbutterflies",
+    "name": "SparklewingButterflies",
+    "kind": "Radiant Butterflies",
+    "location": "Southern Fae Courts Mountain Region",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "sunmites",
+    "name": "SunMites",
+    "kind": "Glowing Insects",
+    "location": "Southern Fae Courts Mountain Region",
+    "group": "SouthernCreatures"
+  },
+  {
+    "id": "noxfanghydras",
+    "name": "NoxfangHydras",
+    "kind": "Multi-headed Serpentine Beasts",
+    "location": "Swamp Lands",
+    "group": "SwampCreatures"
+  },
+  {
+    "id": "mirewraiths",
+    "name": "MireWraiths",
+    "kind": "Ethereal Ghostly Creatures",
+    "location": "Swamp Lands",
+    "group": "SwampCreatures"
+  },
+  {
+    "id": "swampdevourers",
+    "name": "SwampDevourers",
+    "kind": "Carnivorous Plants",
+    "location": "Swamp Lands",
+    "group": "SwampCreatures"
+  },
+  {
+    "id": "biletoads",
+    "name": "BileToads",
+    "kind": "Amphibious Creatures",
+    "location": "Swamp Lands",
+    "group": "SwampCreatures"
+  },
+  {
+    "id": "bogsirens",
+    "name": "BogSirens",
+    "kind": "Humanoid Water Creatures",
+    "location": "Swamp Lands",
+    "group": "SwampCreatures"
+  }
+]

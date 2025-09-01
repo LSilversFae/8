@@ -1,0 +1,19 @@
+{
+  "id": "radiantsylphs",
+  "name": "RadiantSylphs",
+  "kind": "Elemental Spirits",
+  "location": "Southern Courts",
+  "description": "Radiant Sylphs are elemental wind spirits with bodies made of light and air. They appear as ethereal, glowing figures with translucent wings that shimmer like rainbows. Their hair flows like sunlight, and they can take on the form of a gentle breeze or a raging whirlwind.",
+  "abilities": [
+    "Manipulate wind and light, creating blinding gusts that disorient and cut through enemies.",
+    "Become intangible, making it nearly impossible to strike them with physical attacks.",
+    "Summon violent storms of light and wind that can tear apart entire landscapes when angered."
+  ],
+  "danger_level": "High. Their intangibility and ability to summon devastating storms make them dangerous opponents. They are elusive and challenging to catch, but once provoked, they become relentless.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "frostsprites",
+  "name": "FrostSprites",
+  "kind": "Winged Fae",
+  "location": "Northern Courts",
+  "description": "Frost Sprites are small, winged fae that resemble tiny, ice-covered humanoids. They have translucent wings that shimmer with frost, and their skin glows faintly blue. These mischievous creatures thrive in the snow-covered forests and can often be seen playing tricks on travelers.",
+  "abilities": [
+    "Manipulate small amounts of ice and snow to create pranks or minor obstacles.",
+    "Freeze small parts of attackers, such as fingers or toes, to hinder movement.",
+    "Become invisible by blending into snowy environments."
+  ],
+  "danger_level": "Low. They are more of a nuisance than a serious threat, but in large numbers, they can overwhelm an unprepared fae or traveler.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

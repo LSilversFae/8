@@ -1,0 +1,19 @@
+{
+  "id": "phoenixmatriarchs",
+  "name": "PhoenixMatriarchs",
+  "kind": "Firebirds",
+  "location": "Southern Courts",
+  "description": "The Phoenix Matriarchs are ancient, majestic firebirds with wingspans reaching up to 30 feet. Their feathers blaze with intense shades of red, orange, and gold, and their eyes burn with the heat of molten lava. They radiate heat so powerful that the air around them shimmers, and when they fly, embers fall like rain from their wings.",
+  "abilities": [
+    "Control over fire and heat, capable of incinerating entire forests with a single flap of their wings.",
+    "Regenerate from their ashes, making them nearly immortal.",
+    "Their tears possess incredible healing properties."
+  ],
+  "danger_level": "Extremely high. Their mastery over fire and regenerative abilities make them one of the most formidable creatures in the Southern Fae Courts. Only the most powerful Solaryn Fae dare to approach them.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

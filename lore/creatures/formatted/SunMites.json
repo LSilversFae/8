@@ -1,0 +1,17 @@
+{
+  "id": "sunmites",
+  "name": "SunMites",
+  "kind": "Glowing Insects",
+  "location": "Southern Fae Courts Mountain Region",
+  "description": "Small, glowing insects that resemble tiny suns, Sun Mites live in large swarms within the warm crevices of the mountains. They emit a gentle, radiant light and feed on the magical energy in the air.",
+  "abilities": [
+    "In large swarms, they can drain magic from their surroundings."
+  ],
+  "danger_level": "Low. Individually, they are harmless, but in large numbers, they can drain magic from their surroundings, posing a threat.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "snowblindowls",
+  "name": "SnowblindOwls",
+  "kind": "Giant Owls",
+  "location": "Northern Fae Courts Mountain Region",
+  "description": "Gigantic owls with pure white feathers and piercing silver eyes, Snowblind Owls silently patrol the mountain skies. Their feathers have a reflective quality that makes them blend into snowstorms, and their talons are sharp enough to pierce armor.",
+  "abilities": [
+    "Create blinding flashes of light by reflecting the moon's glow off their feathers, temporarily stunning their prey.",
+    "Emit hypnotic hoots that lure creatures into dangerous terrain."
+  ],
+  "danger_level": "Medium. While not overly aggressive, they can be extremely dangerous when hunting or defending their nests.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

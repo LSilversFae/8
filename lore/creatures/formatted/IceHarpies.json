@@ -1,0 +1,18 @@
+{
+  "id": "iceharpies",
+  "name": "IceHarpies",
+  "kind": "Humanoid Bird Creatures",
+  "location": "Northern Fae Courts Mountain Region",
+  "description": "Ice Harpies are humanoid bird creatures with wings made of ice and talons sharp enough to carve through stone. Their feathers are a blend of white and pale blue, and they can fly silently through the snowstorms that sweep through the mountains.",
+  "abilities": [
+    "Fly silently through snowstorms, making them difficult to detect.",
+    "Attack in groups, using their ice-covered talons to slash and rend their enemies."
+  ],
+  "danger_level": "Medium to high. They attack in groups, making them dangerous to unprepared travelers, but they can be driven off with fire or light-based magic.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

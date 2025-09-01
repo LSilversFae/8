@@ -1,0 +1,16 @@
+{
+  "type": {
+    "ethereal beings": "Ethereal",
+    "undead warriors": "Undead",
+    "serpentine creatures": "Drake",
+    "predatory beasts": "Beast",
+    "tree-like guardians": "Treant"
+  },
+  "location": {
+    "northern courts": "Northern Courts",
+    "wraithwood": "Wraithwood Forest",
+    "abyss": "Abyss",
+    "the abyss": "Abyss"
+  }
+}
+

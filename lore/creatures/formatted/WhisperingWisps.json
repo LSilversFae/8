@@ -1,0 +1,18 @@
+{
+  "id": "whisperingwisps",
+  "name": "WhisperingWisps",
+  "kind": "Ethereal Orbs",
+  "location": "Northern Courts",
+  "description": "These small, floating, ethereal orbs of light are often mistaken for harmless fae lights. However, they are malevolent entities that lure travelers deeper into the frozen wilderness, where they can become lost or fall prey to other, more dangerous creatures. The wisps emit a soft, melodic whisper that becomes increasingly haunting the closer one gets to them.",
+  "abilities": [
+    "Create illusions and mimic voices to lead victims astray.",
+    "Drain the life force of disoriented prey, leaving behind an empty, frozen husk."
+  ],
+  "danger_level": "Medium to low. They are more of a threat to those who are already lost or injured, but their ability to manipulate and confuse can be dangerous if underestimated.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

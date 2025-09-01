@@ -1,0 +1,19 @@
+{
+  "id": "shadowdrakes",
+  "name": "ShadowDrakes",
+  "kind": "Drake",
+  "location": "Northern Courts",
+  "description": "Shadow Drakes are serpentine, dragon-like creatures that dwell in the deepest caverns and forests of the Northern Kingdom. They have sleek, black scales that shimmer with iridescent hues and wings that resemble tattered shadows. Their eyes burn with silver light, and they possess long, barbed tails that can strike with deadly precision.",
+  "abilities": [
+    "Manipulate shadows, allowing them to become invisible in the darkness.",
+    "Exhale a black mist that induces hallucinations and nightmares in those who inhale it.",
+    "Capable of summoning shadowy tendrils to ensnare and crush their prey."
+  ],
+  "danger_level": "High. Shadow Drakes are cunning and elusive, making them difficult to track or kill. They are especially dangerous to fae who rely on light-based magic.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

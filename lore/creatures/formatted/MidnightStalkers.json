@@ -1,0 +1,19 @@
+{
+  "id": "midnightstalkers",
+  "name": "MidnightStalkers",
+  "kind": "Feline Predators",
+  "location": "Northern Courts",
+  "description": "Midnight Stalkers are large, feline-like predators with sleek, black fur and glowing, violet eyes. They are solitary hunters that blend into the shadows, making them almost invisible in the darkness. Their claws are retractable but incredibly sharp, capable of cutting through steel.",
+  "abilities": [
+    "Phase in and out of shadows, allowing them to teleport short distances.",
+    "Create shadow doubles to confuse and disorient prey.",
+    "Move silently even on snow or ice, making them exceptional hunters."
+  ],
+  "danger_level": "Medium. While not as dangerous as some of the other creatures, their speed and stealth make them a formidable threat to unprepared fae.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

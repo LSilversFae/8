@@ -38,7 +38,7 @@ LORE_ROOT = Path("lore")
 INDEX_DIR = LORE_ROOT / "indexes"
 CATEGORIES = ["characters", "creatures", "magic", "plots", "realms"]
 
-# Import normalizer utilities (for character normalization route)
+# Import normalizer utilities (for normalization routes)
 try:
     from scripts.format_characters import (
         normalize_file as normalize_character_file,
@@ -51,6 +51,28 @@ except Exception as e:
     print(f"Warning: character normalizer not available: {e}
 ")
     normalize_character_file = None
+
+try:
+    from scripts.format_creatures import (
+        normalize_file as normalize_creatures_file,
+        build_index as build_creatures_index,
+        load_synonyms as load_creatures_synonyms,
+        set_synonyms as set_creatures_synonyms,
+    )
+except Exception as e:
+    print(f"Warning: creatures normalizer not available: {e}")
+    normalize_creatures_file = None
+
+try:
+    from scripts.format_realms import (
+        normalize_file as normalize_realms_file,
+        build_index as build_realms_index,
+        load_synonyms as load_realms_synonyms,
+        set_synonyms as set_realms_synonyms,
+    )
+except Exception as e:
+    print(f"Warning: realms normalizer not available: {e}")
+    normalize_realms_file = None
 
 # -------- INDEXING --------
 def build_category_index(category):
@@ -377,6 +399,144 @@ def normalize_characters_route():
     if output_combined:
         out_path = Path(output_combined)
         save_json_util(out_path, {"characters": all_entries})
+        written_files.append(str(out_path))
+
+    return jsonify({
+        "status": "ok",
+        "count": len(all_entries),
+        "written": written_files,
+    })
+
+
+# -------- CREATURES NORMALIZATION ROUTE --------
+@app.route('/normalize-creatures', methods=['POST', 'GET'])
+def normalize_creatures_route():
+    if normalize_creatures_file is None:
+        return jsonify({"error": "Creatures normalizer module not available"}), 500
+
+    default_input = LORE_ROOT / "creatures" / "creatures.json"
+    default_outdir = LORE_ROOT / "creatures" / "formatted"
+    payload = request.get_json(silent=True) or {}
+
+    input_path = payload.get("input")
+    scan_dir = payload.get("scan")
+    outdir = Path(payload.get("outdir") or default_outdir)
+    split = bool(payload.get("split", True))
+    write_index = bool(payload.get("index", True))
+    output_combined = payload.get("output")
+    mappings_path = payload.get("mappings")
+
+    inputs: List[Path] = []
+    if input_path:
+        inputs = [Path(input_path)]
+    elif scan_dir:
+        inputs = list(Path(scan_dir).glob("*.json"))
+    elif default_input.exists():
+        inputs = [default_input]
+    else:
+        return jsonify({"error": "No input provided and default creatures.json not found"}), 400
+
+    # Synonyms
+    if mappings_path:
+        synonyms = load_creatures_synonyms(Path(mappings_path))
+    else:
+        default_map = LORE_ROOT / "creatures" / "mappings.json"
+        synonyms = load_creatures_synonyms(default_map)
+    set_creatures_synonyms(synonyms)
+
+    all_entries = []
+    for p in inputs:
+        try:
+            all_entries.extend(normalize_creatures_file(p))
+        except Exception as e:
+            return jsonify({"error": f"Failed to normalize {p}", "details": str(e)}), 500
+
+    written_files = []
+    if split:
+        outdir.mkdir(parents=True, exist_ok=True)
+        for e in all_entries:
+            name = e.get("name") or e.get("id") or "creature"
+            safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in name)
+            path = outdir / f"{safe}.json"
+            save_json_util(path, e)
+            written_files.append(str(path))
+        if write_index:
+            idx_path = outdir / "_index.json"
+            save_json_util(idx_path, build_creatures_index(all_entries))
+            written_files.append(str(idx_path))
+
+    if output_combined:
+        out_path = Path(output_combined)
+        save_json_util(out_path, {"creatures": all_entries})
+        written_files.append(str(out_path))
+
+    return jsonify({
+        "status": "ok",
+        "count": len(all_entries),
+        "written": written_files,
+    })
+
+
+# -------- REALMS NORMALIZATION ROUTE --------
+@app.route('/normalize-realms', methods=['POST', 'GET'])
+def normalize_realms_route():
+    if normalize_realms_file is None:
+        return jsonify({"error": "Realms normalizer module not available"}), 500
+
+    default_input = LORE_ROOT / "realms" / "realms.json"
+    default_outdir = LORE_ROOT / "realms" / "formatted"
+    payload = request.get_json(silent=True) or {}
+
+    input_path = payload.get("input")
+    scan_dir = payload.get("scan")
+    outdir = Path(payload.get("outdir") or default_outdir)
+    split = bool(payload.get("split", True))
+    write_index = bool(payload.get("index", True))
+    output_combined = payload.get("output")
+    mappings_path = payload.get("mappings")
+
+    inputs: List[Path] = []
+    if input_path:
+        inputs = [Path(input_path)]
+    elif scan_dir:
+        inputs = list(Path(scan_dir).glob("*.json"))
+    elif default_input.exists():
+        inputs = [default_input]
+    else:
+        return jsonify({"error": "No input provided and default realms.json not found"}), 400
+
+    # Synonyms
+    if mappings_path:
+        synonyms = load_realms_synonyms(Path(mappings_path))
+    else:
+        default_map = LORE_ROOT / "realms" / "mappings.json"
+        synonyms = load_realms_synonyms(default_map)
+    set_realms_synonyms(synonyms)
+
+    all_entries = []
+    for p in inputs:
+        try:
+            all_entries.extend(normalize_realms_file(p))
+        except Exception as e:
+            return jsonify({"error": f"Failed to normalize {p}", "details": str(e)}), 500
+
+    written_files = []
+    if split:
+        outdir.mkdir(parents=True, exist_ok=True)
+        for e in all_entries:
+            name = e.get("name") or e.get("id") or "realm"
+            safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in name)
+            path = outdir / f"{safe}.json"
+            save_json_util(path, e)
+            written_files.append(str(path))
+        if write_index:
+            idx_path = outdir / "_index.json"
+            save_json_util(idx_path, build_realms_index(all_entries))
+            written_files.append(str(idx_path))
+
+    if output_combined:
+        out_path = Path(output_combined)
+        save_json_util(out_path, {"realms": all_entries})
         written_files.append(str(out_path))
 
     return jsonify({

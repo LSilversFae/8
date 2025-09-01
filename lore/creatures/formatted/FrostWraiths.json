@@ -1,0 +1,19 @@
+{
+  "id": "frostwraiths",
+  "name": "FrostWraiths",
+  "kind": "Ethereal",
+  "location": "Northern Courts",
+  "description": "Frost Wraiths are ethereal, ghostly beings made of ice and shadow that wander the frigid landscapes of the Northern Fae Courts. They are tall, skeletal creatures with elongated limbs and piercing blue eyes that glow faintly in the dark. Their bodies are translucent, and they appear to shimmer as though made of frost and mist, blending seamlessly into the icy terrain.",
+  "abilities": [
+    "Drain the life force of their victims with a single touch, freezing them from the inside out.",
+    "Manipulate ice and snow, summoning blizzards to disorient and trap prey.",
+    "Feed on fear and despair, growing stronger when surrounded by negative emotions."
+  ],
+  "danger_level": "Extremely high. Even the most powerful Shadow Fae must be cautious when facing them, as they are nearly impervious to most forms of magic and physical attacks. Only light or fire-based magic can effectively damage them.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

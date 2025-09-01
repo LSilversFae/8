@@ -1,0 +1,16 @@
+{
+  "id": "elysion",
+  "name": "Elysion",
+  "description": "Elysion, the realm of the gods ruled by the God King, is a realm of incomparable beauty and divine power, far removed from the chaos of lower being existence. It stretches across infinite horizons, where the very essence of creation flows freely through rivers of light, and the skies shimmer with the energy of stars yet to be born. Here, towering palaces carved from stardust and moonstone dot the landscape, their walls glowing with an inner light that casts no shadow. The realm is one of perfect balance, where the forces of light and darkness coexist harmoniously, reflecting the divine mandate of the gods who dwell within. At the heart of Elysion stands the Celestial Spire, the seat of the God King's power. It is a monument of divine craftsmanship, a radiant beacon that rises into the heavens, symbolizing his authority over all creation. From the Celestial Spire, the God King commands the divine order, ensuring the balance of all realms—whether they are mortal, fae, or otherwise. His wisdom shapes the fate of all living things, and his presence is the guiding force behind the cycles of life, death, and rebirth.The God King does not rule alone. He is supported by the Council of the Gods, a pantheon of powerful deities who each govern a specific aspect of the cosmos. This council meets within the Hall of Eternity, an endless chamber where the walls pulse with the energy of countless worlds. Together, they maintain the equilibrium that binds the universe. In Elysion, the gods' domains are intertwined, reflecting their balance of power and their interdependence. The Silver Rivers of Eternity flow through the land, a mystical watercourse that mirrors the energy of life and magic itself. The Garden of Souls blossoms with luminous flowers that represent the spirits of the deceased, awaiting their passage into new forms or their final rest. The gods, ever vigilant, watch the lower realms from their divine seats. They shape events, sometimes subtly, and at other times with great force when the balance is threatened. The God King and his council work together to maintain the equilibrium, ensuring that light and shadow, life and death, creation and destruction, remain in perpetual harmony. Each god plays a vital role in guiding the realms, and though they are immensely powerful, they are also bound by cosmic laws—laws that the God King ensures are never broken, for the breaking of such laws would unravel the very fabric of existence.",
+  "domains": [],
+  "ruler": null,
+  "capital": null,
+  "factions": null,
+  "notable_locations": null,
+  "notes": null,
+  "attributes": null,
+  "source": {
+    "file": "lore\\realms\\realms.json",
+    "category": "realms"
+  }
+}

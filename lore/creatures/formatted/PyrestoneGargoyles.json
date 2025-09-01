@@ -1,0 +1,18 @@
+{
+  "id": "pyrestonegargoyles",
+  "name": "PyrestoneGargoyles",
+  "kind": "Molten Stone Creatures",
+  "location": "Southern Fae Courts Mountain Region",
+  "description": "Pyrestone Gargoyles are stone-like creatures with bodies that resemble molten lava encased in rock. They perch on mountain ledges and cliffs, remaining motionless until disturbed. When awakened, their bodies crack open, revealing glowing veins of lava.",
+  "abilities": [
+    "Hurl molten rocks at their enemies and create waves of intense heat to drive off intruders.",
+    "Melt into pools of lava and reform elsewhere when enraged, making them difficult to kill."
+  ],
+  "danger_level": "Very high. They are nearly impervious to physical attacks and can endure even the harshest conditions.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

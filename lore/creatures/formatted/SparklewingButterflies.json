@@ -1,0 +1,18 @@
+{
+  "id": "sparklewingbutterflies",
+  "name": "SparklewingButterflies",
+  "kind": "Radiant Butterflies",
+  "location": "Southern Fae Courts Mountain Region",
+  "description": "Sparklewing Butterflies are large, radiant butterflies with wings that shimmer in all colors of the sun's spectrum. They flutter harmlessly through the mountains, but their beauty hides a deadly secret.",
+  "abilities": [
+    "Release clouds of sparkling, golden dust that cause intense heat and temporary blindness when threatened.",
+    "The dust is flammable, making them highly dangerous if exposed to open flames."
+  ],
+  "danger_level": "Low to medium. While not aggressive, they can cause harm if provoked, and their dust can ignite and cause widespread fires.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

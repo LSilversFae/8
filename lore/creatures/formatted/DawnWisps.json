@@ -1,0 +1,19 @@
+{
+  "id": "dawnwisps",
+  "name": "DawnWisps",
+  "kind": "Ethereal Orbs",
+  "location": "Southern Courts",
+  "description": "Dawn Wisps are small, glowing orbs of light that float around the Southern Fae Courts. They emit a soft, warm light that is soothing to most creatures, but they can quickly turn aggressive if threatened. They often travel in clusters and are drawn to areas of high magic.",
+  "abilities": [
+    "Project beams of light that burn or blind enemies.",
+    "Merge together to form larger, more powerful wisps that emit concentrated blasts of light.",
+    "Their warmth can heal minor wounds and soothe pain, but they can also scorch those they see as threats."
+  ],
+  "danger_level": "Medium to low. Individually, they pose little threat, but in large numbers, they can overwhelm even powerful fae.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "radiantbasilisks",
+  "name": "RadiantBasilisks",
+  "kind": "Four-legged Lizards",
+  "location": "Southern Fae Courts Mountain Region",
+  "description": "These four-legged lizards have scales that glow with a golden light. Their eyes emit rays of heat that can burn or paralyze their prey. Radiant Basilisks prefer to bask on sunlit ledges during the day, gathering warmth to fuel their power.",
+  "abilities": [
+    "Channel intense heat through their gaze, turning their prey to ash.",
+    "Emit a blinding light from their scales, stunning attackers.",
+    "Their tails are lined with sharp, golden spines that they can launch at their enemies."
+  ],
+  "danger_level": "Medium. They are formidable but can be avoided if one is careful not to meet their gaze.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

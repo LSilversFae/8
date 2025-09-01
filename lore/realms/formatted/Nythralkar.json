@@ -1,0 +1,16 @@
+{
+  "id": "nythralkar",
+  "name": "Nythralkar",
+  "description": "Also called the Abyss of Shadows, is a twisted and forbidding dimension where darkness reigns supreme. It is the seat of the Demon Lord Azrathar's power, a realm steeped in perpetual shadow, where the very fabric of reality seems malleable to the whims of darkness. This world is a labyrinth of endless black corridors, where the air is thick with an oppressive sense of dread. The shadows within Nythralkar are not mere absence of light—they are sentient, writhing masses that coil and whisper, eager to devour any glimmer of brightness that dares to enter their domain.Time and space seem to function differently within the Abyss. There is an ever-present feeling of being watched, as if the realm itself is alive, feeding off the fear of those who enter. The walls are often described as being made of obsidian, slick with some unknown moisture, reflecting faint, distorted images of the souls trapped within. This nightmarish place amplifies the powers of those attuned to shadow magic, such as Azrathar and his demonic legions. It is a realm designed to suffocate hope, where even the strongest minds can be led to madness by the ever-looming presence of Morvantos, the ancient steward of the Abyss.At its core lies the Demon Lord's palace, a fortress of unfathomable darkness, where even the most powerful fae dread to tread. The palace is said to pulse with a malign, ancient energy, a dark nexus where the power of the Abyss flows unimpeded. It is here that Azrathar schemes, his voice a dark echo in the void, plotting the downfall of the fae kingdoms and awaiting the moment his seal will weaken.This realm's influence stretches into the physical world, sending forth plagues of miasma that creep into the lands of the living, threatening to choke them with shadow and despair. Those who venture too close to the breaches between Nythralkar and Elarion risk being consumed, their souls lost to the abyss, becoming nothing more than fuel for Azrathar's growing power.",
+  "domains": [],
+  "ruler": null,
+  "capital": null,
+  "factions": null,
+  "notable_locations": null,
+  "notes": null,
+  "attributes": null,
+  "source": {
+    "file": "lore\\realms\\realms.json",
+    "category": "realms"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "frostfirechimera",
+  "name": "FrostfireChimera",
+  "kind": "Hybrid Beasts",
+  "location": "Northern Fae Courts Mountain Region",
+  "description": "These creatures are hybrid beasts with the head of a wolf, the body of a bear, and the tail of a serpent. Their fur is covered in frost, and they emit an eerie blue flame from their mouths. The Frostfire Chimera are known to dwell in hidden caves, emerging to hunt during blizzards.",
+  "abilities": [
+    "Breathe both fire and ice, making them incredibly versatile in combat.",
+    "Their serpent-like tail is venomous and can paralyze their prey.",
+    "Bear-like strength allows them to crush even the strongest opponents."
+  ],
+  "danger_level": "High. They are rare but extremely dangerous when encountered, as they are relentless in their pursuit of prey.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

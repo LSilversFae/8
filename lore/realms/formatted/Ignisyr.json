@@ -1,0 +1,53 @@
+{
+  "id": "ignisyr",
+  "name": "Ignisyr",
+  "description": "A realm of the Elder Dragons ruled by the Dragon Queen, forged in the crucible of chaos, Ignisyr stands as a testament to unyielding power and elemental fury. The land is a jagged expanse of obsidian plains and volcanic spires that claw at a perpetually darkened sky, where the sun's light is strangled by endless clouds of ash and smoke. Rivers of molten lava snake through the hardened terrain, their fiery glow casting eerie, flickering shadows that seem alive, whispering of ancient secrets and untold destruction.",
+  "domains": [],
+  "ruler": null,
+  "capital": null,
+  "factions": null,
+  "notable_locations": null,
+  "notes": null,
+  "attributes": {
+    "environment": {
+      "terrain": "Obsidian plains, volcanic spires, rivers of molten lava, hardened ash-covered ground.",
+      "sky": "Darkened, perpetually shrouded by ash and smoke.",
+      "climate": "Searing heat with dense, acrid air carrying the stench of brimstone.",
+      "flora": "Thorned, blackened vegetation adapted to survive the oppressive heat.",
+      "fauna": "Shadowy creatures with glowing eyes, blurred forms, and haunting presences."
+    },
+    "features": {
+      "pyrethrone": {
+        "description": "The colossal volcanic citadel serving as the dominion of the elder dragons. It rises from the largest volcano, its jagged black walls streaked with veins of glowing magma, resembling fiery lifeblood coursing through stone.",
+        "role": "Seat of power for the elder dragons, whose might rivals the gods."
+      },
+      "lava_pools": {
+        "description": "Bubbling magma pools that erupt sporadically, adding to the land's ominous and ever-changing landscape."
+      },
+      "ash_fields": {
+        "description": "Expanses coated in endless layers of ash, muffling sound and creating an eerie stillness."
+      }
+    },
+    "atmosphere": {
+      "lighting": "Flickering, eerie shadows cast by rivers of lava and bursts of flame.",
+      "sound": "Mournful howls of wind across the barren plains, the rumble of volcanic eruptions, and distant roars of dragons."
+    },
+    "inhabitants": {
+      "dragons": {
+        "description": "Elder dragons whose power rivals or surpasses the gods. They reign supreme, controlling the fiery and shadowy elements of the realm.",
+        "habitat": "The Pyrethrone and surrounding volcanic spires."
+      },
+      "other_creatures": {
+        "description": "Shadowy predators adapted to the harsh environment, often blurring into the shimmering heat."
+      }
+    },
+    "lore": {
+      "dominance": "Ignisyr is a crucible of fear and power where the dragons reign supreme. It is said no god dares tread upon its scorched soil.",
+      "purpose": "A realm that tests the strength of any who enter, reminding even the mightiest of their mortality."
+    }
+  },
+  "source": {
+    "file": "lore\\realms\\realms.json",
+    "category": "realms"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "icerevenants",
+  "name": "IceRevenants",
+  "kind": "Undead",
+  "location": "Northern Courts",
+  "description": "The Ice Revenants are ancient elven warriors who died in battle but were resurrected by the dark magic that permeates the Northern Kingdom. Standing over seven feet tall, they wear rusted, frozen armor and wield weapons made of ice. Their eyes emit a cold, blue glow, and icy mist seeps from their bodies as they move.",
+  "abilities": [
+    "Possess immense strength and resilience.",
+    "Can freeze anything they touch and generate powerful ice spikes to hurl at enemies.",
+    "Can regenerate from injuries by drawing power from the cold environment."
+  ],
+  "danger_level": "Very high. They are relentless and single-minded in their pursuit of prey, and only the most experienced warriors can stand against them.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

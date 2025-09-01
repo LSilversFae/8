@@ -1,0 +1,19 @@
+{
+  "id": "lavamantises",
+  "name": "LavaMantises",
+  "kind": "Insectoid Predators",
+  "location": "Southern Fae Courts Mountain Region",
+  "description": "Resembling enormous praying mantises with bodies made of volcanic rock and lava, these creatures blend into the rocky mountainsides. Their scythe-like forelimbs glow with heat, and they can camouflage themselves perfectly against the warm, sunlit cliffs.",
+  "abilities": [
+    "Shoot jets of molten lava from their forelimbs.",
+    "Create steam clouds to obscure their movements.",
+    "Possess incredibly tough exoskeletons capable of withstanding even the strongest magical attacks."
+  ],
+  "danger_level": "Medium to high. They are aggressive and difficult to kill, but they tend to be solitary and prefer to ambush prey rather than pursue it.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "SouthernCreatures"
+  }
+}

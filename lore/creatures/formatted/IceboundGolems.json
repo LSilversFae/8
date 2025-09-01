@@ -1,0 +1,18 @@
+{
+  "id": "iceboundgolems",
+  "name": "IceboundGolems",
+  "kind": "Massive Elemental Beings",
+  "location": "Northern Fae Courts Mountain Region",
+  "description": "Massive creatures formed entirely of ice and stone, the Icebound Golems stand guard at ancient ruins hidden within the mountains. Their bodies are covered in glowing blue runes that pulse with power.",
+  "abilities": [
+    "Create barriers of ice, summon icy boulders, and regenerate from damage by absorbing snow and ice.",
+    "Possess immense strength capable of crushing anything in their path."
+  ],
+  "danger_level": "Medium. They are slow-moving but incredibly resilient, and they attack anything that threatens the ancient sites they protect.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}

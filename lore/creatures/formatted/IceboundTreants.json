@@ -1,0 +1,19 @@
+{
+  "id": "iceboundtreants",
+  "name": "IceboundTreants",
+  "kind": "Treant",
+  "location": "Northern Courts",
+  "description": "Icebound Treants are massive, tree-like creatures that dwell in the snow-covered forests. Their bodies are composed of frozen wood and covered in layers of ice, with branches tipped with sharp icicles. They possess glowing blue eyes set deep within their bark-covered faces, and their movements cause the ground to tremble.",
+  "abilities": [
+    "Can manipulate ice and snow, creating barriers or launching ice shards at enemies.",
+    "Can call upon the roots of trees to entangle and immobilize intruders.",
+    "Despite their size, they move with surprising speed and agility."
+  ],
+  "danger_level": "Medium to high. They are formidable opponents due to their size and strength, but they are slow-moving and can be avoided or outmaneuvered by skilled fae.",
+  "attributes": null,
+  "source": {
+    "file": "lore\\creatures\\creatures.json",
+    "category": "creatures",
+    "group": "NorthernCreatures"
+  }
+}
