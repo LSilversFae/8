@@ -178,9 +178,15 @@ def to_notion_prop(prop_type: str, value: Any):
         # Notion requires empty object of the correct type to clear; leave unset to avoid overwriting
         return None
     if prop_type == "title":
-        return {"title": [{"text": {"content": str(value)}}]}
+        s = str(value)
+        if len(s) > 1900:
+            s = s[:1900] + "…"
+        return {"title": [{"text": {"content": s}}]}
     if prop_type == "rich_text":
-        return {"rich_text": [{"text": {"content": str(value)}}]}
+        s = str(value)
+        if len(s) > 1900:
+            s = s[:1900] + "…"
+        return {"rich_text": [{"text": {"content": s}}]}
     if prop_type == "select":
         return {"select": {"name": str(value)}}
     if prop_type == "multi_select":
@@ -352,6 +358,17 @@ def push_to_notion(category: str, mapping_path: Optional[Path] = None) -> Dict[s
                 if "danger_level" in entry and "danger_level_bucket" not in entry:
                     entry["danger_level_bucket"] = _danger_bucket(entry.get("danger_level"))
 
+            # Derive normalized fields for certain categories
+            if category == "creatures":
+                # Bucket the verbose danger_level into a short select-friendly value
+                if "danger_level" in entry and "danger_level_bucket" not in entry:
+                    entry["danger_level_bucket"] = _danger_bucket(entry.get("danger_level"))
+            elif category == "realms":
+                # Set a concise summary derived from description
+                desc = get_by_path(entry, "description")
+                if isinstance(desc, str) and desc:
+                    entry["summary"] = (desc[:500] + ("…" if len(desc) > 500 else ""))
+
             props = build_properties_from_json(entry, mapping, actual_types)
 
             # Incremental: skip if hash unchanged
@@ -396,15 +413,23 @@ def push_to_notion(category: str, mapping_path: Optional[Path] = None) -> Dict[s
             # Append long description as page content blocks (avoid property limits)
             try:
                 desc = get_by_path(entry, "description") or get_by_path(entry, "summary")
-                if used_page_id and isinstance(desc, str) and len(desc) > 800:
-                    # Avoid re-append if unchanged
+                # For Realms, always append full description into page content
+                should_append = category == "realms" and isinstance(desc, str) and desc
+                # For others, append only if very long
+                if not should_append and isinstance(desc, str) and len(desc) > 800:
+                    should_append = True
+                if used_page_id and should_append:
                     dh = hashlib.sha256(desc.encode("utf-8")).hexdigest()
                     if st.get("desc_hash") != dh:
-                        _with_retry(notion.blocks.children.append, used_page_id, children=[{
-                            "object": "block",
-                            "type": "paragraph",
-                            "paragraph": {"rich_text": [{"type": "text", "text": {"content": desc[:2000]}}]}
-                        }])
+                        _with_retry(
+                            notion.blocks.children.append,
+                            used_page_id,
+                            children=[{
+                                "object": "block",
+                                "type": "paragraph",
+                                "paragraph": {"rich_text": [{"type": "text", "text": {"content": desc[:2000]}}]}
+                            }]
+                        )
                         st["desc_hash"] = dh
             except Exception:
                 pass
