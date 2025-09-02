@@ -1003,6 +1003,9 @@ def dashboard():
     cats = CATEGORIES
     tiles = []
     for c in cats:
+        extra = ""
+        if c in ("creatures", "realms"):
+            extra = f" · <a href=\"#\" onclick=\"call('/refactor-{c}')\">Refactor</a>"
         tiles.append(f'''
         <div class="tile">
           <h3>{c.title()}</h3>
@@ -1011,7 +1014,7 @@ def dashboard():
             <a href="#" onclick="call('/ensure-{c}-schema')">Ensure</a> ·
             <a href="#" onclick="call('/push-{c}-to-notion')">Push</a> ·
             <a href="#" onclick="call('/pull-{c}-from-notion')">Pull</a> ·
-            <a href="#" onclick="call('/validate-mapping/{c}')">Validate</a>
+            <a href="#" onclick="call('/validate-mapping/{c}')">Validate</a>{extra}
           </p>
         </div>
         ''')
