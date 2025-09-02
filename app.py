@@ -1050,9 +1050,9 @@ def dashboard():
       </section>
       <script>
         // Modal helpers
-        function showModal(text) {
+        function showModal(text) {{
           let m = document.getElementById('modal');
-          if(!m){
+          if(!m){{
             m = document.createElement('div');
             m.id='modal';
             m.style='display:flex; position:fixed; inset:0; background:rgba(0,0,0,0.7); align-items:center; justify-content:center;';
@@ -1064,10 +1064,10 @@ def dashboard():
               <pre id="modal-content" style="white-space:pre-wrap;"></pre>
             </div>`;
             document.body.appendChild(m);
-          }
+          }}
           const pre = document.getElementById('modal-content');
-          if(pre){ pre.textContent = text; }
-        }
+          if(pre){{ pre.textContent = text; }}
+        }}
 
         async function call(path) {{
           try {{
