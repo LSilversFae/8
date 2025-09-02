@@ -1017,15 +1017,40 @@ def dashboard():
         <div id="log">Ready.</div>
       </section>
       <script>
+        // Modal helpers
+        function showModal(text) {
+          let m = document.getElementById('modal');
+          if(!m){
+            m = document.createElement('div');
+            m.id='modal';
+            m.style='display:flex; position:fixed; inset:0; background:rgba(0,0,0,0.7); align-items:center; justify-content:center;';
+            m.innerHTML = `<div style="background:#2a1332; border:1px solid #bb86fc; color:#e0d1f7; border-radius:12px; padding:16px; width:min(92vw, 1000px); max-height:80vh; overflow:auto; box-shadow:0 10px 30px rgba(0,0,0,0.6);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <h3 style="margin:0; color:#bb86fc;">Response</h3>
+                <button onclick="document.getElementById('modal').remove()" style="background:#bb86fc; color:#1b0e1e; border:none; padding:6px 10px; border-radius:6px; cursor:pointer;">Close</button>
+              </div>
+              <pre id="modal-content" style="white-space:pre-wrap;"></pre>
+            </div>`;
+            document.body.appendChild(m);
+          }
+          const pre = document.getElementById('modal-content');
+          if(pre){ pre.textContent = text; }
+        }
+
         async function call(path) {{
-          const log = document.getElementById('log');
-          log.textContent = 'Request: ' + path + '\\n';
           try {{
             const res = await fetch(path, {{ method: 'GET' }});
-            const txt = await res.text();
-            log.textContent += 'Status: ' + res.status + '\\n' + txt;
+            const ct = res.headers.get('content-type') || '';
+            let bodyText;
+            if (ct.includes('application/json')) {{
+              const data = await res.json();
+              bodyText = JSON.stringify(data, null, 2);
+            }} else {{
+              bodyText = await res.text();
+            }}
+            showModal('Request: ' + path + '\\nStatus: ' + res.status + '\\n' + bodyText);
           }} catch (e) {{
-            log.textContent += 'Error: ' + e;
+            showModal('Error: ' + e);
           }}
         }}
         function batch(kind) {{
