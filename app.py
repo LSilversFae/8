@@ -874,12 +874,41 @@ def _start_scheduler_if_enabled():
         except Exception as e:
             print(f"Auto-refactor plots skipped: {e}")
 
+    def _maybe_refactor_realms():
+        try:
+            if normalize_realms_file is None:
+                return
+            formatted = LORE_ROOT / "realms" / "formatted"
+            existing = list(formatted.glob("**/*.json")) if formatted.exists() else []
+            src = LORE_ROOT / "realms" / "realms.json"
+            if len(existing) < 3 and src.exists():
+                entries = normalize_realms_file(src)
+                written = 0
+                formatted.mkdir(parents=True, exist_ok=True)
+                for e in entries:
+                    name = e.get("name") or e.get("id") or "realm"
+                    safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in name)
+                    save_json_util(formatted / f"{safe}.json", e)
+                    written += 1
+                # backup + compact
+                try:
+                    orig = src.read_text(encoding="utf-8")
+                    (src.parent / "realms.json.bak").write_text(orig, encoding="utf-8")
+                except Exception:
+                    pass
+                compact = {"note": "Data split into lore/realms/formatted", "total": len(entries)}
+                save_json_util(src, compact)
+                print(f"Auto-refactor realms completed: {written} entries")
+        except Exception as e:
+            print(f"Auto-refactor realms skipped: {e}")
+
     def worker():
         # initial delay allows the app to finish booting
         time.sleep(3)
         _maybe_refactor_creatures()
         _maybe_refactor_magic()
         _maybe_refactor_plots()
+        _maybe_refactor_realms()
         if pull_on_start:
             _do_pull_all_internal()
         if publish_on_start:
@@ -1412,6 +1441,72 @@ def normalize_realms_route():
         "status": "ok",
         "count": len(all_entries),
         "written": written_files,
+    })
+
+
+# -------- REALMS REFACTOR (split + rewrite source as lightweight index) --------
+@app.route('/refactor-realms', methods=['POST', 'GET'])
+def refactor_realms_route():
+    if normalize_realms_file is None:
+        return jsonify({"error": "Realms normalizer module not available"}), 500
+
+    default_input = LORE_ROOT / "realms" / "realms.json"
+    default_outdir = LORE_ROOT / "realms" / "formatted"
+    payload = request.get_json(silent=True) or {}
+
+    input_path = Path(payload.get("input") or default_input)
+    outdir = Path(payload.get("outdir") or default_outdir)
+    rewrite_source = bool(payload.get("rewrite_source", True))
+    mappings_path = payload.get("mappings")
+
+    # Synonyms
+    if mappings_path:
+        synonyms = load_realms_synonyms(Path(mappings_path))
+    else:
+        default_map = LORE_ROOT / "realms" / "mappings.json"
+        synonyms = load_realms_synonyms(default_map)
+    set_realms_synonyms(synonyms)
+
+    # Normalize from the single source file
+    try:
+        entries = normalize_realms_file(input_path)
+    except Exception as e:
+        return jsonify({"error": f"Failed to normalize {input_path}", "details": str(e)}), 500
+
+    written: List[str] = []
+
+    # Write per-realm split files
+    outdir.mkdir(parents=True, exist_ok=True)
+    for e in entries:
+        name = e.get("name") or e.get("id") or "realm"
+        safe = "".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in name)
+        path = outdir / f"{safe}.json"
+        save_json_util(path, e)
+        written.append(str(path))
+
+    # Rewrite the original realms.json to a compact index
+    if rewrite_source and default_input.exists():
+        compact = {
+            "realms_index": [{"name": e.get("name"), "file": str((outdir / ("".join(c if c.isalnum() or c in (".", "_", "-") else "_" for c in (e.get("name") or e.get("id") or "realm")) + ".json")).relative_to(LORE_ROOT))} for e in entries],
+            "total": len(entries),
+            "note": "Data split into lore/realms/formatted (per-realm).",
+        }
+        try:
+            # simple backup
+            try:
+                orig_text = default_input.read_text(encoding="utf-8")
+                (default_input.parent / "realms.json.bak").write_text(orig_text, encoding="utf-8")
+            except Exception:
+                pass
+            save_json_util(default_input, compact)
+        except Exception as e:
+            return jsonify({"error": "Failed to rewrite source realms.json", "details": str(e)}), 500
+
+    return jsonify({
+        "status": "ok",
+        "split_count": len(entries),
+        "written": written,
+        "rewrote_source": bool(rewrite_source),
     })
 
 
