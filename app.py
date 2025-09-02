@@ -1,4 +1,4 @@
-﻿from flask import Flask, jsonify, request
+﻿from flask import Flask, jsonify, request, send_from_directory
 import os
 import json
 from pathlib import Path
@@ -971,19 +971,19 @@ def validate_mapping(category):
 # -------- SIMPLE WEB DASHBOARD --------
 @app.route('/dashboard', methods=['GET'])
 def dashboard():
-    # Minimal HTML UI to trigger common actions
     cats = CATEGORIES
-    buttons = []
+    tiles = []
     for c in cats:
-        buttons.append(f'''
-        <div class="card">
+        tiles.append(f'''
+        <div class="tile">
           <h3>{c.title()}</h3>
-          <div class="row">
-            <button onclick="call('/ensure-{c}-schema')">Ensure</button>
-            <button onclick="call('/push-{c}-to-notion')">Push</button>
-            <button onclick="call('/pull-{c}-from-notion')">Pull</button>
-            <button onclick="call('/validate-mapping/{c}')">Validate Mapping</button>
-          </div>
+          <p>Manage {c} data.</p>
+          <p>
+            <a href="#" onclick="call('/ensure-{c}-schema')">Ensure</a> ·
+            <a href="#" onclick="call('/push-{c}-to-notion')">Push</a> ·
+            <a href="#" onclick="call('/pull-{c}-from-notion')">Pull</a> ·
+            <a href="#" onclick="call('/validate-mapping/{c}')">Validate</a>
+          </p>
         </div>
         ''')
 
@@ -993,44 +993,42 @@ def dashboard():
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
       <title>Notion Lore Control</title>
-      <style>
-        body {{ font-family: system-ui, Arial, sans-serif; padding: 20px; max-width: 1100px; margin: auto; }}
-        h1 {{ margin-bottom: 8px; }}
-        .wrap {{ display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 14px; }}
-        .card {{ border: 1px solid #ddd; border-radius: 8px; padding: 12px; background: #fafafa; }}
-        .row button {{ margin: 4px 6px 4px 0; }}
-        .top {{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom: 12px; }}
-        .log {{ white-space: pre-wrap; background:#111; color:#0f0; padding:12px; border-radius:8px; max-height: 50vh; overflow:auto; }}
-        input[type=text] {{ padding:6px; }}
-      </style>
+      <link rel="stylesheet" href="/main.css" />
     </head>
     <body>
-      <h1>Notion Lore Control</h1>
-      <div class="top">
-        <button onclick="call('/health/notion')">Health</button>
-        <button onclick="call('/generate-indexes')">Generate Indexes</button>
-        <input id="secret" type="text" placeholder="Optional secret for batch" />
-        <button onclick="batch('publish')">Publish All</button>
-        <button onclick="batch('pull')">Pull All</button>
-      </div>
-      <div class="wrap">
-        {''.join(buttons)}
-      </div>
-      <h3>Response</h3>
-      <div class="log" id="log">Ready.</div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#" onclick="call('/health/notion')">Health</a></li>
+          <li><a href="#" onclick="call('/generate-indexes')">Generate Indexes</a></li>
+          <li><a href="#" onclick="batch('publish')">Publish All</a></li>
+          <li><a href="#" onclick="batch('pull')">Pull All</a></li>
+        </ul>
+      </nav>
+      <section id="header">
+        <h1>Notion Lore Control</h1>
+        <p>Manage sync with a click. Optional secret for batch actions:</p>
+        <input id="secret" type="text" placeholder="Optional SYNC_SECRET" />
+      </section>
+      <section id="links">
+        {''.join(tiles)}
+      </section>
+      <section class="footer">
+        <div id="log">Ready.</div>
+      </section>
       <script>
         async function call(path) {{
           const log = document.getElementById('log');
-          log.textContent = 'Request: ' + path + '\n';
+          log.textContent = 'Request: ' + path + '\\n';
           try {{
             const res = await fetch(path, {{ method: 'GET' }});
             const txt = await res.text();
-            log.textContent += 'Status: ' + res.status + '\n' + txt;
+            log.textContent += 'Status: ' + res.status + '\\n' + txt;
           }} catch (e) {{
             log.textContent += 'Error: ' + e;
           }}
         }}
-        async function batch(kind) {{
+        function batch(kind) {{
           const sec = document.getElementById('secret').value;
           const path = kind === 'publish' ? '/publish-all' : '/pull-all';
           const q = sec ? path + '?secret=' + encodeURIComponent(sec) : path;
@@ -1040,6 +1038,10 @@ def dashboard():
     </body>
     </html>'''
     return html
+
+@app.route('/main.css')
+def serve_main_css():
+    return send_from_directory('.', 'main.css', mimetype='text/css')
 
 @app.route('/getLore', methods=['GET'])
 def get_lore():
@@ -1390,3 +1392,4 @@ def normalize_realms_route():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
