@@ -61,6 +61,15 @@ CATEGORY_MAPPING_PATHS: Dict[str, Path] = {
     "magic": MAGIC_MAPPING_PATH,
 }
 
+# Preferred capitalized labels for Category select in Notion
+CATEGORY_LABEL: Dict[str, str] = {
+    "characters": "Characters",
+    "creatures": "Creatures",
+    "realms": "Realms",
+    "magic": "Magic",
+    "plots": "Plots",
+}
+
 
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -334,7 +343,8 @@ def push_to_notion(category: str, mapping_path: Optional[Path] = None) -> Dict[s
             # Ensure accurate round-trip path & category every push
             entry.setdefault("source", {})
             entry["source"]["file"] = str(p)
-            entry["source"].setdefault("category", category)
+            # Force Category label to capitalized form to match common Notion views
+            entry["source"]["category"] = CATEGORY_LABEL.get(category, category.title())
 
             # Derive normalized fields for certain categories
             if category == "creatures":
